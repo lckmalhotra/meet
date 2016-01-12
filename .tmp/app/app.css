@@ -7629,166 +7629,213 @@ body {
   padding: 0;
   font-family: 'open_sanslight'; }
 
-#container {
-  /*max-width:1280px;*/
+/*----------------------------------------- Rajan Css --------------------------------*/
+header {
+  background: #f4cb29;
+  display: block;
+  overflow: hidden; }
+
+section {
+  display: block;
+  overflow: hidden; }
+
+.container {
+  width: 80%;
+  height: auto;
+  margin: 0 auto; }
+
+.custom-header {
   width: 100%;
-  height: auto; }
+  float: left;
+  padding: 20px 0; }
 
-#banner {
-  background-color: #f4cb29;
-  background-repeat: repeat-x;
-  /*background-size:cover;*/
+.custom-header .logo {
+  width: 30%;
+  float: left; }
+
+.custom-menu {
+  text-align: right;
+  width: 70%;
+  float: left;
+  padding: 25px 0; }
+
+.custom-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block; }
+
+.custom-menu ul li {
+  display: inline-block; }
+
+.custom-menu ul li a {
+  padding: 5px 15px;
+  color: #5a512f;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-decoration: none; }
+
+.custom-menu ul li a:hover {
+  border-color: #5a512f; }
+
+.custom-banner-area {
+  padding: 30px 0 0;
+  float: left;
   width: 100%; }
 
-.background_bottom {
-  width: 100%; }
+.bannerText {
+  width: 55%;
+  float: left; }
+
+.bannerText h2 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #5a512f;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0; }
+
+.bannerText h2 strong {
+  font-weight: 600; }
+
+.bannerText p {
+  width: 90%;
+  font-size: 18px;
+  line-height: 24px;
+  color: #5a512f;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 10px 0 40px; }
+
+.bannerText ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.bannerText ul li {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+  color: #5a512f;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  padding: 0 15px; }
+
+.bannerText ul li span {
+  font-weight: 600; }
+
+.bannerText ul li:after {
+  content: "";
+  width: 2px;
+  height: 17px;
+  background: #5a512f;
+  position: absolute;
+  top: 4px;
+  right: 0px; }
+
+.bannerText ul li:first-child {
+  padding-left: 0; }
+
+.bannerText ul li:last-child:after {
+  width: 0; }
+
+.bannerimg {
+  width: 45%;
+  float: left;
+  text-align: right; }
+
+.bannerimg p {
+  margin: 0; }
+
+.bannerimg a {
+  width: 256px;
+  height: 42px;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  background: #ef3458;
+  color: #FFF;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 3px;
+  border: 3px solid transparent;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  padding: 5px 17px; }
+
+.bannerimg a:hover {
+  border: 3px solid #f51943;
+  text-decoration: none; }
+
+.custom-aboutUs h2 {
+  font-size: 40px;
+  line-height: 50px;
+  color: #5a512f;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-top: 0; }
+
+.custom-aboutUs h3 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #5a512f;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center; }
+
+.custom-aboutUs p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5a512f;
+  font-weight: normal;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 50px; }
+
+.custom-aboutUs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin-bottom: 40px;
+  overflow: hidden; }
+
+.custom-aboutUs ul li {
+  float: left;
+  width: 18%;
+  margin: 0 1%;
+  text-align: center; }
+
+.custom-aboutUs ul li span {
+  border: 2px solid #596674;
+  border-radius: 50%;
+  width: auto;
+  display: inline-block;
+  padding: 26px;
+  clear: both;
+  margin: 0 auto;
+  transition: all 0.1s ease;
+  width: 150px;
+  height: 150px; }
+
+.custom-aboutUs ul li:hover span {
+  background: #00afec;
+  border: 2px solid #00afec; }
 
 .background_bottom img {
   width: 100%; }
 
-#logo {
-  width: 600px;
-  height: 67px;
-  margin-top: 53px;
-  float: left;
-  text-align: center; }
-
-#menu {
-  width: auto;
-  height: 39px;
-  margin-top: 67px;
-  float: left;
-  /*right:71px;*/ }
-
-#menu ul {
-  margin: 0;
-  padding: 0; }
-
-#menu ul li {
-  list-style-type: none;
-  display: inline-block;
-  float: left;
-  color: #ffffff;
-  text-transform: uppercase;
-  width: 113px;
-  height: 39px;
-  text-align: center;
-  line-height: 40px;
-  margin-right: 4px;
-  font-family: open-sans;
-  font-size: 18px;
-  font-weight: normal; }
-
-#menu ul li:last-child {
-  margin-right: 0 !important; }
-
-#menu ul li:active {
-  background-color: #fff;
-  border-radius: 2px; }
-
-#menu ul li:hover {
-  border: 1px solid #fff;
-  box-sizing: border-box;
-  border-radius: 2px; }
-
-#companyBrand {
-  width: 186px;
-  height: 70px;
-  background-color: #fff;
-  float: right;
-  margin-right: 68px;
-  margin-top: 115px;
-  padding: 20px 10px 10px 10px; }
-
-.clr {
-  clear: both; }
-
-#SponsoredFont {
-  font-size: 14px;
-  font-weight: bold;
-  float: left;
-  margin-right: 10px; }
-
-.registerButton {
-  width: 252px;
-  height: 46px;
-  background-image: url(../Register-btn.png);
-  float: right;
-  margin-right: 68px;
-  margin-top: 24px; }
-
-#BannerText {
-  float: left;
-  width: 37%;
-  height: 68px;
-  margin-top: 100px;
-  text-align: left;
-  color: #fff;
-  margin-left: 10%; }
-
-#BannerText h2 {
-  font-weight: normal !important;
-  font-size: 29px;
-  line-height: 20px; }
-
-#BannerText div {
-  width: 85%;
-  font-size: 18px; }
-
-.RegBtnText {
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-  padding: 12px;
-  cursor: pointer; }
-
-#bottomLineText {
-  text-align: left;
-  float: left;
-  color: #fff;
-  margin-left: 10%;
-  width: 50%;
-  line-height: 50px;
-  font-size: 18px;
-  margin-top: 22px; }
-
-#aboutUs h2, #attendees h2 {
-  font-size: 20px;
-  font-weight: normal;
-  margin-top: 71px;
-  text-align: center; }
-
-#aboutUs div, #attendees div {
-  text-align: center;
-  width: 80%;
-  margin: auto; }
-
-#attendees {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 70px; }
-
-.CircularPartContainer {
-  width: 15% !important;
-  display: inline-block; }
-
-.CircularPart {
-  width: 136px !important;
-  height: 136px;
-  border-radius: 50%;
-  border: 1px solid #000;
-  text-align: center;
-  line-height: 180px; }
-
-.CircularPartText {
-  padding-top: 23px;
-  text-align: center; }
-
-.blueBg {
-  background-color: #00afec;
-  border: none; }
-
+/*------------------------------------------------------- End rajan Css----------------------*/
 #speakers {
   text-align: center;
   width: 100%;
@@ -7975,7 +8022,6 @@ ul.program_table {
 #form {
   max-width: 477px;
   width: 100%;
-  height: 620px;
   padding: 0;
   margin: 0; }
 
@@ -7999,8 +8045,7 @@ ul.program_table {
   width: 60%;
   margin: auto;
   text-align: center;
-  font-size: 12px;
-  padding: 15px 0; }
+  font-size: 12px; }
 
 #submitBtn {
   color: #fff;
@@ -8049,7 +8094,6 @@ ul.program_table {
   border-radius: 0;
   border-bottom: 2px solid #555555;
   max-width: 400px;
-  margin-top: 15px;
   background: none; }
 
 .short-input {
