@@ -10,12 +10,37 @@
       });
     };
 
-    $scope.addThing = function () {
-      alert('haha');
-      /*if (this.newThing) {
-        this.$http.post('/api/things', { name: this.newThing });
-        this.newThing = '';
-      }*/
+    $scope.fetch = function () {
+      $http.get("http://localhost:9000/api/things").then(function (res) {
+        $scope.items = res;
+      }, function () {});
+    };
+    $scope.fetch();
+    var _that = this;
+    _that.init = function () {
+      jQuery(window).scroll(function () {
+        var element = jQuery("#agenda");
+        var offset = element.offset().top - 300;
+        var currentScroll = jQuery(window).scrollTop();
+        if (currentScroll > offset) {
+
+          jQuery("span.begin").stop().animate({ left: 0 }, 800);
+          jQuery("span.end").stop().animate({ right: "33px" }, 800).promise().done(function () {
+            jQuery("ul.program_table").stop().fadeIn(500);
+          });;
+        } else if (currentScroll < offset) {
+
+          jQuery("span.begin").stop().animate({ left: "40%" }, 800);
+          jQuery("span.end").stop().animate({ right: "45%" }, 800);
+          jQuery("ul.program_table").css("display", "none");
+        }
+      });
+
+      jQuery('.program_table li').mouseenter(function () {
+        jQuery(this).find('.time_detail').stop().slideDown(500);
+      }).mouseleave(function () {
+        jQuery(this).find('.time_detail').stop().slideUp(500);
+      });
     };
   });
 })();

@@ -19,7 +19,7 @@
     </p>
   </form>
 </div>-->
-
+<div ng-init="main.init()">
 <header>
   <div class="container">
     <div class="custom-header">
@@ -141,7 +141,7 @@
     <div class="program"><span class="begin">Begin</span>
       <ul class="program_table">
 
-        <li>
+        <li class="active">
           <a href="#">9:45</a>
 
           <div class="time_detail">
@@ -226,7 +226,7 @@
       <span class="end">End.</span></div>
     <div class="bottom_btn">
       <div class="registerButton">
-        <div class="RegBtnText"><a href="#" ng-click="registerNow()">Book Your Seat</a> </div>
+        <div class="RegBtnText"><a href="#" ng-click="registerNow()" class="register_btn">Book Your Seat</a> </div>
       </div>
     </div>
   </div>
@@ -235,38 +235,58 @@
 
 
 <script type="text/ng-template" id="templateId">
-  <div id="form"><h1>Invitation Form</h1>
+
+<div id="form" ng-show="isActive" >
+
+    <h1>Invitation Form</h1>
     <div class="topText">Our representative will send you the invitation of the Front End Fest 2016</div>
       <div id="container">
         <div class="inner">
-          <div class="field">
-            <label ng-show="formData.name" class="show-hide">Name</label>
-            <input type="text" class="form-control" ng-model="formData.name" placeholder="Name"/> </div>
-          <div class="field">
-            <label ng-show="formData.Company" class="show-hide">Company</label>
-            <input type="text" class="form-control" ng-model="formData.company" placeholder="Company"/>
+          <form  name="userForm" ng-submit="addThing()" novalidate>
+          <div class="field form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+            <label ng-show="showname" class="show-hide">Name</label>
+            <input type="text" name="name" ng-focus="showname = true" ng-blur="showname = false" class="form-control" ng-model="formData.name" placeholder="Name" required>
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
+          </div>
+          <div class="field form-group" ng-class="{ 'has-error' : userForm.company.$invalid && !userForm.company.$pristine }">
+            <label ng-show="showCompany" class="show-hide">Company</label>
+            <input type="text" ng-focus="showCompany = true" ng-blur="showCompany = false" name="company" class="form-control" ng-model="formData.company" placeholder="Company" required>
+            <p ng-show="userForm.company.$invalid && !userForm.company.$pristine" class="help-block">Your Company name is required.</p>
           </div>
 
-          <div class="field">
-            <label ng-show="formData.Email" class="show-hide">Email</label>
-            <input type="text" class="form-control" ng-model="formData.email" placeholder="Email"/>
+          <div class="form-group field" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+
+            <label ng-show="showEmail"  class="show-hide">Email</label>
+
+            <input ng-focus="showEmail = true" ng-blur="showEmail = false"  type="email" class="form-control" name="email" ng-model="formData.email" placeholder="Email"/>
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+          </div>
+          <!-- USERNAME -->
+          <div class="form-group field" ng-class="{ 'has-error' : userForm.phone.$invalid && !userForm.phone.$pristine }">
+            <label ng-show="showNumber" class="show-hide">Phone Number</label>
+            <input type="integer" ng-focus="showNumber = true" ng-blur="showNumber = false"  name="phone" placeholder="Phone Number" class="form-control" ng-model="formData.phone" ng-minlength="10" ng-maxlength="10">
+            <p ng-show="userForm.phone.$error.minlength" class="help-block">Enter Valid Number</p>
+
+          </div>
+          <div class="field form-group" ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine }">
+            <label ng-show="showmessage" class="show-hide">Message</label>
+            <input type="text" ng-focus="showmessage = true" ng-blur="showmessage = false" name="message" class="form-control" ng-model="formData.message" placeholder="Message" required>
+            <p ng-show="userForm.message.$invalid && !userForm.message.$pristine" class="help-block">Your Message is required.</p>
           </div>
 
+    <div class="topText">We need your information to contact you only. We shall never see</div>
+    <button type="submit" class="btn btn-primary" id="submitBtn" ng-disabled="userForm.$invalid">Submit</button>
+    </form>
+</div>
+  </div></div>
+  <div id="succes_div" class="success_div" ng-show="!isActive">
+    <h1>Thankyou Message</h1>
+<span class="image_right"><img src="../assets/images/tick_green.png" alt="right_image"</span>
+    <span class="request">Your request has been sent.</span>
+    <span class="contact">We will contact you Shortly </span>
 
-          <div class="field">
-            <label ng-show="formData.Phone" class="show-hide">Phone Number</label>
-            <input type="text" class="form-control" ng-model="formData.phone" placeholder="Phone Number"/>
-          </div>
+    <button ng-click="closeThisDialog()" class="finish">Finish</button>
 
-
-
-          <div class="field">
-            <label ng-show="formData.info" class="show-hide">Message</label>
-            <input type="text" class="form-control" ng-model="formData.message" placeholder="Message"/>
-          </div>
-        </div>
-      </div>
-    <div class="topText">We need your information to contact you only. We shall never se</div>
-    <button type="submit" id="submitBtn" ng-click="addThing()">Submit</button>
   </div>
 </script>
+<!--<script src="../../bower_components/jquery/dist/jquery.min.js"></script>-->

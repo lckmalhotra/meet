@@ -28,8 +28,9 @@ var LoginController = (function () {
           email: this.user.email,
           password: this.user.password
         }).then(function () {
+          console.log();
           // Logged in, redirect to home
-          _this.$state.go('main');
+          _this.$state.go('dashboard');
         })['catch'](function (err) {
           _this.errors.other = err.message;
         });

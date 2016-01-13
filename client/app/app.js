@@ -15,7 +15,6 @@ angular.module('meetApp', [
   'ngAnimate'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
-      .otherwise('/');
+
     $locationProvider.html5Mode(true);
   });

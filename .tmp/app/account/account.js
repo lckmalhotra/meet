@@ -26,6 +26,11 @@ angular.module('meetApp').config(function ($stateProvider) {
     controller: 'SettingsController',
     controllerAs: 'vm',
     authenticate: true
+  }).state('dashboard', {
+    url: '/dashboard',
+    templateUrl: 'app/account/dashboard/dashboard.html',
+    controller: 'dashboardController',
+    authenticate: true
   });
 }).run(function ($rootScope) {
   $rootScope.$on('$stateChangeStart', function (event, next, nextParams, current) {
