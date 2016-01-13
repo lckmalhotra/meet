@@ -43,11 +43,11 @@
 
         jQuery('.program_table li').mouseenter(function(){
           jQuery('.program_table li').removeClass('active');
-          jQuery(this).addClass('active');
-          jQuery(this).find('.time_detail').stop().slideDown(500);
+
+          jQuery(this).find('.time_detail').stop().slideDown(1000);
         }).mouseleave(function(){
-          jQuery(this).removeClass('active');
-          jQuery(this).find('.time_detail').stop().slideUp(500);
+
+          jQuery(this).find('.time_detail').stop().slideUp(1000);
         })
       }
     });

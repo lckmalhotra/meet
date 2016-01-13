@@ -336,7 +336,7 @@ span.begin{
   font-weight: bold;
   color:#2c3d4f;
   left:40%;
-  min-height:100px;
+  min-height:150px;
 }
 span.end{
   font-weight: bold;
@@ -423,6 +423,14 @@ ul.program_table {
   display:block;
 }
 .program_table li.active a{
+  color: #ef3458;
+  width:100%;
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+.program_table li a:hover{
   color: #ef3458;
   width:100%;
   -webkit-transition: width 1s ease-in-out;
@@ -591,4 +599,7 @@ position: relative;
   max-width: 60px;
   width: 100%;
   margin: 0 auto;
+}
+.table .text-center {
+  text-align: left;
 }

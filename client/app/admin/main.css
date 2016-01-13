@@ -12089,7 +12089,45 @@ button:hover, button:focus, input:hover, input:focus {
   #wrapper {
     padding-left: 225px;
   }
-
+  .navbar-default {
+    background-color: #F4CB29;
+    border-color: #fff;
+  }
+  .navbar-default .navbar-nav > li > a{color:#000;}
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{color:#fff;background:#EF3458}
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{color:#fff;background:#EF3458}
+  .row.login_container {
+    width: 450px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding:10px;
+  }
+  .login_btn {
+    text-align: center;
+  }
+  button.btn.btn-inverse.btn-lg.btn-login{color:#fff;background:#EF3458}
+  button.btn.btn-inverse.btn-lg.btn-login:hover{color:#000;background-color: #F4CB29;}
+  a.btn.btn-default.btn-lg.btn-register{ background-color: #F4CB29;
+    border-color: #fff;}
+  a.btn.btn-default.btn-lg.btn-register:hover{ color:#fff;background:#EF3458}
+  .login_container h1 {
+    text-align: center;
+  }
+  .navbar-default .navbar-text {
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .table .text-center {
+    text-align: left;
+  }
+  span.message_width.ng-binding {
+    width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+  }
   /* line 41, ../../app/styles/_dashboard.scss */
   #page-wrapper {
     padding: 10px;

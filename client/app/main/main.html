@@ -244,7 +244,7 @@
         <div class="inner">
           <form  name="userForm" ng-submit="addThing()" novalidate>
           <div class="field form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
-            <label ng-show="showname" class="show-hide">Name</label>
+            <label ng-show="showname"  class="show-hide">Name</label>
             <input type="text" name="name" onclick="this.placeholder=''" onblur="this.placeholder='Name'" ng-focus="showname = true "  ng-blur="showname = false" class="form-control" ng-model="formData.name" placeholder="Name" required>
             <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
           </div>
