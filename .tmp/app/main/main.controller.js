@@ -11,7 +11,7 @@
     };
 
     $scope.fetch = function () {
-      $http.get("http://localhost:9000/api/things").then(function (res) {
+      $http.get("/api/things").then(function (res) {
         $scope.items = res;
       }, function () {});
     };
@@ -27,7 +27,7 @@
           jQuery("span.begin").stop().animate({ left: 0 }, 800);
           jQuery("span.end").stop().animate({ right: "33px" }, 800).promise().done(function () {
             jQuery("ul.program_table").stop().fadeIn(500);
-          });;
+          });
         } else if (currentScroll < offset) {
 
           jQuery("span.begin").stop().animate({ left: "40%" }, 800);
@@ -37,8 +37,11 @@
       });
 
       jQuery('.program_table li').mouseenter(function () {
+        jQuery('.program_table li').removeClass('active');
+        jQuery(this).addClass('active');
         jQuery(this).find('.time_detail').stop().slideDown(500);
       }).mouseleave(function () {
+        jQuery(this).removeClass('active');
         jQuery(this).find('.time_detail').stop().slideUp(500);
       });
     };

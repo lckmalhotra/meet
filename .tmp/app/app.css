@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7627,7 +7628,7 @@ button.close {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'open_sanslight'; }
+  font-family: 'Open Sans', sans-serif; }
 
 /*----------------------------------------- Rajan Css --------------------------------*/
 header {
@@ -7923,9 +7924,8 @@ ul.speakers_ul {
 #agenda .program > span {
   display: block;
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 800;
   color: #2c3d4f;
-  font-family: 'open_sansextrabold';
   position: absolute;
   font-size: 40px; }
 
@@ -7953,8 +7953,7 @@ ul.program_table {
   padding: 0;
   margin: 0;
   font-size: 14px;
-  display: none;
-  font-family: 'open_sansbold'; }
+  display: none; }
 
 .program_table li {
   width: 16%;
@@ -7997,7 +7996,6 @@ ul.program_table {
 
 .time_detail .owner_name {
   width: 100%;
-  font-family: 'open_sanslight';
   display: block;
   font-size: 15px;
   font-weight: normal; }
@@ -8063,7 +8061,9 @@ ul.program_table {
 .show-hide.ng-hide-remove {
   transition: all linear 0.2s;
   display: block !important;
-  position: absolute; }
+  position: absolute;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1); }
 
 .show-hide.ng-hide-add.ng-hide-add-active,
 .show-hide.ng-hide-remove {
@@ -8074,7 +8074,7 @@ ul.program_table {
 
 .show-hide.ng-hide-add,
 .show-hide.ng-hide-remove.ng-hide-remove-active {
-  top: -14px;
+  top: -12px;
   opacity: 1;
   display: block !important;
   position: absolute; }

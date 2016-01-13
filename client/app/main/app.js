@@ -1,10 +1,11 @@
-/**
+/*
+/!**
  * Created by Rumman on 1/12/2016.
- */
+ *!/
 
 
-/*$(".program_table li").first().find('.time_detail').css("display","block");
- $(".program_table li").first().find('a').css("width","100%");*/
+/!*$(".program_table li").first().find('.time_detail').css("display","block");
+ $(".program_table li").first().find('a').css("width","100%");*!/
 
 $(window).scroll(function(){
   var element=$("#speakers");
@@ -39,3 +40,4 @@ $('.program_table li').mouseenter(function(){
 })
 
 
+*/
