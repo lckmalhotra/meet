@@ -13,7 +13,7 @@
 
             $scope.addThing = function () {
                 if ($scope.formData) {
-                    $http.post('/api/things', $scope.formData);
+                    $http.post('/api/registrations', $scope.formData);
                     $scope.formData = {};
                     $scope.isActive = false;
                 }
