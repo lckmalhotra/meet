@@ -571,9 +571,17 @@ span.contact {
 div#succes_div {
   padding: 10px;
   text-align: center;
+  min-height:450px;
 }
 .image_right img {
   width: 10%;
+}
+.success_msg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
 }
 span.request {
   font-size: 14px;

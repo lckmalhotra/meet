@@ -8154,10 +8154,24 @@ span.contact {
 
 div#succes_div {
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  min-height: 450px; }
 
 .image_right img {
   width: 10%; }
+
+.success_msg {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 300px; }
 
 span.request {
   font-size: 14px;
