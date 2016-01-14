@@ -10,7 +10,7 @@
 'use strict';
 
 import _ from 'lodash';
-import Thing from './thing.model';
+import Thing from './registration.model.js';
 
 function respondWithResult(res, statusCode) {
 

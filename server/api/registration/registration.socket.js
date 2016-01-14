@@ -4,7 +4,7 @@
 
 'use strict';
 
-var ThingEvents = require('./thing.events');
+var ThingEvents = require('./registration.events.js');
 
 // Model events to emit
 var events = ['save', 'remove'];
