@@ -4,6 +4,7 @@
 
   angular.module('meetApp').controller('MainController', function ($scope, ngDialog, $http) {
     $scope.registerNow = function () {
+
       ngDialog.open({
         template: 'templateId',
         controller: 'registerNow'
@@ -15,7 +16,9 @@
         $scope.items = res;
       }, function () {});
     };
+
     $scope.fetch();
+
     var _that = this;
     _that.init = function () {
       jQuery(window).scroll(function () {
@@ -37,13 +40,9 @@
       });
 
       jQuery('.program_table li').mouseenter(function () {
+
         jQuery('.program_table li').removeClass('active');
-
-        jQuery(this).find('.time_detail').show();
-      }).mouseleave(function () {
-
-        jQuery(this).find('.time_detail').hide();
-      });
+      }).mouseleave(function () {});
       jQuery(window).scroll(function () {
         if ($(this).scrollTop() > 490) {
           jQuery('.header-top').addClass('smaller');

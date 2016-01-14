@@ -8,7 +8,16 @@ angular.module('meetApp')
 $scope.fetch =  function () {
   $http.get("/api/things").then(function(res){
     $scope.items = res;
+    console.log("thing",thing);
   },function(){});
 };
-$scope.fetch();});
+$scope.fetch();
+    $scope.deleteThing = function(thing) {
+      console.log("deleted-thing",thing);
+     $http.delete("/api/things/" + thing._id).then(function(res){
+       $scope.fetch();
+     });
+    };
+
+  });
 
