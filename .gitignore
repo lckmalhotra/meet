@@ -27,4 +27,4 @@ build/Release
 node_modules
 .idea/
 .tmp/
-.sass-cache/
+.sass-cache
