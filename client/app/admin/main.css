@@ -6,8 +6,9 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /* line 9, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -1713,7 +1714,7 @@ html {
 
 /* line 27, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -7812,7 +7813,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif,
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7950,7 +7951,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -12101,6 +12102,13 @@ button:hover, button:focus, input:hover, input:focus {
     margin: 0 auto;
     border: 1px solid #ddd;
     padding:10px;
+    margin-top:10%;
+  }
+  .front_nav img {
+    width: 50%;
+  }
+  .front_nav li {
+    list-style-type: none;
   }
   .login_btn {
     text-align: center;

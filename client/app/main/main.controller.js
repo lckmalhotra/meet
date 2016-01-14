@@ -28,7 +28,7 @@
           if(currentScroll > offset){
 
             jQuery( "span.begin").stop().animate({left:0},800);
-            jQuery( "span.end").stop().animate({right:"33px"},800).promise().done(function () {
+            jQuery( "span.end").stop().animate({right:"60px"},800).promise().done(function () {
               jQuery("ul.program_table").stop().fadeIn(500);
             });
           }

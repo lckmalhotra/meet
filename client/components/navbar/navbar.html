@@ -10,15 +10,15 @@
 
     </div>
     <div collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
+      <ul class="front_nav navbar-nav">
         <li ng-repeat="item in nav.menu" ui-sref-active="active">
-            <a ui-sref="{{item.state}}">{{item.title}}</a>
+            <a ui-sref="{{item.state}}"><img src="../../assets/images/conference-logo.png" alt="Logo"/></a>
         </li>
         <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup"><i class="fa fa-sign-in"></i>Sign up</a></li>
+        <!--<li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup"><i class="fa fa-sign-in"></i>Sign up</a></li>-->
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
         <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
         <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="dashboard">DashBoard</a></li>

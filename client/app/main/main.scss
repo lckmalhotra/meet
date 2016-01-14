@@ -361,8 +361,16 @@ ul.program_table {
   list-style-type: none;
   min-height: 150px;
   vertical-align: middle;
-  padding: 17px 0;
-  position:relative;
+  padding: 20px 0;
+  position: relative;
+}
+
+#agenda .program > span {
+  display: block;
+  font-size: 50px;
+  font-weight: 800;
+  color: #2c3d4f;
+  position: absolute;
 }
 .program_table li a {
   text-decoration: none;
@@ -372,7 +380,7 @@ ul.program_table {
   float: left;
   line-height:10px;
   text-align:left;
-  width: 65px;
+  width: 103px;
   font-weight: bold;
   font-size: 25px;
   white-space: nowrap;
@@ -407,9 +415,7 @@ ul.program_table {
   float:left;
 }
 .program_table li:first-child {
-  margin-left: 18%;
-}
-.program_table li:last-child {
+  margin-left: 16%;
 }
 .program_table li:hover a {
   color: #ef3458;
@@ -476,29 +482,7 @@ ul.program_table {
   text-align:center;
   margin:15px 0 0 130px !important;
 }
-.show-hide.ng-hide-add,
-.show-hide.ng-hide-remove {
-  transition: all linear 0.2s;
-  display: block!important;
-  position: absolute;
-  transform: scale(1.1);
-}
 
-.show-hide.ng-hide-add.ng-hide-add-active,
-.show-hide.ng-hide-remove {
-  top: -8px;
-  display: block!important;
-  position: absolute;
-  opacity: 0;
-}
-
-.show-hide.ng-hide-add,
-.show-hide.ng-hide-remove.ng-hide-remove-active {
-  top: -12px;
-  opacity: 1;
-  display: block!important;
-  position: absolute;
-}
 
 .field {
   position: relative;
@@ -511,6 +495,30 @@ ul.program_table {
   color: #428bca;
   font-size: 0.8em;
 }
+.field {
+  position: relative;
+}
+
+.field > label {
+  position: absolute;
+  color: rgba(0,0,0,0.87);
+  top: 8px;
+  left: 4px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.field label.effect {
+  top: -10px;
+  color: #00B9F5;
+  font-size: 12px;
+  left:0;
+}
+.field label.effect {
+  top: -10px;
+  color: #00B9F5;
+  font-size: 12px
+}
+
 .field > input {
   border: 0;
   padding: 0.5em 0!important;
@@ -603,3 +611,4 @@ position: relative;
 .table .text-center {
   text-align: left;
 }
+
