@@ -19,13 +19,15 @@ function respondWithResult(res, statusCode) {
     statusCode = statusCode || 200;
     return function (entity) {
         if (entity) {
-            MailService.sendMailWithTemplate(null, "manoj.nama@tothenew.com", "Test mail", Templates.CONFIRMATION, {})
-                .once("ERROR", function (err) {
-                    console.log("Error sending mail", err);
-                })
-                .once("SUCCESS", function (resp) {
-                    console.log("Mail sent", resp);
-                });
+            if(entity.email) {
+                MailService.sendMailWithTemplate(null, entity.email, "[FE-CONF] Registration complete", Templates.CONFIRMATION, {})
+                    .once("ERROR", function (err) {
+                        console.log("Error sending mail", err);
+                    })
+                    .once("SUCCESS", function (resp) {
+                        console.log("Mail sent", resp);
+                    });
+            }
             res.status(statusCode).json(entity);
         }
     };
