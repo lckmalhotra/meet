@@ -12,7 +12,7 @@ var ejs = require("ejs"),
 module.exports = {
     sendMailWithTemplate: function (sender, recipients, subject, template, model, attachment) {
         var templatePath = fs.readFileSync(path.join(__dirname, template), 'utf8'),
-            messageHtml = ejs.render(templatePath, model),
+            messageHtml = ejs.render(templatePath, {user: model}),
             emitter = new EventEmitter();
 
         sendMail(sender, recipients, subject, messageHtml, attachment)

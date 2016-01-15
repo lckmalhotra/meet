@@ -22,7 +22,7 @@ module.exports = {
             html = "";
 
         try {
-            html = ejs.render(template, {});
+            html = ejs.render(template, {user: user});
         } catch (error) {
             return emitter.emit("ERROR", new Error("HTML Creation error"));
         }

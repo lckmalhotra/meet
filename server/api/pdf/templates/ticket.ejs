@@ -1,278 +1,223 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <title>Sample ticket</title>
+    <title>Ticket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        /****************reset css starts here*********************************/
+        * {box-sizing: border-box;-moz-box-sizing: border-box; -webkit-box-sizing: border-box;-ms-box-sizing: border-box;-o-box-sizing: border-box;}
+        h1, h2, h3, h4, h5, h6, p, ul, li, body, html, form, fieldset,figure, div, small, strong, sup, sub, section { margin:0; padding:0; outline:none; font-weight:normal; border:0 }
+        form, fieldset { float:left; width:100% }
+        img { border:0 none; max-width: 100%; height: auto;display:block;vertical-align:top;}
+        a { text-decoration:none; border:0; outline:0;}
+        ul { list-style:none; }
+        .clear { clear:both;}
 
-    <style type="text/css">
-        body {
-            font-size: 14px;
-            line-height: 1.2;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-            font-family: 'Calibri', Arial;
-            font-weight: 400;
-            color: #640018;
+        /****************body**************************************************/
+        @font-face {
+            font-family: 'open_sansbold';
+            src: url('http://www.fe-conf.com/assets/font/OpenSans-Bold-webfont.eot');
+            src: url('http://www.fe-conf.com/assets/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Bold-webfont.woff2') format('woff2'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Bold-webfont.woff') format('woff'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Bold-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+
         }
-        table {
-            border-collapse: collapse;
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt;
+
+        @font-face {
+            font-family: 'open_sanslight';
+            src: url('http://www.fe-conf.com/assets/font/OpenSans-Light-webfont.eot');
+            src: url('http://www.fe-conf.com/assets/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Light-webfont.woff2') format('woff2'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Light-webfont.woff') format('woff'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Light-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+
         }
-        td, td a {
-            color: #640018;
-            text-decoration: none;
+
+        @font-face {
+            font-family: 'open_sansregular';
+            src: url('http://www.fe-conf.com/assets/font/OpenSans-Regular-webfont.eot');
+            src: url('http://www.fe-conf.com/assets/font/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Regular-webfont.woff2') format('woff2'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Regular-webfont.woff') format('woff'),
+            url('http://www.fe-conf.com/assets/font/OpenSans-Regular-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+
         }
-        td {
-            font-size: 14px;
-            line-height: 1.2;
+
+        body {font-family: 'open_sansregular', sans-serif;font-size: 16px;color:#313030;}
+        body, html {height: 100%;}
+        html {background: #fff;}
+        *, *:after, *:before {box-sizing: border-box;-moz-box-sizing: border-box; -webkit-box-sizing: border-box;-ms-box-sizing: border-box;}
+        .clearfix:before, .clearfix:after {content: ""; display: table;}
+        .clearfix:after {clear: both;}
+        .clearfix {zoom: 1; /* ie 6/7 */}
+
+        /*********** helping classes *************************/
+        .pull-left {float:left;}
+        .pull-right {float:right;}
+
+        /*********** layout section start here ***************/
+        .main-container {
+            background: #fff;
+            min-height: 360px;
+            height:auto;
+            margin: auto;
+            position: relative;
+            top: 33px;
+            width: 700px;
         }
-        img {
-            border: none;
-            outline: none;
-            text-decoration: none;
+        .top-section {
+            background: url("http://www.fe-conf.com/assets/images/yellow-bg.svg") no-repeat;
+            background-size: contain;
+            position: relative;
+            height: 254px;
+            width: 700px;
+        }
+        .top-section > span {
+            background: #fff none repeat scroll 0 0;
+            font-family: 'open_sanslight';
             display: inline-block;
+            margin-top: 11px;
+            padding: 10px;
         }
-        p {
-            margin: 0;
-            padding: 0;
+        .top-section .logo {
+            height: 0;
+            margin: auto;
+            overflow: hidden;
+            padding: 70px 0 0;
+            width: 518px;
+            background: url("http://www.fe-conf.com/assets/images/logo.svg") no-repeat center;
         }
-        a:hover, td a:hover {
-            color: #4B4B4B;
-            outline: none;
+        .top-section > p {
+            margin-top: 13px;
+            position: relative;
+            text-align: center;
         }
-
-
-        td[class="desk-none"] {
-            display: none !important;
+        .top-section p span {
+            font-family: 'open_sansbold';
         }
-
-        @media only screen and (max-width: 599px) {
-            table[class="table_full"] {
-                width: 100% !important;
-                float: none !important;
-            }
-            td[class="gutter"] {
-                width: 15px !important;
-            }
-            td[class="td_full"] {
-                width: 100% !important;
-                display: block !important;
-                float: none !important;
-            }
-            td[class="td_full-text"] {
-                width: 100% !important;
-                display: block !important;
-                float: none !important;
-                text-align: left !important;
-            }
-            td[class="td_full-height"] {
-                width: 100% !important;
-                display: block !important;
-                float: none !important;
-                height: 15px !important;
-            }
-            td[class="height-15"] {
-                height: 15px !important;
-            }
-            td[class="mob-none"] {
-                display: none !important;
-            }
-            td[class="desk-none"] {
-                display: block !important;
-            }
-            img[class="mob-none"], .mob-none {
-                display: none !important;
-            }
+        .entry-section {
+            background: url("http://www.fe-conf.com/assets/images/red-bg.svg") no-repeat center center;
+            color: #fff;
+            display: block;
+            float: right;
+            font-family: "open_sansbold";
+            font-size: 13px;
+            height: 76px;
+            line-height: 73px;
+            margin-top: -88px;
+            max-width: 234px;
+            overflow: hidden;
+            padding: 0 17px 0 68px;
+            position: relative;
+            text-align: right;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            vertical-align: middle;
+            white-space: nowrap;
+            width: 234px;
         }
-
+        .bottom-section {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .user-section {
+            float: left;
+            width: 80%;
+            padding-top: 14px;
+        }
+        .user-section span {
+            font-family: 'open_sansbold';
+            font-size: 18px;
+            text-transform: capitalize;
+            max-width: 490px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+        }
+        .user-section p {
+            font-family: 'open_sansregular';
+            font-size: 13px;
+        }
+        .brand-section {
+            float: left;
+            margin-top: -7px;
+            padding: 7px 0 0;
+            text-align: right;
+            width: 20%;
+        }
+        .brand-section a {
+            margin: auto;
+            padding: 58px 0 0 0;
+            height: 0;
+            background: url("http://www.fe-conf.com/assets/images/brand-logo.svg") no-repeat center;
+            overflow: hidden;
+            display: inline-block;
+            width: 66px;
+        }
+        .brand-section span {
+            font-family: 'open_sansbold';
+            display: inline-block;
+            font-size: 11px;
+            vertical-align: top;
+        }
+        .note-section {
+            clear: both;
+            padding-top: 13px;
+        }
+        .note-section small {
+            font-family: 'Arial';
+            font-size: 11px;
+        }
+        .note-section small sup {
+            position: relative;
+            top: 3px;
+        }
+        .note-section small a {
+            color:#313030;
+        }
+        .note-section small a span {
+            font-weight: 900;
+        }
     </style>
 </head>
-
 <body>
+<!-- BOF main container ---------------------------------------------------- -->
+<div class="main-container">
+    <!-- BOF top section ---------------------------------------------------- -->
+    <section class="top-section">
+        <span>Ticket to</span>
+        <div class="logo">FrontEnd Meet</div>
+        <p><span>Venue:</span> TO THE NEW Digital,  Logix Techno Park  Tower B, 4th Floor, Sector - 127 Noida, UP</p>
+    </section>
+    <!-- EOF top section ---------------------------------------------------- -->
+    <div class="entry-section">Entry One</div>
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" style="background-color: #ffffff;">
-    <tr>
-        <td valign="top">
-            <table class="table_full" align="center" border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#eeeeee" style="background-color: #eeeeee;">
-
-                <!--header start-->
-                <tr>
-                    <td valign="top">
-                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #f4cb29">
-                            <tr>
-                                <td class="gutter" valign="top" width="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;">&nbsp;</a></td>
-                                <td valign="top">
-                                    <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td valign="top" height="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;">&nbsp;</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" align="center">
-                                                <a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"><img border="0" src="http://vincampaigns.qa2.intelligrape.net/newsletter/FEConf/images/logo.png" width="324" height="61" style="display: block; max-width: 100%; height: auto;"></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" height="10"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" style="font-family: 'Calibri', Arial; font-size: 16px; font-weight: 400; color: #242322;"><a href="http://www.fe-conf.com" target="_blank" style="display: block; font-weight: 700; font-family: 'Calibri', Arial; font-size: 22px; font-weight: 400; text-align: center; text-transform: uppercase; color: #242322; text-decoration: none;">JAN 30, 2016</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" height="10"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" style="font-family: 'Calibri', Arial; font-size: 16px; font-weight: 400; color: #242322;"><a href="http://www.fe-conf.com" target="_blank" style="display: block; font-family: 'Calibri', Arial; font-size: 16px; font-weight: 400; color: #242322; text-decoration: none;">TO THE NEW Digital,  Logix Techno Park  Tower B, 4th Floor, Sector - 127 Noida, UP</a></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td class="gutter" valign="top" width="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- header end-->
-
-                <!--book start-->
-                <tr>
-                    <td valign="top">
-                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td valign="top">
-                                    <a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"><img border="0" src="http://vincampaigns.qa2.intelligrape.net/newsletter/FEConf/images/img5.png" width="600" height="73" style="display: block;  max-width: 100%; height: auto;"></a>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- book end-->
-
-                <!--content start-->
-                <tr>
-                    <td valign="top">
-                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td class="gutter" valign="top" width="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block;"></a></td>
-                                <td valign="top">
-                                    <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td valign="top" height="10"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" style="font-family: 'Calibri', Arial; font-size: 20px; font-weight: 400; color: #313030;">
-                                                <a href="http://www.fe-conf.com" target="_blank" style="display: block; font-family: 'Calibri', Arial; font-size: 20px; font-weight: 400; color: #313030; text-decoration: none;">We are pleased to invite you to the prestigious <strong>FE - Conf</strong>, one-day event dedicated to Frontend Engineering and UI community.</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" height="25"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" style="font-family: 'Calibri', Arial; font-size: 20px; font-weight: 400; color: #313030;">
-                                                <a href="http://www.fe-conf.com" target="_blank" style="display: block; font-family: 'Calibri', Arial; font-size: 20px; font-weight: 400; color: #313030; text-decoration: none;">The event aims to bring together the bright minds from Frontend Engineering, UI Development, HTML & CSS, Angular.js and Ploymer.js ecosystem. The meet gives you an opportunity  to learn and share your passion about User Experience and related disciplines.</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" height="18"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-
-
-                                        <tr>
-                                        <tr>
-                                            <td valign="top">
-                                                <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                    </table>
-                                </td>
-                                <td class="gutter" valign="top" width="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- content end-->
-
-                <!--agenda more start-->
-                <tr>
-                    <td valign="top">
-                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td class="gutter" valign="top" width="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                <td valign="top">
-                                    <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-top: 1px dashed #adaba1;">
-
-                                        <td class="td_full" valign="top" width="50%">
-                                            <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td valign="top">
-                                                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-
-                                                            <tr>
-                                                                <td valign="top" height="17"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                                            </tr>
-
-
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td class="gutter" valign="top" width="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- agenda more end-->
-
-                <!--click more start-->
-                <tr>
-                    <td valign="top">
-                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td class="gutter" valign="top" width="30"></td>
-                                <td valign="top">
-                                    <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-
-                                        <tr>
-                                            <td valign="top">
-                                                <table align="right" border="0" cellpadding="0" cellspacing="0">
-                                                    <tr>
-                                                        <td valign="top" height="15" colspan="3"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td valign="top" style="font-family: 'Calibri', Arial; font-size: 14px; text-align: right; font-weight: 700; color: #000000;"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none; font-family: 'Calibri', Arial; font-size: 14px; text-align: right; font-weight: 700; color: #000000;">Sponsored:</a></td>
-                                                        <td valign="top" width="15"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                                        <td valign="top">
-                                                            <a href="http://www.fe-conf.com" target="_blank" style="display: inline-block; text-decoration: none;"><img border="0" src="http://vincampaigns.qa2.intelligrape.net/newsletter/FEConf/images/ttnd.png" width="85" height="64" style="display: block; max-width: 100%; height: auto;"> </a>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" height="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td class="gutter" valign="top" width="30"><a href="http://www.fe-conf.com" target="_blank" style="display: block; text-decoration: none;"></a></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- click more end-->
-
-            </table>
-        </td>
-    </tr>
-</table>
+    <!-- BOF bottom section ---------------------------------------------------- -->
+    <section class="bottom-section clearfix">
+        <div class="user-section">
+            <span><%- user.name %></span>
+            <p>Start time: 9:30am</p>
+        </div>
+        <div class="brand-section">
+            <span>Sponsor: </span>
+            <a href="http://www.tothenew.com/">To The New</a>
+        </div>
+        <p class="note-section clearfix">
+            <small class="pull-left">Note<sup>*</sup>: Please bring your Laptop</small>
+            <small class="pull-right">For more information please login to <a href="http://www.fe-conf.com">http://www.<span>fe-conf</span>.com</a></small>
+        </p>
+    </section>
+    <!-- BOF bottom section ---------------------------------------------------- -->
+</div>
+<!-- EOF main container ------------------------------------------------------ -->
 
 </body>
-
 </html>

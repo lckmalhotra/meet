@@ -36,6 +36,11 @@ export function generateAndSendTicket(req, res, next) {
                         console.log("Error sending mail", err);
                     } else {
                         console.log("Mail sent", resp);
+                        Registration.update({
+                            _id: userId
+                        }, {
+                            $set: {ticketSent: true}
+                        });
                     }
                 })
             });
@@ -52,7 +57,7 @@ function sendMailWithPDF(user, cb) {
         null,
         user.email,
         "[FE-CONF] Entry Ticket!",
-        Templates.TICKET,
+        Templates.CONFIRMATION,
         user,
         ticketToAttach
     )
