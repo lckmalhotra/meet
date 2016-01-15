@@ -8122,29 +8122,37 @@ ul.program_table {
 
 #submitBtn {
   color: #fff;
-  background-color: #00afec;
-  width: 200px;
-  height: 35px;
+  background-color: #ef3458;
+  padding: 8px 63px;
   border: none;
   text-align: center;
-  margin: 15px 0 0 130px !important; }
+  border-radius: 0;
+  margin: 0 auto;
+  text-align: center; }
+
+span.nine-one {
+  position: absolute;
+  display: block;
+  border-bottom: none;
+  top: 5px; }
+
+.phone label {
+  left: 60px !important; }
+
+.phone input {
+  width: 81%;
+  margin-left: 58px; }
 
 .field {
   position: relative;
   margin-bottom: 1em; }
-
-.field > label {
-  position: absolute;
-  top: -14px;
-  color: #428bca;
-  font-size: 0.8em; }
 
 .field {
   position: relative; }
 
 .field > label {
   position: absolute;
-  color: rgba(0, 0, 0, 0.87);
+  color: #adadad;
   top: 8px;
   left: 4px;
   transition: all 0.3s ease;
@@ -8166,9 +8174,23 @@ ul.program_table {
   padding: 0.5em 0 !important;
   box-shadow: none !important;
   border-radius: 0;
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #cccccc;
   max-width: 400px;
-  background: none; }
+  background: none;
+  color: #000 !important;
+  font-size: 16px;
+  text-transform: capitalize; }
+
+.name_field > input {
+  color: #ef3458 !important;
+  font-size: 16px;
+  font-weight: 600; }
+
+.mail_field input {
+  text-transform: lowercase; }
+
+.btn_wrapper {
+  text-align: center; }
 
 .short-input {
   max-width: 400px;
@@ -8240,11 +8262,15 @@ span.request {
 
 button.finish {
   background: #f4cb29;
-  padding: 5px 30px;
-  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
   color: #fff;
-  margin: 15px;
-  cursor: pointer; }
+  padding: 8px 63px;
+  border: none;
+  text-align: center;
+  border-radius: 0; }
 
 button.finish:hover {
   background: #f51943; }
@@ -8379,6 +8405,12 @@ button.send_btn {
     -moz-transition: width 500ms ease-out;
     -o-transition: width 500ms ease-out;*/
   transition: width 200ms ease-in; }
+
+.help-block {
+  font-size: 13px; }
+
+.field label.effect {
+  color: #adadad; }
 
 .custom_wrapper a {
   text-decoration: none;
