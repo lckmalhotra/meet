@@ -12,7 +12,9 @@
 import _ from 'lodash';
 import Registration from './registration.model.js';
 import Templates from "../mail/templates.enum.js";
+import PDFTemplates from "../pdf/templates.enum.js";
 import * as MailService from "../mail/mail.service.js";
+import * as PdfService from "../pdf/pdf.service.js";
 
 function respondWithResult(res, statusCode) {
 
@@ -27,6 +29,14 @@ function respondWithResult(res, statusCode) {
                     .once("SUCCESS", function (resp) {
                         console.log("Mail sent", resp);
                     });
+
+                //PdfService.generatePdf(entity, PDFTemplates.TICKET)
+                //    .once("ERROR", function (err) {
+                //        console.log("Error generating PDF", err);
+                //    })
+                //    .once("SUCCESS", function (resp) {
+                //        console.log("Generated PDF", resp);
+                //    });
             }
             res.status(statusCode).json(entity);
         }
