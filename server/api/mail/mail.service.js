@@ -2,9 +2,8 @@
 
 import config from '../../config/environment';
 
-var mg = require("mailgun"),
-    MG = new mg.Mailgun(config.mailgun.apiKey),
-    ejs = require("ejs"),
+var ejs = require("ejs"),
+    maingunjs = require("mailgun-js")({apiKey: config.mailgun.apiKey, domain: config.mailgun.domain}),
     path = require("path"),
     EventEmitter = require("events").EventEmitter,
     Templates = require("./templates.enum"),
@@ -29,7 +28,7 @@ module.exports = {
 };
 
 
-function sendMail(sender, recipients, subject, body) {
+function sendMail(sender, recipients, subject, body, attachment) {
     var _recipients = [],
         emitter = new EventEmitter();
 
@@ -39,7 +38,7 @@ function sendMail(sender, recipients, subject, body) {
 
     console.log("\nINFO: Sending mails to ", _recipients.toString());
 
-    sendSingleMail(sender, _recipients.toString(), subject, body, function (err) {
+    sendSingleMail(sender, _recipients.toString(), subject, body, attachment, function (err) {
         if (err) {
             console.error("Error sending mails", err, "for subject", subject, "recipients", _recipients);
             return emitter.emit("ERROR", err);
@@ -51,18 +50,24 @@ function sendMail(sender, recipients, subject, body) {
     return emitter;
 }
 
-function sendSingleMail(sender, recipient, subject, body, callback) {
-    var rawBody = 'From: ' + sender +
-        '\nTo: ' + recipient +
-        '\nContent-Type: text/html; charset=utf-8' +
-        '\nSubject: ' + subject +
-        '\n' + body;
+function sendSingleMail(sender, recipient, subject, body, attachment, callback) {
+    var data = {
+        from: sender,
+        to: recipient,
+        subject: subject,
+        html: body
+    };
 
-    MG.sendRaw(sender, recipient, rawBody, function (err) {
-        if (err) {
+    if(attachment) {
+        data["attachment"] = attachment;
+    }
+
+    maingunjs.messages().send(data, function (err, body) {
+
+        if(err) {
             return callback(err);
-        } else {
-            return callback(null)
         }
+        return callback(null, body);
+
     });
 }
