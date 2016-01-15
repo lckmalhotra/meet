@@ -28,5 +28,6 @@ node_modules
 .idea/
 .tmp/
 .sass-cache
+client/bower_components
 dist
 tickets/*.pdf
