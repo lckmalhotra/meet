@@ -86,7 +86,7 @@ function respondWithResult(res, statusCode) {
     return function (entity) {
         if (entity) {
             if (entity.email) {
-                MailService.sendMailWithTemplate(null, entity.email, "[FE-CONF] Registration complete", Templates.CONFIRMATION, {})
+                MailService.sendMailWithTemplate(null, entity.email, "[FE-CONF] Registration complete", Templates.CONFIRMATION, entity)
                     .once("ERROR", function (err) {
                         console.log("Error sending mail", err);
                     })
