@@ -14045,3 +14045,19 @@ input[type="file"] {
 }
 
 /*# sourceMappingURL=main.css.map */
+/*
+rumman css*/
+button.send_btn {
+  background: #EF3458;
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+button.delete_btn {
+  background: #C9302C;
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
