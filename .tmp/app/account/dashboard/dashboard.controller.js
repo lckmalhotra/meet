@@ -7,15 +7,13 @@
 angular.module('meetApp').controller('dashboardController', function ($scope, $http) {
 
   $scope.fetch = function () {
-    $http.get("/api/things").then(function (res) {
+    $http.get("/api/registrations").then(function (res) {
       $scope.items = res;
-      console.log("thing", thing);
     }, function () {});
   };
   $scope.fetch();
   $scope.deleteThing = function (thing) {
-    console.log("deleted-thing", thing);
-    $http['delete']("/api/things/" + thing._id).then(function (res) {
+    $http['delete']("/api/registrations/" + thing._id).then(function (res) {
       $scope.fetch();
     });
   };

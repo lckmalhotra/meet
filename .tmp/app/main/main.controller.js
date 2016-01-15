@@ -11,14 +11,6 @@
       });
     };
 
-    $scope.fetch = function () {
-      $http.get("/api/things").then(function (res) {
-        $scope.items = res;
-      }, function () {});
-    };
-
-    $scope.fetch();
-
     var _that = this;
     _that.init = function () {
       jQuery(window).scroll(function () {
