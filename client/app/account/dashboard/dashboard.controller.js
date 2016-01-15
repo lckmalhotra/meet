@@ -5,17 +5,30 @@
 angular.module('meetApp')
     .controller('dashboardController', function ($scope, $http) {
 
-$scope.fetch =  function () {
-  $http.get("/api/registrations").then(function(res){
-    $scope.items = res;
-  },function(){});
-};
-$scope.fetch();
-    $scope.deleteThing = function(thing) {
-     $http.delete("/api/registrations/" + thing._id).then(function(res){
-       $scope.fetch();
-     });
-    };
+        $scope.fetch = function () {
+            $http.get("/api/registrations").then(function (res) {
+                $scope.items = res;
+            }, function () {
+            });
+        };
 
-  });
+        $scope.fetch();
+
+        $scope.sendTicket = function (user, idx) {
+            $http.post("/api/registrations/sendTicket", user)
+                .then(function (res) {
+                    console.log($scope.items[idx]);
+                    //$scope.items[idx].ticketSent = true;
+                }, function () {
+
+                });
+        };
+
+        $scope.deleteThing = function (thing) {
+            $http.delete("/api/registrations/" + thing._id).then(function (res) {
+                $scope.fetch();
+            });
+        };
+
+    });
 

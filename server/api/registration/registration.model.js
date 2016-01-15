@@ -7,7 +7,8 @@ var RegistrationSchema = new mongoose.Schema({
     company: String,
     email: String,
     phone: String,
-    message: String
+    message: String,
+    ticketSent: {type: Boolean, default: false}
 });
 
 export default mongoose.model('Registration', RegistrationSchema);
