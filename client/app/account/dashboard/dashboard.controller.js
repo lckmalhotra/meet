@@ -17,8 +17,7 @@ angular.module('meetApp')
         $scope.sendTicket = function (user, idx) {
             $http.post("/api/registrations/sendTicket", user)
                 .then(function (res) {
-                    console.log($scope.items[idx]);
-                    //$scope.items[idx].ticketSent = true;
+                    $scope.items.data[idx].ticketSent = true;
                 }, function () {
 
                 });
