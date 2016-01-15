@@ -13416,7 +13416,6 @@ ul.pagination {
 /* line 254, ../../app/styles/_onboarding.scss */
 .ngdialog {
   padding-top: 0 !important;
-  overflow: hidden !important;
 }
 /* line 258, ../../app/styles/_onboarding.scss */
 .ngdialog .ngdialog-content {
