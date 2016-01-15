@@ -57,7 +57,7 @@ function sendMailWithPDF(user, cb) {
         null,
         user.email,
         "[FE-CONF] Entry Ticket!",
-        Templates.CONFIRMATION,
+        Templates.TICKET,
         user,
         ticketToAttach
     )
