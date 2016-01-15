@@ -10,12 +10,12 @@ var ejs = require("ejs"),
     fs = require("fs");
 
 module.exports = {
-    sendMailWithTemplate: function (sender, recipients, subject, template, model) {
+    sendMailWithTemplate: function (sender, recipients, subject, template, model, attachment) {
         var templatePath = fs.readFileSync(path.join(__dirname, template), 'utf8'),
             messageHtml = ejs.render(templatePath, model),
             emitter = new EventEmitter();
 
-        sendMail(sender, recipients, subject, messageHtml)
+        sendMail(sender, recipients, subject, messageHtml, attachment)
             .once("ERROR", function (err) {
                 return emitter.emit("ERROR", err);
             })
@@ -51,6 +51,7 @@ function sendMail(sender, recipients, subject, body, attachment) {
 }
 
 function sendSingleMail(sender, recipient, subject, body, attachment, callback) {
+
     var data = {
         from: sender,
         to: recipient,

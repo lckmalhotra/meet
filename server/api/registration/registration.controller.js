@@ -16,12 +16,71 @@ import PDFTemplates from "../pdf/templates.enum.js";
 import * as MailService from "../mail/mail.service.js";
 import * as PdfService from "../pdf/pdf.service.js";
 
+var path = require("path");
+
+export function generateAndSendTicket(req, res, next) {
+    var userId = req.body._id;
+
+    console.log(req.body);
+    Registration.findOne({_id: userId}, {name: 1, email: 1}).lean().exec(function (err, user) {
+        if (err) {
+            console.log("Error fetching user", err);
+            return handleError(res);
+        } else {
+            generatePdf(user, function (err, resp) {
+                if (err) {
+                    return handleError(res);
+                }
+                sendMailWithPDF(user, function (err, resp) {
+                    if (err) {
+                        console.log("Error sending mail", err);
+                    } else {
+                        console.log("Mail sent", resp);
+                    }
+                })
+            });
+            res.json({message: "Processing request"});
+        }
+    });
+}
+
+function sendMailWithPDF(user, cb) {
+    var basePath = path.join(process.cwd(), './tickets/'),
+        ticketToAttach = basePath + "FE-Conf-" + user._id + "-ticket.pdf";
+
+    MailService.sendMailWithTemplate(
+        null,
+        user.email,
+        "[FE-CONF] Entry Ticket!",
+        Templates.TICKET,
+        user,
+        ticketToAttach
+    )
+        .once("ERROR", function (err) {
+            cb(err);
+        })
+        .once("SUCCESS", function (resp) {
+            cb(null, resp);
+        });
+}
+
+function generatePdf(user, cb) {
+    PdfService.generatePdf(user, PDFTemplates.TICKET)
+        .once("ERROR", function (err) {
+            console.log("error generating PDF", err);
+            cb(err);
+        })
+        .once("SUCCESS", function (err) {
+            cb(null, user);
+        });
+}
+
 function respondWithResult(res, statusCode) {
 
     statusCode = statusCode || 200;
     return function (entity) {
         if (entity) {
-            if(entity.email) {
+            if (entity.email) {
                 MailService.sendMailWithTemplate(null, entity.email, "[FE-CONF] Registration complete", Templates.CONFIRMATION, {})
                     .once("ERROR", function (err) {
                         console.log("Error sending mail", err);
@@ -29,14 +88,6 @@ function respondWithResult(res, statusCode) {
                     .once("SUCCESS", function (resp) {
                         console.log("Mail sent", resp);
                     });
-
-                //PdfService.generatePdf(entity, PDFTemplates.TICKET)
-                //    .once("ERROR", function (err) {
-                //        console.log("Error generating PDF", err);
-                //    })
-                //    .once("SUCCESS", function (resp) {
-                //        console.log("Generated PDF", resp);
-                //    });
             }
             res.status(statusCode).json(entity);
         }

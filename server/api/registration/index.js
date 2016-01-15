@@ -5,6 +5,7 @@ var controller = require('./registration.controller.js');
 
 var router = express.Router();
 
+router.post("/sendTicket", controller.generateAndSendTicket);
 router.get('/', controller.index);
 router.get('/:id', controller.show);
 router.post('/', controller.create);
