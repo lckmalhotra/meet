@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7885,7 +7886,7 @@ nav.nav-bar ul li a.active {
   border: 2px solid #00afec; }
 
 .background_bottom {
-  background-image: url(../assets/images/header-bottom-bg.png);
+  background-image: url(assets/images/header-bottom-bg.png);
   background-repeat: no-repeat;
   height: 82px;
   width: 100%;
