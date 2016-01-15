@@ -3,8 +3,9 @@
  */
 
 angular.module('meetApp')
-  .controller('dashboardController', function($scope,$http){
+    .controller('dashboardController', function ($scope, $http) {
 
+<<<<<<< HEAD
 $scope.fetch =  function () {
   $http.get("/api/things").then(function(res){
     $scope.items = res;
@@ -20,4 +21,7 @@ $scope.fetch();
     };
 
   });
+=======
+    });
+>>>>>>> a4fbb531e3d73a51d02bdf0593ef11d781ecc16f
 

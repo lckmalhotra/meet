@@ -23,7 +23,6 @@ angular.module('meetApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
   'validation.match',
