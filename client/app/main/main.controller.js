@@ -30,24 +30,23 @@
           var offset=element.offset().top-500;
           var currentScroll=jQuery(window).scrollTop();
           if(currentScroll > offset){
-
-            jQuery( "span.begin").stop().animate({left:0},800);
-            jQuery( "span.end").stop().animate({right:"60px"},800).promise().done(function () {
-              jQuery("ul.program_table").stop().fadeIn(500);
-            });
+            element.addClass("begin_animate");
+            /*jQuery( "span.end").addClass("end_animate");
+            jQuery( ".animate-left").addClass("left_side");*/
           }
           else if(currentScroll < offset){
-
-            jQuery( "span.begin").stop().animate({left:"40%"},800);
+            element.removeClass("begin_animate");
+          /*  jQuery( "span.begin").stop().animate({left:"40%"},800);
             jQuery( "span.end").stop().animate({right:"50%"},800)
-              jQuery("ul.program_table").css("display","none");
+              jQuery("ul.program_table").css("display","none");*/
+         /*   jQuery( "span.end").removeClass("end_animate");*/
           }
         });
 
 
-        jQuery('.program_table li').mouseenter(function(){
+        jQuery('.custom_wrapper').mouseenter(function(){
 
-         jQuery('.program_table li').removeClass('active');
+         jQuery('.custom_wrapper').first().removeClass('active');
         }).mouseleave(function(){
         });
         jQuery(window).scroll(function() {
@@ -67,7 +66,7 @@
             scrollTime: 600,       // how long (in ms) the animation takes
             activeClass: 'active', // class given to the active nav element
             onPageChange: null,    // function(pageIndex) that is called when page is changed
-            topOffset: -61           // offste (in px) for fixed top navigation
+            topOffset: -61  // offste (in px) for fixed top navigation
           });
         });
 

@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
 
 body{
   margin:0;
@@ -38,6 +37,7 @@ section {
   display: block;
 }
 .header-top .logo img, .header-top.smaller .logo, .header-top.smaller nav.nav-bar, .header-top.smaller {
+
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -54,6 +54,7 @@ section {
   padding: 10px 0;
 }
 .header-top.smaller {
+  z-index:99999;
   padding: 0;
   position:fixed;
   box-shadow:0 0 2px 2px #DAD7D7;
@@ -365,33 +366,45 @@ ul.speakers_ul {
   width: 100%;
   float: left;
 }
-#agenda .program>span {
+#agenda .program  .slide_left > span {
   display: block;
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 800;
   color: #2c3d4f;
   position: absolute;
-  font-size:40px;
+  width: 19%;
+  float: left;
 }
-.hide_onscroll span{
-  display:block;
+#agenda .program  .slide_right > span {
+  display: block;
+  font-size: 50px;
+  font-weight: 800;
+  color: #2c3d4f;
+  position: absolute;
+  width: 19%;
+  float: left;
+  text-align:left;
 }
+
 span.begin{
-  font-weight: bold;
   color:#2c3d4f;
   left:40%;
   min-height:150px;
+  top:-10px
 }
 span.end{
-  font-weight: bold;
   color:#2c3d4f;
-  top:50%;
+  top:47%;
   right: 45%;
 }
 #agenda .registerButton {
-  float: none;
+ /* float: none;
   display: inline-block;
-  margin: 50px 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;*/
+  padding-top:57px;
 }
 ul.program_table {
   padding: 0;
@@ -409,13 +422,7 @@ ul.program_table {
   position: relative;
 }
 
-#agenda .program > span {
-  display: block;
-  font-size: 50px;
-  font-weight: 800;
-  color: #2c3d4f;
-  position: absolute;
-}
+
 .program_table li a {
   text-decoration: none;
   padding: 5px;
@@ -442,9 +449,10 @@ ul.program_table {
 .time_detail .timing_heading {
   color: #24272a;
   display: block;
-  padding: 5px 0;
-  font-size: 20px;
-  font-weight: bold;
+  padding: 1px 0;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .time_detail .owner_name {
   width: 100%;
@@ -464,22 +472,22 @@ ul.program_table {
 .program_table li.active .time_detail span{
   opacity:1;
 }
-.program_table li.active a{
-  color: #ef3458;
-  width:100%;
-  /*-webkit-transition: width 1s ease-in-out;
-  -moz-transition: width 1s ease-in-out;
-  -o-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;*/
+.animate-left {
+  width: 80%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  margin-left: 21.5%;
+  top: 8px;
 }
-.program_table li:hover a{
-  color: #ef3458;
-  width:100%;
-/*  -webkit-transition: width 500ms ease-out;
-  -moz-transition: width 500ms ease-out;
-  -o-transition: width 500ms ease-out;*/
-  transition: width 200ms ease-in;
+.custom_wrapper {
+  width: 17.6%;
+  float: left;
+  position: relative;
+  text-align: left;
 }
+
 #form{
   max-width:477px;
   width:100%;
@@ -593,6 +601,8 @@ text-decoration: none;
 transition: all 0.1s ease;
 padding: 5px 17px;
 }
+
+
 .register_btn:hover{
   color:#fff;
   text-decoration: none;
@@ -703,23 +713,25 @@ button.send_btn {
   color: #fff;
   border: none;
 }
-
-.program_table li .time_detail {
+.custom_wrapper .time_detail {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 3;
-  padding: 10px;
+  z-index: 0;
+  padding: 10px 0;
   opacity: 0;
-  transition: opacity 500ms cubic-bezier(0.700, 0.08, 0.7005, 2);
+  transition: opacity 500ms cubic-bezier(0.7, 0.08, 0.7005, 2);
 }
-.program_table li:hover .time_detail {
+.custom_wrapper:hover .time_detail {
+  opacity: 1;
+}
+.custom_wrapper.active .time_detail span {
   opacity: 1;
 }
 
-.program_table li .time_detail span {
+.custom_wrapper .time_detail span {
   display: block;
   vertical-align: top;
   margin: 0 2px;
@@ -727,23 +739,276 @@ button.send_btn {
   transform: translateY(0px);
   opacity:0;
   transition: all 600ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  font-size: 15px
 }
 
-.program_table li .time_detail  span + span {
+.custom_wrapper .time_detail  span + span {
   transform: translateY(0px);
 }
 
-.program_table li:hover .time_detail span {
-  transform: translateY(50px);
+.custom_wrapper:hover .time_detail span {
+  transform: translateY(42px);
   opacity:1;
 }
 
-.program_table li:hover .time_detail span + span {
+.custom_wrapper:hover .time_detail span + span {
   transition-delay: 300ms;
-  transform: translateY(50px);
+  transform: translateY(40px);
 }
-.program_table li.active .time_detail {
+.custom_wrapper.active .time_detail {
   opacity: 1;
-  top: 52px;
+  top: 40px;
+}
+.custom_wrapper:hover a {
+  text-decoration: none;
+}
+.custom_wrapper.active a{
+  color: #ef3458;
+  width:100%;
+  /*-webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;*/
+}
+.custom_wrapper:hover a{
+  color: #ef3458;
+  width:100%;
+  /*  -webkit-transition: width 500ms ease-out;
+    -moz-transition: width 500ms ease-out;
+    -o-transition: width 500ms ease-out;*/
+  transition: width 200ms ease-in;
+}
+.custom_wrapper a {
+  text-decoration: none;
+  padding: 5px 0;
+  color: #2c3d4f;
+  border-bottom: 3px solid #2c3d4f;
+  float: left;
+  text-align: left;
+  width: 103px;
+  font-weight: bold;
+  font-size: 25px;
+  white-space: nowrap;
+  transition: width 200ms ease-in;
+  background: #fff;
+  position: relative;
+  z-index: 5;
+}
+.animate-right {
+  width: 69.1%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  margin-right: 10%;
+  margin-top:4px;
+/*  left: 22.6%;*/
+}
+.animate-right .custom_wrapper {
+  width: 21.5%;
+}
+.slide_left {
+  width: 100%;
+  min-height: 168px;
+}
+.slide_right {
+  width: 100%;
+  min-height: 170px;
+  margin-left: 6%;
+}
+#agenda .program .slide_left > span {
+  display: block;
+  font-size: 60px;
+  font-weight: 800;
+  color: #2c3d4f;
+  position: absolute;
+  width: 19%;
+  float: left;
+  font-weight: 800;
+}
+
+#agenda .program > span {
+  display: block;
+  font-size: 60px;
+  color: #2c3d4f;
+  position: absolute;
+  width: 19%;
+  float: left;
+  font-weight: 800;
+  text-align:left;
+}
+.custom_wrapper.active .time_detail{
+opacity:1;
+}
+.animate-left.left_side{
+  -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation: myfirst 2s ;
+  animation-direction: alternate;
+  left:0px;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+  0%   { left: -1000px; top: 0px;opacity:0;}
+
+  100% { left: 0px; top: 0px;opacity:1;}
+}
+
+
+
+
+
+.bottom_btn .register_btn {
+  padding: 16px 40px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  width: auto;
+  height: auto;
+}
+/*
+ANIMATION FOR AGENDA*/
+
+/*
+BEGIN*/
+
+.begin_animate .begin{
+  -webkit-animation: begin 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation: begin 2s ;
+  animation-direction: alternate;
+  left:10px;
+}
+@-webkit-keyframes begin {
+  0%   { left: 40%;opacity:0;}
+  100% { left: 10px;opacity:1;}
+}
+
+
+/*
+END*/
+.begin_animate .end{
+  -webkit-animation: end 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation: end 2s ;
+  animation-direction: alternate;
+  right:4px;
+}
+@-webkit-keyframes end {
+  0%   { right: 40%;opacity:0;}
+
+  100% { right: 4px;opacity:1;}
+}
+
+/*
+BOOK YOUR SEAT BUTTON*/
+.begin_animate .registerButton{
+  -webkit-animation: register 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation: register 1s ;
+  animation-direction: alternate;
+}
+@-webkit-keyframes register {
+  0%   { top: 0;opacity:0;}
+  100% { top: 70px; opacity:1;}
+}
+
+
+/*
+AGENDA DASHBOARD*/
+
+.begin_animate  .animate-left {
+  -webkit-animation: agendaLeft 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation: agendaLeft 1.5s ;
+  animation-direction: alternate;
+  left: 0;
+/*  -webkit-animation-delay: 4s; /!* Chrome, Safari, Opera *!/
+  animation-delay: 4s;*/
+  opacity: 1;
+}
+
+
+@-webkit-keyframes agendaLeft {
+  0%  { opacity:0;}
+  90% { opacity:0;left: -40px;}
+  100% { opacity:1;left: 0; }
+}
+
+/*End part css animation*/
+
+
+/*
+END*/
+.begin_animate .end{
+  -webkit-animation: end 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation: end 2s ;
+  animation-direction: alternate;
+  right:0;
+  text-align:center;
+  width:18%;
+}
+@-webkit-keyframes end {
+  0%   { right: 40%;opacity:0;}
+
+  100% { right: 0;opacity:1;}
+}
+
+
+/*
+AGENDA DASHBOARD*/
+
+.begin_animate  .animate-right {
+  -webkit-animation: agendaRight 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation: agendaRight 1.5s ;
+  animation-direction: alternate;
+  right: 0;
+  /*  -webkit-animation-delay: 4s; /!* Chrome, Safari, Opera *!/
+    animation-delay: 4s;*/
+  opacity: 1;
+}
+
+
+@-webkit-keyframes agendaRight {
+  0%  { opacity:0;}
+  90% { opacity:0;right: -40px;}
+  100% { opacity:1;right: 0; }
+}
+
+/*.............................GoogleMAp.................*/
+.gmap-container{
+  width:100%;
+  overflow:hidden;
+  height:400px;
+}
+.gmap{
+  height:100%;
+  width:100%
+}
+.iframe{
+  height:100%;
+  width:100%;
+  border:0;
+}
+ /*
+ fixed scrollbar */
+.fixed-socialbar .icons_wrapper {
+  display:block;
+  color: #fff;
+  padding: 10px;
+  border-bottom:1px solid #000;
+}
+a.instagram.icons_wrapper {
+  background: #125688;
+}
+a.twitter.icons_wrapper {
+  background: #0084B4;
+}
+.fixed-socialbar {
+  position: fixed;
+  top: 50%;
+}
+.fixed-socialbar .facebook{
+background: #5295cf;
 }
