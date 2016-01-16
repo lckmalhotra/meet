@@ -39,8 +39,16 @@
          jQuery('.custom_wrapper').first().removeClass('active');
         }).mouseleave(function(){
         });
+
+       /* jQuery('.speakers_ul li').mouseenter(function(){
+
+          jQuery(this).addClass('speaker-animation');
+        }).mouseleave(function(){
+          jQuery(this).removeClass('speaker-animation');
+        });*/
+
         jQuery(window).scroll(function() {
-          if ($(this).scrollTop() > 490){
+          if (jQuery(this).scrollTop() > 490){
             jQuery('.header-top').addClass('smaller');
           }
           else{

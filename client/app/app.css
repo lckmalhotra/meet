@@ -7980,7 +7980,8 @@ ul.speakers_ul {
   text-align: center;
   border-right: 1px solid rgba(255, 255, 255, 0.44);
   list-style-type: none;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: top; }
 
 .speakers_ul .image {
   display: block;
@@ -7997,7 +7998,8 @@ ul.speakers_ul {
 
 .image_container {
   width: 79%;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
 
 .content_heading {
   width: 79%;
@@ -8012,7 +8014,8 @@ ul.speakers_ul {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   line-height: 25px;
-  text-align: justify; }
+  text-align: justify;
+  position: relative; }
 
 .speakers_ul li:last-child {
   border: none; }
@@ -8703,6 +8706,41 @@ a.twitter.icons_wrapper {
 .fixed-socialbar .facebook {
   background: #5295cf; }
 
+/*speaker animation*/
+/*.speakers_ul .speaker-animation{
+  background: #c11b3b;
+}
+
+.speakers_ul .speaker-animation{
+  transform:scale(1.2);
+  -webkit-transition: -moz-transform .9s ease-out;
+  -moz-transition: -webkit-transform .9s ease-out;
+  transition: transform .9s ease-out;
+}
+.speakers_ul .speaker-animation .content_detail .content_span:after{
+  display:none;
+}
+.speakers_ul .speaker-animation .content_detail  .content_span {
+  height: auto;
+  overflow:auto;
+}
+.speakers_ul .speaker-animation  .image_container*/
+/*End speaker animation*/
+/*.content_span:after {
+  content: '...';
+  text-align: right;
+  position: absolute;
+  display: block;
+  width: 1em;
+  bottom: 0;
+  right: -17px;
+  }
+
+.content_span {
+  height: 175px;
+  overflow: hidden;
+  display: block;
+}*/
 footer.footer {
   text-align: center;
   padding: 30px 0;
