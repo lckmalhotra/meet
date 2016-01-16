@@ -872,19 +872,19 @@ button.send_btn {
 .custom_wrapper.active .time_detail{
 opacity:1;
 }
-.animate-left.left_side{
-  -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
-  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+/*.animate-left.left_side{
+  -webkit-animation: myfirst 5s; /!* Chrome, Safari, Opera *!/
+  -webkit-animation-direction: alternate; /!* Chrome, Safari, Opera *!/
   animation: myfirst 2s ;
   animation-direction: alternate;
   left:0px;
 }
-/* Chrome, Safari, Opera */
+/!* Chrome, Safari, Opera *!/
 @-webkit-keyframes myfirst {
   0%   { left: -1000px; top: 0px;opacity:0;}
 
   100% { left: 0px; top: 0px;opacity:1;}
-}
+}*/
 
 
 
