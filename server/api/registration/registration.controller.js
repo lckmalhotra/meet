@@ -36,6 +36,11 @@ export function generateAndSendTicket(req, res, next) {
                         console.log("Error sending mail", err);
                     } else {
                         console.log("Mail sent", resp);
+                        Registration.update({
+                            _id: userId
+                        }, {
+                            $set: {ticketSent: true}
+                        });
                     }
                 })
             });
@@ -81,7 +86,7 @@ function respondWithResult(res, statusCode) {
     return function (entity) {
         if (entity) {
             if (entity.email) {
-                MailService.sendMailWithTemplate(null, entity.email, "[FE-CONF] Registration complete", Templates.CONFIRMATION, {})
+                MailService.sendMailWithTemplate(null, entity.email, "[FE-CONF] Registration complete", Templates.CONFIRMATION, entity)
                     .once("ERROR", function (err) {
                         console.log("Error sending mail", err);
                     })
