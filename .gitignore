@@ -27,6 +27,8 @@ build/Release
 node_modules
 .idea/*
 .tmp/*
+.tmp/app/app.css
+.tmp/app/app.css.map
 .sass-cache
 client/bower_components
 dist
