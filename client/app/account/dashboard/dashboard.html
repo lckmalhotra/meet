@@ -22,7 +22,7 @@
     <td class="text-center "><span class="message_width">{{item.message}}</span></td>
     <td class="text-center ">
       <button type="button" ng-disabled="item.ticketSent" ng-click="sendTicket(item, $index)" class="send_btn">Send Ticket</button>
-      <button type="button" ng-click="deleteThing(item)" class="delete_btn">Remove</button>
+      <button type="button" ng-click="deleteThing(item)" class="delete_btn" disabled>Remove</button>
     </td>
   </tr>
 
