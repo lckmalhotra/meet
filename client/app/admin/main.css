@@ -6013,7 +6013,7 @@ tbody.collapse.in {
 }
 /* line 397, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #F4CB29!important;
   border-color: #e7e7e7;
 }
 /* line 401, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -6040,8 +6040,8 @@ tbody.collapse.in {
 }
 /* line 425, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #fff;
+  background-color: #ef3458 !important;
 }
 /* line 433, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
@@ -13416,7 +13416,6 @@ ul.pagination {
 /* line 254, ../../app/styles/_onboarding.scss */
 .ngdialog {
   padding-top: 0 !important;
-  overflow: hidden !important;
 }
 /* line 258, ../../app/styles/_onboarding.scss */
 .ngdialog .ngdialog-content {
