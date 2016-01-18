@@ -7656,32 +7656,35 @@ section {
 .header-top .logo {
   width: 35%;
   float: left;
-  padding: 19px 0 20px 63px; }
+  padding: 19px 0 20px 0; }
 
 .header-top .logo a {
   display: block; }
 
 .header-top .logo img, .header-top.smaller .logo, .header-top.smaller nav.nav-bar, .header-top.smaller {
-  transition: all 0.3s;
+  transition: all 0.7s ease-in-out;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s; }
 
 .header-top.smaller .logo img {
-  width: 50%; }
+  width: 75%; }
 
 .header-top.smaller .logo {
   padding: 8px 0 0 63px; }
 
 .header-top.smaller nav.nav-bar {
-  padding: 10px 0; }
+  padding: 16px 0; }
 
 .header-top.smaller {
   z-index: 99999;
   padding: 0;
   position: fixed;
-  box-shadow: 0 0 2px 2px #DAD7D7; }
+  box-shadow: 0px 0px 5px 2px rgba(108, 105, 105, 0.53); }
+
+.nav-bar li {
+  margin-right: 5px; }
 
 nav.nav-bar {
   text-align: right;
@@ -7726,7 +7729,7 @@ nav.nav-bar ul li a.active {
 .bannerText {
   width: 60%;
   float: left;
-  padding-left: 83px; }
+  padding-left: 0; }
 
 .bannerText h2 {
   font-size: 30px;
@@ -7762,7 +7765,7 @@ nav.nav-bar ul li a.active {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   letter-spacing: -0.3px;
-  padding: 0 22px; }
+  padding: 0 19px; }
 
 .bannerText ul li span {
   font-weight: 700; }
@@ -7843,7 +7846,7 @@ nav.nav-bar ul li a.active {
   color: #5a512f;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 60px; }
+  margin-bottom: 30px; }
 
 .aboutUs ul {
   list-style: none;
@@ -7886,7 +7889,7 @@ nav.nav-bar ul li a.active {
   border: 2px solid #00afec; }
 
 .background_bottom {
-  background-image: url(/assets/images/header-bottom-bg.png);
+  background-image: url(../../assets/images/header-bottom-bg.png);
   background-repeat: no-repeat;
   height: 82px;
   width: 100%;
@@ -7929,8 +7932,8 @@ ul.speakers_ul {
 
 .speakers_ul .image {
   display: block;
-  width: 72px;
-  height: 72px;
+  width: 94px;
+  height: 94px;
   border-radius: 50%;
   margin: 0 auto; }
 
@@ -7945,13 +7948,17 @@ ul.speakers_ul {
   margin: auto;
   position: relative; }
 
+.image_wrapper .image img {
+  width: 94px;
+  height: 94px; }
+
 .content_heading {
   width: 79%;
   text-align: center;
   line-height: 33px;
   display: block;
   font-size: 16px;
-  margin: 30px 0 30px 29px;
+  margin: 0 0 30px 29px;
   text-transform: uppercase; }
 
 .content_detail {
@@ -7978,7 +7985,7 @@ ul.speakers_ul {
   text-align: center;
   display: inline-block;
   margin: 0;
-  padding: 80px 0 60px;
+  padding: 30px 0 60px;
   line-height: 40px; }
 
 #agenda .program {
@@ -8027,7 +8034,7 @@ span.end {
    position: absolute;
    left: 0;
    right: 0;*/
-  padding-top: 57px; }
+  padding-top: 30px; }
 
 ul.program_table {
   padding: 0;
@@ -8061,7 +8068,7 @@ ul.program_table {
   color: #24272a;
   display: block;
   padding: 1px 0;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -8119,10 +8126,11 @@ ul.program_table {
   margin: 0 auto; }
 
 .topText {
-  width: 60%;
+  width: 100%;
   margin: auto;
   text-align: center;
-  font-size: 12px; }
+  font-size: 14px;
+  margin: 10px 0 20px; }
 
 #submitBtn {
   color: #fff;
@@ -8189,6 +8197,9 @@ span.nine-one {
   color: #ef3458 !important;
   font-size: 16px;
   font-weight: 600; }
+
+.btn_wrapper {
+  margin: 20px 0 10px; }
 
 .mail_field input {
   text-transform: lowercase; }
@@ -8631,6 +8642,19 @@ AGENDA DASHBOARD*/
     opacity: 1;
     right: 0; } }
 /*.............................GoogleMAp.................*/
+#venue {
+  background: #F4CB29; }
+
+#venue h2 {
+  font-size: 38px;
+  font-weight: 300;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  padding: 30px 0;
+  line-height: 40px; }
+
 .gmap-container {
   width: 100%;
   overflow: hidden;
@@ -8701,6 +8725,111 @@ a.twitter.icons_wrapper {
   overflow: hidden;
   display: block;
 }*/
+/*contact css*/
+#contact {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 70px;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif; }
+
+.title {
+  float: left;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+  padding: 50px 0; }
+
+.title > span {
+  color: #292929;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  width: 100%; }
+
+.title > p {
+  display: inline-block;
+  line-height: 27px;
+  margin: 20px 0 0;
+  width: 100%; }
+
+.title h2 {
+  color: #292929;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+  width: 100%;
+  padding: 20px 0; }
+
+.contact-now {
+  float: left;
+  width: 100%;
+  margin-bottom: 40px; }
+
+.contact {
+  float: left;
+  width: 33%;
+  margin-bottom: 50px; }
+
+.contact > span {
+  color: #999999;
+  float: left;
+  font-size: 70px;
+  line-height: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 120px; }
+
+.information {
+  margin-top: 19px;
+  overflow: hidden;
+  padding-right: 10px;
+  text-align: left; }
+
+nav.nav-bar ul li a.active:hover {
+  border: none; }
+
+.information > strong {
+  color: #000;
+  display: table;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase; }
+
+.information > p {
+  font-size: 13px;
+  line-height: 26px;
+  margin: 0; }
+
+/*contact css*/
+/*Footer css*/
+#footer-conf {
+  width: 100%;
+  background: #313030;
+  padding: 15px 60px;
+  float: left; }
+
+.footer-conf span {
+  color: #fff;
+  vertical-align: middle; }
+
+.scroll-top {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  background: url(../assets/images/scroll-btn.png) 0 0 no-repeat;
+  height: 36px;
+  width: 40px;
+  display: none;
+  cursor: pointer; }
+
+/*Footer css*/
 footer.footer {
   text-align: center;
   padding: 30px 0;
