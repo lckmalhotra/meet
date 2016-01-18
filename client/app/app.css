@@ -8573,6 +8573,13 @@ BEGIN*/
   100% {
     left: 10px;
     opacity: 1; } }
+@keyframes begin {
+  0% {
+    left: 40%;
+    opacity: 0; }
+  100% {
+    left: 10px;
+    opacity: 1; } }
 /*
 END*/
 .begin_animate .end {
@@ -8591,6 +8598,13 @@ END*/
   100% {
     right: 4px;
     opacity: 1; } }
+@keyframes end {
+  0% {
+    right: 40%;
+    opacity: 0; }
+  100% {
+    right: 4px;
+    opacity: 1; } }
 /*
 BOOK YOUR SEAT BUTTON*/
 .begin_animate .registerButton {
@@ -8602,6 +8616,13 @@ BOOK YOUR SEAT BUTTON*/
   animation-direction: alternate; }
 
 @-webkit-keyframes register {
+  0% {
+    top: 0;
+    opacity: 0; }
+  100% {
+    top: 70px;
+    opacity: 1; } }
+@keyframes register {
   0% {
     top: 0;
     opacity: 0; }
@@ -8631,6 +8652,15 @@ AGENDA DASHBOARD*/
   100% {
     opacity: 1;
     left: 0; } }
+@keyframes agendaLeft {
+  0% {
+    opacity: 0; }
+  90% {
+    opacity: 0;
+    left: -40px; }
+  100% {
+    opacity: 1;
+    left: 0; } }
 /*End part css animation*/
 /*
 END*/
@@ -8652,6 +8682,13 @@ END*/
   100% {
     right: 0;
     opacity: 1; } }
+@keyframes end {
+  0% {
+    right: 40%;
+    opacity: 0; }
+  100% {
+    right: 0;
+    opacity: 1; } }
 /*
 AGENDA DASHBOARD*/
 .begin_animate .animate-right {
@@ -8667,6 +8704,15 @@ AGENDA DASHBOARD*/
   opacity: 1; }
 
 @-webkit-keyframes agendaRight {
+  0% {
+    opacity: 0; }
+  90% {
+    opacity: 0;
+    right: -40px; }
+  100% {
+    opacity: 1;
+    right: 0; } }
+@keyframes agendaRight {
   0% {
     opacity: 0; }
   90% {
