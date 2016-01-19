@@ -15,30 +15,31 @@
 
  var _that=this;
       _that.init=function(){
-     jQuery(window).scroll(function(){
-          var element=jQuery("#agenda");
-          var offset=element.offset().top-500;
-          var currentScroll=jQuery(window).scrollTop();
-          if(currentScroll > offset){
-            element.addClass("begin_animate");
-            /*jQuery( "span.end").addClass("end_animate");
-            jQuery( ".animate-left").addClass("left_side");*/
-          }
-          else if(currentScroll < offset){
-            element.removeClass("begin_animate");
-          /*  jQuery( "span.begin").stop().animate({left:"40%"},800);
-            jQuery( "span.end").stop().animate({right:"50%"},800)
-              jQuery("ul.program_table").css("display","none");*/
-         /*   jQuery( "span.end").removeClass("end_animate");*/
-          }
-        });
+        if (jQuery(window).width() > 770) {
+          jQuery(window).scroll(function () {
+            var element = jQuery("#agenda");
+            var offset = element.offset().top - 500;
+            var currentScroll = jQuery(window).scrollTop();
+            if (currentScroll > offset) {
+              element.addClass("begin_animate");
+              /*jQuery( "span.end").addClass("end_animate");
+               jQuery( ".animate-left").addClass("left_side");*/
+            }
+            else if (currentScroll < offset) {
+              element.removeClass("begin_animate");
+              /*  jQuery( "span.begin").stop().animate({left:"40%"},800);
+               jQuery( "span.end").stop().animate({right:"50%"},800)
+               jQuery("ul.program_table").css("display","none");*/
+              /*   jQuery( "span.end").removeClass("end_animate");*/
+            }
+          });
+        }
 
-
-        jQuery('.custom_wrapper').mouseenter(function(){
+        /*jQuery('.custom_wrapper').mouseenter(function(){
 
          jQuery('.custom_wrapper').first().removeClass('active');
         }).mouseleave(function(){
-        });
+        });*/
 
        /* jQuery('.speakers_ul li').mouseenter(function(){
 
@@ -47,7 +48,7 @@
           jQuery(this).removeClass('speaker-animation');
         });*/
 
-          if (jQuery(window).width() > 760) {
+          if (jQuery(window).width() > 770) {
             jQuery(window).scroll(function () {
               if (jQuery(this).scrollTop() > 154) {
                 jQuery('.header-top').addClass('smaller');
@@ -81,8 +82,34 @@
           jQuery('html, body').animate({
             scrollTop: target.offset().top
           }, 1000);
-        } )
+        } );
 
+        /*BOF mobile menu button*/
+        jQuery("#mobile-menu-icon").click(function() {
+
+          if(jQuery(this).next().is(":hidden")) {
+            jQuery(".nav-bar").slideUp();
+            jQuery(this).next().slideDown();
+          }
+          else {
+            jQuery(".nav-bar").slideUp();
+          }
+          return false;
+        });
+        /*EOF mobile menu button*/
+
+        /*BOF  Speaker section height*/
+        if (jQuery(window).width() > 770) {
+          jQuery(".speakers_ul li").each(function (index, value) {
+            var height = 0;
+            var maxHeight = jQuery(this).height();
+            if (maxHeight > height) {
+              height = maxHeight;
+            }
+            jQuery(".speakers_ul li").height(height);
+          });
+        }
+        /* EOF Speaker section height*/
         jQuery(function(){
           jQuery.scrollIt({
             upKey: 38,             // key code to navigate to the next section
