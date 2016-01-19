@@ -1060,6 +1060,9 @@ AGENDA DASHBOARD*/
 #venue {
   background: #F4CB29;
 }
+.gmap-container {
+  pointer-events: none;
+}
 #venue h2 {
   font-size: 38px;
   font-weight: 300;
