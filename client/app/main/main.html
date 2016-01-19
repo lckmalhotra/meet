@@ -347,14 +347,14 @@
           </div>
 
           <div class="form-group field phone" ng-class="{ 'has-error' : userForm.phone.$invalid && !userForm.phone.$pristine }">
-            <label ng-class="{'effect':phone.effect==true,'normal':phone.effect==false}" class="show-hide">Phone Number</label>
-           <span class="nine-one">+91</span> <input type="integer" ng-focus="phone.effect=true" ng-blur="!formData.phone && userForm.phone.$valid ? phone.effect=false : phone.effect=true " name="phone" class="form-control" ng-model="formData.phone" ng-minlength="10" maxlength="10">
+            <label ng-class="{'effect':phone.effect==true,'normal':phone.effect==false}" class="show-hide">Phone Number (Pl. Don't prefix +91 or 0 )</label>
+           <span class="nine-one">+91</span> <input type="integer" ng-focus="phone.effect=true" ng-blur="!formData.phone && userForm.phone.$valid ? phone.effect=false : phone.effect=true " name="phone" class="form-control" ng-model="formData.phone" ng-minlength="10" maxlength="13">
             <p ng-show="userForm.phone.$error.minlength" class="help-block">Enter Valid Number</p>
           <!--  <p ng-show="userForm.phone.$error.maxlength" class="help-block">Your Number is exceeded by 10 numbers</p>-->
 
           </div>
           <div class="field form-group">
-            <label  ng-class="{'effect':message.effect==true,'normal':message.effect==false}" class="show-hide">Message</label>
+            <label  ng-class="{'effect':message.effect==true,'normal':message.effect==false}" class="show-hide">Current Role/Designation</label>
             <input type="text" ng-focus="message.effect=true" ng-blur="!formData.message ? message.effect=false : message.effect=true " name="message" class="form-control" ng-model="formData.message">
 
           </div>
