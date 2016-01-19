@@ -8176,7 +8176,7 @@ span.nine-one {
 .field > label {
   position: absolute;
   color: #adadad;
-  top: 8px;
+  top: 0px;
   left: 4px;
   transition: all 0.3s ease;
   pointer-events: none; }
@@ -8222,7 +8222,7 @@ span.nine-one {
   max-width: 400px;
   display: block; }
 
-.ngdialog.ngdialog-theme-default .ngdialog-content {
+.ngdialog-content {
   background: #ffffff;
   width: 450px; }
 
@@ -8281,9 +8281,6 @@ span.request {
 button.finish {
   background: #CB3234;
   cursor: pointer;
-  position: absolute;
-  bottom: 10%;
-  left: 30%;
   color: #fff;
   padding: 8px 63px;
   border: none;
@@ -9166,7 +9163,35 @@ nav.nav-bar ul li a.active:hover {
   .information > p, .information a {
     width: 100%;
     display: block;
-    text-align: center; } }
+    text-align: center; }
+
+  .ngdialog.ngdialog-theme-default .ngdialog-content {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px; }
+
+  #form h1, #succes_div h1 {
+    font-size: 17px; }
+
+  .topText {
+    font-size: 13px; }
+
+  .field {
+    margin-bottom: 10px; }
+
+  .field > label {
+    top: 0;
+    line-height: 11px; }
+
+  .field > input {
+    font-size: 13px;
+    padding-bottom: 0 !important; }
+
+  .success_msg {
+    padding-top: 22px; }
+
+  div#succes_div {
+    min-height: 300px; } }
 /****************************** End Responsive code ***********/
 footer.footer {
   text-align: center;
