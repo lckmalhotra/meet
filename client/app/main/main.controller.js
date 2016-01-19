@@ -35,11 +35,11 @@
           });
         }
 
-        /*jQuery('.custom_wrapper').mouseenter(function(){
+        jQuery('.custom_wrapper').mouseenter(function(){
 
          jQuery('.custom_wrapper').first().removeClass('active');
         }).mouseleave(function(){
-        });*/
+        });
 
        /* jQuery('.speakers_ul li').mouseenter(function(){
 
