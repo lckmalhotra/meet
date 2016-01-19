@@ -182,7 +182,7 @@ nav.nav-bar ul li a.active {
 .bannerimg p {
   margin: 0;
 }
-.bannerimg a {
+.bannerimg .register_btn {
   width: 256px;
   height: 42px;
   box-sizing: border-box;
@@ -200,11 +200,14 @@ nav.nav-bar ul li a.active {
   text-decoration: none;
   transition: all 0.1s ease;
   padding: 5px 17px;
-  margin-top: 9px;
+  margin-top: 24px;
 }
-.bannerimg a:hover {
+.bannerimg .register_btn:hover {
   border: 3px solid #f51943;
   text-decoration: none;
+}
+.bannerimg img{
+  margin-top:-8px;
 }
 .aboutUs {
   width: 98%;
@@ -670,13 +673,11 @@ div#succes_div {
 }
 .success_msg {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 21%;
   min-height: 300px;
 }
 span.request {
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 600;
   display: inline-block;
 }
@@ -685,7 +686,7 @@ button.finish {
   background: #CB3234;
   cursor:pointer;
   position: absolute;
-  bottom: 20px;
+  bottom: 10%;
   left: 30%;
   color: #fff;
   padding: 8px 63px;
