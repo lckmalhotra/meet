@@ -8876,6 +8876,7 @@ nav.nav-bar ul li a.active:hover {
   height: 36px;
   width: 40px;
   display: none;
+  z-index: 999;
   cursor: pointer; }
 
 /*Footer css*/
