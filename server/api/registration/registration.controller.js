@@ -184,3 +184,23 @@ export function destroy(req, res) {
         .then(removeEntity(res))
         .catch(handleError(res));
 }
+
+
+export function referFriends(req, res) {
+    var emailList = req.body.emails || [];
+
+    if(emailList.length) {
+        console.log("Sending mails to", emailList.length, "people");
+        MailService.sendMailWithTemplate(null, emailList, "[FE-CONF] Referral", Templates.REFERRAL, {})
+            .once("ERROR", function (err) {
+                console.log("Error sending mail", err);
+            })
+            .once("SUCCESS", function (resp) {
+                console.log("Mail(s) sent", resp);
+            });
+
+        res.status(200).json({message: "Mails sent"});
+    } else {
+        res.status(201).json({message: "No emails provided. Did not send any mail"});
+    }
+}
