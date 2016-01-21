@@ -8897,6 +8897,35 @@ nav.nav-bar ul li a.active:hover {
   margin: 0; }
 
 /*contact css*/
+/*refer a friend */
+.mannual__refer {
+  list-style: none;
+  padding: 0; }
+
+.mannual__refer li {
+  margin-top: 5px; }
+
+.mannual__refer--name {
+  border: solid 1px #ccc;
+  padding: 6px;
+  width: 190px; }
+
+.mannual__refer--email {
+  border: solid 1px #ccc;
+  padding: 6px;
+  width: 280px; }
+
+.mannual__refer--button {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #00BFFF;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer; }
+
+/*refer a friend end*/
 /*Footer css*/
 #footer-conf {
   width: 100%;

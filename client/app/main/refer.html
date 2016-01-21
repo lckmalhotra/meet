@@ -1,0 +1,117 @@
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.awesomeThings">
+        <li><a href="#" tooltip="{{thing.message}}">{{thing.name}} - {{thing.phone}} - {{thing.email}}<button type="button" class="close" ng-click="main.deleteThing(thing)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="main.newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="main.addThing()">Add New</button>
+      </span>
+    </p>
+  </form>
+</div>-->
+<div ng-init="refer.init()">
+
+  <header>
+    <div class="header-top">
+      <div class="container clearfix">
+        <div class="logo">
+          <a ui-sref="main"><img src="../../assets/images/Frontend-logo.png" alt="Logo"/></a>
+        </div>
+        <span class="mobile-menu-icon" id="mobile-menu-icon">&#9776;</span>
+        <nav class="nav-bar">
+          <ul>
+            <li><a class=""  data-scroll-nav="0">ABOUT</a></li>
+            <li><a data-scroll-nav="1">SPEAKERS</a></li>
+            <li><a data-scroll-nav="2">AGENDA</a></li>
+            <li><a data-scroll-nav="3">VENUE</a></li>
+            <li><a data-scroll-nav="4" href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container clearfix">
+      <div class="banner-area">
+        <div class="bannerText">
+          <h2>Where <strong>Frontend Engineers’ Meet!</strong></h2>
+          <p>Be a part of the leading conference on state-of-the-art frontend and UX technologies.</p>
+          <ul>
+            <li>Saturday: <span>January 30, 2016</span></li>
+            <li>Time: <span>9:30 AM</span></li>
+            <li>Venue: <span>Noida</span></li>
+          </ul>
+        </div>
+        <div class="bannerimg">  <a href="http://www.tothenew.com/"><img src="../../assets/images/sponsor-ttnd.png" /></a><br>
+          <a href="#" ng-click="registerNow()" class="register_btn">Book Your Seat</a> </div>
+      </div>
+    </div>
+  <!--  <div class="header-top">
+      <div class="container">
+        <div class="logo">
+        <a href="#"><img src="../../assets/images/conference-logo.png" alt="Logo"/></a>
+      </div>
+        <nav class="nav-bar">
+          <ul>
+            <li><a class="active"  data-scroll-nav="0">ABOUT</a></li>
+            <li><a data-scroll-nav="1">SPEAKERS</a></li>
+            <li><a  data-scroll-nav="2">AGENDA</a></li>
+            <li><a href="#">VENUE</a></li>
+            <li><a href="#">CONTACTS</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="banner-area">
+        <div class="bannerText">
+          <h2>We are in <strong>Bangalore to hire Tech Geeks</strong></h2>
+          <p>Be a Part of One of The Fastest Growing Premium Digital  Services Company in India</p>
+          <ul>
+            <li>Saturday: <span>January 30, 2016</span></li>
+            <li>Time: <span>9:30 AM</span></li>
+            <li>Venue: <span>Noida</span></li>
+          </ul>
+        </div>
+        <div class="bannerimg"> <img src="../../assets/images/sponsor-ttnd.png" /><br>
+          <a href="#" ng-click="registerNow()" class="register_btn">Book Your Seat</a> </div>
+      </div>
+    </div>--></header>
+
+  <article class="container">
+    <div class="col-xs-6">
+      <h2>Refer a friend</h2>
+      <ul class="mannual__refer" ng-form="referForm">
+        <li ng-repeat="candidate in refer.referingList">
+            <input type="text" name="name-{{$index}}" class="mannual__refer--name" data-ng-model="candidate.name"/>
+            <input type="text" name="email-{{$index}}" ng-blur="candidate.isDirty = true" class="mannual__refer--email" ng-trim="true" ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" data-ng-model="candidate.email" required/>
+            <span class="mannual__refer--button" ng-click="refer.addMore(candidate)">+</span>
+            <span class="mannual__refer--button" ng-show="$index != 0 || refer.referingList.length > 1" ng-click="refer.removeMore(candidate)">-</span>
+            <span class="mannual__refer--error"  ng-show="candidate.isDirty && referForm['email-{{$index}}'].$error.pattern">
+                  Email is Invalid
+            </span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-6">
+    a
+    </div>
+     <div class="col-xs-12">
+       <button ng-click="refer.sendEmail()">Click</button>
+     </div>
+  </article>
+
+
+</div>
+
+
+<!--<script src="../../bower_components/jquery/dist/jquery.min.js"></script>-->
+
