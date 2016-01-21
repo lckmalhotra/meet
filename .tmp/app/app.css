@@ -8991,6 +8991,9 @@ nav.nav-bar ul li a.active:hover {
   .header-top .logo {
     padding: 0; }
 
+  .field > label {
+    font-size: 12px; }
+
   .mobile-menu-icon {
     display: inline-block;
     cursor: pointer;
