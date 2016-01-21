@@ -92,8 +92,16 @@
     </div>
 
     <div class="col-xs-12" ng-show="refer.googleContactList.length">
-      <button ng-click="refer.selectAllReferFriend()">Select All</button>
-      <ul>
+      <button ng-click="refer.selectAllReferFriend()" class="select_all">Select All/None</button>
+      <table class="table refer_table table-hover table-striped">
+        <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList">
+          <td valign="middle" class=""> <span class="content-center"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/></span></td>
+          <td class="" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='https://success.salesforce.com/resource/1452988800000/sharedlayout/img/new-user-image-default.png'" alt="" class="image_friend"/></td>
+          <td valign="middle"><span class="content-center">{{contact.name}}</span></td>
+          <td valign="middle" class=""><span class="content-center">{{contact.email}}</span></td>
+        </tr>
+      </table>
+  <!--    <ul>
         <li data-ng-repeat="contact in refer.googleContactList">
           <label>
             <input type="checkbox" ng-model="contact.isSelected"/>
@@ -102,9 +110,9 @@
           <div class="name">{{contact.name}}</div>
           <div class="email">{{contact.email}}</div>
         </li>
-      </ul>
+      </ul>-->
       <div class="">
-        <button ng-click="refer.sendGoogleEmail()">Send mail</button>
+        <button ng-click="refer.sendGoogleEmail()" class="btn sent-refer">Send mail</button>
       </div>
     </div>
   </article>

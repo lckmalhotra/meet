@@ -9045,6 +9045,37 @@ span.minus {
   border-radius: 50%;
   cursor: pointer; }
 
+img.image_friend {
+  width: 50px;
+  height: 50px; }
+
+table.table.refer_table {
+  border-top: 2px solid #c1c1c1; }
+
+button.select_all {
+  margin: 20px 0;
+  background: #F0524E;
+  border: none;
+  padding: 10px; }
+
+table.refer_table td {
+  height: 50px;
+  line-height: 50px !important; }
+
+table.refer_table td input.refer_checkbox {
+  display: block;
+  position: relative;
+  top: 13px;
+  left: 20px; }
+
+.sent-refer {
+  background: #ef3458; }
+
+/*.content-center {
+  vertical-align: top;
+  line-height: 49px;
+  display: block;
+}*/
 /*EOF refer section css*/
 /****************************** clearfix class ************/
 .clearfix:before, .clearfix:after {

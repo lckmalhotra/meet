@@ -101,11 +101,11 @@
           }
         }
 
-       // $http.post('/api/registrations/refer', email).then(function(response){
-       //   console.log(response);
-       // },function(response){
-       //   console.log(response);
-       // });
+       $http.post('/api/registrations/refer', email).then(function(response){
+       console.log(response);
+     },function(response){
+         console.log(response);
+       });
       }
 
 
