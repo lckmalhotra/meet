@@ -39,20 +39,21 @@
       }
 
       refer.sendEmail = function(){
-        refer.isActive=false;
+
         var email ={"emails":[]};
         for (var i = 0; i < refer.referingList.length; i++) {
           if(refer.referingList[i].email){
             email.emails.push(refer.referingList[i].email)
           }
         }
-
-         $http.post('/api/registrations/refer', email).then(function(response){
-          console.log(response);
-         },function(response){
-          console.log(response);
-         });
-
+        if(email.emails.length) {
+          $http.post('/api/registrations/refer', email).then(function (response) {
+            console.log(response);
+          }, function (response) {
+            console.log(response);
+          });
+          refer.isActive=false;
+        }
       }
 
       var gmailFactory = function(data,token){
