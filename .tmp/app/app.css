@@ -8858,34 +8858,6 @@ nav.nav-bar ul li a.active:hover {
 
 /*contact css*/
 /*refer a friend */
-.mannual__refer {
-  list-style: none;
-  padding: 0; }
-
-.mannual__refer li {
-  margin-top: 5px; }
-
-.mannual__refer--name {
-  border: solid 1px #ccc;
-  padding: 6px;
-  width: 190px; }
-
-.mannual__refer--email {
-  border: solid 1px #ccc;
-  padding: 6px;
-  width: 280px; }
-
-.mannual__refer--button {
-  display: inline-block;
-  border-radius: 50%;
-  background-color: #00BFFF;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  color: #fff;
-  cursor: pointer; }
-
-/*refer a friend end*/
 /*Footer css*/
 #footer-conf {
   width: 100%;
@@ -8936,6 +8908,104 @@ nav.nav-bar ul li a.active:hover {
 #nav-toggle span:after {
   bottom: -10px; }
 
+/*BOF refer section css*/
+.refer-section h2 {
+  padding-top: 15px;
+  font-size: 38px;
+  color: #5a512f;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+button.btn.refer_submit {
+  position: absolute;
+  bottom: 0;
+  right: 20%; }
+
+p.refer-text {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 25px; }
+
+.google_refer {
+  display: inline-block;
+  width: 33%;
+  min-height: 300px;
+  vertical-align: top;
+  text-align: center; }
+
+span.google-text {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 14px; }
+
+.refer_wrapper {
+  min-height: 300px; }
+
+.mannual__refer {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  width: 64%;
+  float: left;
+  border-right: 1px solid #a1a99a;
+  text-align: center;
+  min-height: 300px; }
+
+.mannual__refer li {
+  margin-top: 0;
+  padding: 10px 20px;
+  position: relative;
+  float: left; }
+
+span.or_span {
+  background: #a1a99a;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  right: -20px;
+  line-height: 37px;
+  top: 5px; }
+
+.refer_submit {
+  background: #ef3458;
+  color: #fff; }
+
+input.mannual__refer--email {
+  margin-right: 0; }
+
+span.plus {
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  background: #158b05;
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer; }
+
+li.refer_input input {
+  width: 280px;
+  float: left;
+  margin-right: 23px;
+  border-radius: 0; }
+
+span.minus {
+  background: #ef3458;
+  font-size: 13px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer; }
+
+/*EOF refer section css*/
 /****************************** clearfix class ************/
 .clearfix:before, .clearfix:after {
   content: "";

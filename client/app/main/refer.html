@@ -54,55 +54,38 @@
           <a href="#" ng-click="registerNow()" class="register_btn">Book Your Seat</a> </div>
       </div>
     </div>
-  <!--  <div class="header-top">
-      <div class="container">
-        <div class="logo">
-        <a href="#"><img src="../../assets/images/conference-logo.png" alt="Logo"/></a>
-      </div>
-        <nav class="nav-bar">
-          <ul>
-            <li><a class="active"  data-scroll-nav="0">ABOUT</a></li>
-            <li><a data-scroll-nav="1">SPEAKERS</a></li>
-            <li><a  data-scroll-nav="2">AGENDA</a></li>
-            <li><a href="#">VENUE</a></li>
-            <li><a href="#">CONTACTS</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="container">
-      <div class="banner-area">
-        <div class="bannerText">
-          <h2>We are in <strong>Bangalore to hire Tech Geeks</strong></h2>
-          <p>Be a Part of One of The Fastest Growing Premium Digital  Services Company in India</p>
-          <ul>
-            <li>Saturday: <span>January 30, 2016</span></li>
-            <li>Time: <span>9:30 AM</span></li>
-            <li>Venue: <span>Noida</span></li>
-          </ul>
-        </div>
-        <div class="bannerimg"> <img src="../../assets/images/sponsor-ttnd.png" /><br>
-          <a href="#" ng-click="registerNow()" class="register_btn">Book Your Seat</a> </div>
-      </div>
-    </div>--></header>
-
+</header>
+  <div class="background_bottom"></div>
   <article class="container">
     <div ng-show="!refer.googleContactList.length">
-    <div class="col-xs-6">
+    <div class="refer-section">
       <h2>Refer a friend</h2>
+      <p class="refer-text">
+        Enter mannually the name and email id of the person you want to refer for this conf or use your existing Gmail contacts.
+      </p>
+      <div class="refer_wrapper">
       <ul class="mannual__refer" ng-form="referForm">
-        <li ng-repeat="candidate in refer.referingList">
-            <input type="text" name="name-{{$index}}" class="mannual__refer--name" data-ng-model="candidate.name"/>
-            <input type="text" name="email-{{$index}}" ng-blur="candidate.isDirty = true" class="mannual__refer--email" ng-trim="true" ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" data-ng-model="candidate.email" required/>
-            <span class="mannual__refer--button" ng-show="refer.referingList.length -1  == $index" ng-click="refer.addMore(candidate)">+</span>
-            <span class="mannual__refer--button" ng-show="$index + 1 != refer.referingList.length" ng-click="refer.removeMore(candidate)">-</span>
+        <li class="refer_input" ng-repeat="candidate in refer.referingList">
+            <input type="text"  name="name-{{$index}}" class="mannual__refer--name form-control" data-ng-model="candidate.name"/>
+            <input type="text" name="email-{{$index}}" ng-blur="candidate.isDirty = true" class="mannual__refer--email form-control" ng-trim="true" ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" data-ng-model="candidate.email" required/>
+            <span class="mannual__refer--button plus" ng-show="refer.referingList.length -1  == $index" ng-click="refer.addMore(candidate)">+</span>
+            <span class="mannual__refer--button minus" ng-show="$index + 1 != refer.referingList.length" ng-click="refer.removeMore(candidate)">-</span>
             <span class="mannual__refer--error"  ng-show="candidate.isDirty && referForm['email-{{$index}}'].$error.pattern">
                   Email is Invalid
             </span>
         </li>
+        <span class="or_span">OR</span>
+        <button ng-click="refer.sendEmail()" class="btn refer_submit">Submit</button>
       </ul>
+      <div class="google_refer">
+        <div ng-click="refer.auth()" style="cursor:pointer">
+        <img src="../assets/images/google.png" alt="google">
+<span class="google-text">(Please click here to refer from Google.)</span></div>
+      </div>
+
+      </div>
       <div class="col-xs-12">
-        <button ng-click="refer.sendEmail()">Click</button>
+
       </div>
     </div>
     <div class="col-xs-6">
