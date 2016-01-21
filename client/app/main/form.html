@@ -1,0 +1,59 @@
+
+
+  <div id="form" ng-show="isActive" >
+
+    <h1>Registration Form</h1>
+    <div class="topText">One of our representative will call you shortly to confirm your participation.</div>
+    <div id="container">
+      <div class="inner">
+        <form  name="userForm" ng-submit="addThing()" novalidate>
+          <div class="field form-group name_field" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+            <label ng-class="{'effect':name.effect==true,'normal':name.effect==false}"  class="show-hide">Name</label>
+            <input type="text" name="name" ng-focus="name.effect=true" ng-blur="!formData.name ? name.effect=false : name.effect=true " class="form-control" ng-model="formData.name" required>
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
+          </div>
+          <div class="field form-group" ng-class="{ 'has-error' : userForm.company.$invalid && !userForm.company.$pristine }">
+            <label ng-class="{'effect':company.effect==true,'normal':company.effect==false}" class="show-hide">Company</label>
+            <input type="text" ng-focus="company.effect=true" ng-blur="!formData.company ? company.effect=false : company.effect=true "  name="company" class="form-control" ng-model="formData.company"  required>
+            <p ng-show="userForm.company.$invalid && !userForm.company.$pristine" class="help-block">Your Company name is required.</p>
+          </div>
+
+          <div class="form-group mail_field field" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+
+            <label ng-class="{'effect':email.effect==true,'normal':email.effect==false}"  class="show-hide">Email</label>
+
+            <input ng-focus="email.effect=true" ng-blur="!formData.email && userForm.email.$valid ? email.effect=false : email.effect=true " type="email" class="form-control" name="email" ng-model="formData.email"/>
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+          </div>
+
+          <div class="form-group field phone" ng-class="{ 'has-error' : userForm.phone.$invalid && !userForm.phone.$pristine }">
+            <label ng-class="{'effect':phone.effect==true,'normal':phone.effect==false}" class="show-hide">Phone Number (Pl. Don't prefix +91 or 0 )</label>
+            <span class="nine-one">+91</span> <input type="integer" ng-focus="phone.effect=true" ng-blur="!formData.phone && userForm.phone.$valid ? phone.effect=false : phone.effect=true " name="phone" class="form-control" ng-model="formData.phone" ng-minlength="10" maxlength="13">
+            <p ng-show="userForm.phone.$error.minlength" class="help-block">Enter Valid Number</p>
+            <!--  <p ng-show="userForm.phone.$error.maxlength" class="help-block">Your Number is exceeded by 10 numbers</p>-->
+
+          </div>
+          <div class="field form-group">
+            <label  ng-class="{'effect':message.effect==true,'normal':message.effect==false}" class="show-hide">Current Role/Designation</label>
+            <input type="text" ng-focus="message.effect=true" ng-blur="!formData.message ? message.effect=false : message.effect=true " name="message" class="form-control" ng-model="formData.message">
+
+          </div>
+
+
+          <div class="btn_wrapper">
+            <button type="submit" class="btn btn-primary" id="submitBtn" ng-disabled="userForm.$invalid">Submit</button></div>
+        </form>
+      </div>
+    </div></div>
+  <div id="succes_div" class="success_div" ng-show="!isActive">
+    <h1>Thank You</h1>
+    <div class="success_msg">
+      <span class="image_right"><img src="../assets/images/tick_green.png" alt="right_image"</span>
+      <span class="request">Your request has been sent.</span>
+      <span class="contact">We will contact you shortly. </span>
+
+      <button ng-click="closeThisDialog()" class="finish">Finish</button>
+    </div>
+  </div>
+
+

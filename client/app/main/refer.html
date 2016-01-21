@@ -22,41 +22,34 @@
 <div ng-init="refer.init()">
 
   <header>
-    <div class="header-top">
+    <div class="header-top refer_header">
       <div class="container clearfix">
         <div class="logo">
           <a ui-sref="main"><img src="../../assets/images/Frontend-logo.png" alt="Logo"/></a>
+          <div class="">
+            <div class="bannerText">
+
+              <ul>
+                <li>Saturday: <span>January 30, 2016</span></li>
+                <li>Time: <span>9:30 AM</span></li>
+                <li>Venue: <span>Noida</span></li>
+              </ul>
+            </div>
         </div>
-        <span class="mobile-menu-icon" id="mobile-menu-icon">&#9776;</span>
-        <nav class="nav-bar">
-          <ul>
-            <li><a class=""  data-scroll-nav="0">ABOUT</a></li>
-            <li><a data-scroll-nav="1">SPEAKERS</a></li>
-            <li><a data-scroll-nav="2">AGENDA</a></li>
-            <li><a data-scroll-nav="3">VENUE</a></li>
-            <li><a data-scroll-nav="4" href="#">CONTACT</a></li>
-          </ul>
-        </nav>
+
       </div>
-    </div>
-    <div class="container clearfix">
-      <div class="banner-area">
-        <div class="bannerText">
-          <h2>Where <strong>Frontend Engineers’ Meet!</strong></h2>
-          <p>Be a part of the leading conference on state-of-the-art frontend and UX technologies.</p>
-          <ul>
-            <li>Saturday: <span>January 30, 2016</span></li>
-            <li>Time: <span>9:30 AM</span></li>
-            <li>Venue: <span>Noida</span></li>
-          </ul>
-        </div>
         <div class="bannerimg">  <a href="http://www.tothenew.com/"><img src="../../assets/images/sponsor-ttnd.png" /></a><br>
           <a href="#" ng-click="registerNow()" class="register_btn">Book Your Seat</a> </div>
+
+      </div>
+    <div class="container clearfix">
+
+
       </div>
     </div>
 </header>
   <div class="background_bottom"></div>
-  <article class="container">
+  <article class="container refer_container">
     <div ng-show="!refer.googleContactList.length">
     <div class="refer-section">
       <h2>Refer a friend</h2>
@@ -64,7 +57,7 @@
         Enter mannually the name and email id of the person you want to refer for this conf or use your existing Gmail contacts.
       </p>
       <div class="refer_wrapper">
-      <ul class="mannual__refer" ng-form="referForm">
+      <ul class="mannual__refer" ng-show="refer.isActive" ng-form="referForm">
         <li class="refer_input" ng-repeat="candidate in refer.referingList">
         <!--    <input type="text"  name="name-{{$index}}" class="mannual__refer&#45;&#45;name form-control" data-ng-model="candidate.name"/>-->
             <input type="text" name="email-{{$index}}" ng-blur="candidate.isDirty = true" class="mannual__refer--email form-control" ng-trim="true" ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" data-ng-model="candidate.email" placeholder="Enter the email id"required/>
@@ -78,6 +71,10 @@
         <div class="button_referSubmit">
         <button ng-click="refer.sendEmail()" class="btn refer_submit">Submit</button></div>
       </ul>
+        <div class="refer_confirmation" ng-show="!refer.isActive">
+          <span class="refer_success">Success !!</span>
+          <span class="refer_thanks">Thanks for your referral. </span>
+        </div>
       <div class="google_refer">
         <div ng-click="refer.auth()" style="cursor:pointer">
         <img src="../assets/images/google.png" alt="google">
@@ -90,9 +87,11 @@
       </div>
     </div>
 
+
     </div>
 
     <div class="col-xs-12" ng-show="refer.googleContactList.length">
+      <div ng-show="refer.show">
       <button ng-click="refer.selectAllReferFriend()" class="select_all">Select All/None</button>
       <table class="table refer_table table-hover table-striped">
         <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList">
@@ -116,6 +115,11 @@
         <button ng-click="refer.sendGoogleEmail()" class="btn sent-refer">Send mail</button>
       </div>
     </div>
+
+      <div class="google_referSuccess" ng-show="!refer.show">
+      <span class="refer_success">Success !!</span>
+      <span class="refer_thanks">Thanks for your referral. </span></div>
+</div>
   </article>
 
 

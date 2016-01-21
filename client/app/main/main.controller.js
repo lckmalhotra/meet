@@ -7,13 +7,12 @@
       $scope.registerNow = function () {
 
         ngDialog.open({
-          template: 'templateId',
-          controller: 'registerNow'
+            templateUrl: '/app/main/form.html',
+            controller: 'registerNow'
         });
-
       };
 
- var _that=this;
+     var _that=this;
       _that.init=function(){
         if (jQuery(window).width() > 770) {
           jQuery(window).scroll(function () {

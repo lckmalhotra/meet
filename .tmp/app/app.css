@@ -8927,7 +8927,19 @@ nav.nav-bar ul li a.active:hover {
 p.refer-text {
   font-size: 18px;
   text-align: center;
-  margin-bottom: 25px; }
+  margin-bottom: 50px; }
+
+.refer_header .bannerimg {
+  width: 47%;
+  float: left;
+  text-align: right;
+  padding: 7px 0 0;
+  margin-top: 34px; }
+
+.refer_header .bannerText {
+  width: 100%;
+  float: left;
+  margin-top: 50px; }
 
 .button_referSubmit {
   width: 100%;
@@ -8966,6 +8978,9 @@ span.google-text {
   position: relative;
   float: left;
   width: 100%; }
+
+.refer_header {
+  position: relative !important; }
 
 span.or_span {
   background: #a1a99a;
@@ -9012,7 +9027,9 @@ span.minus {
   width: 20px;
   color: #fff;
   border-radius: 50%;
-  cursor: pointer; }
+  cursor: pointer;
+  float: left;
+  margin-left: 17px; }
 
 img.image_friend {
   width: 50px;
@@ -9038,13 +9055,39 @@ table.refer_table td input.refer_checkbox {
   left: 20px; }
 
 .sent-refer {
-  background: #ef3458; }
+  background: #ef3458;
+  color: #fff; }
 
-/*.content-center {
-  vertical-align: top;
-  line-height: 49px;
+.refer_confirmation {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  float: left;
+  border-right: 1px solid #a1a99a;
+  text-align: center;
+  min-height: 150px; }
+
+.google_referSuccess {
+  width: 100%;
+  text-align: center;
+  min-height: 150px;
+  margin-top: 100px; }
+
+.refer_success {
   display: block;
-}*/
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: #EF3458; }
+
+span.refer_thanks {
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  display: block; }
+
 /*EOF refer section css*/
 /****************************** clearfix class ************/
 .clearfix:before, .clearfix:after {

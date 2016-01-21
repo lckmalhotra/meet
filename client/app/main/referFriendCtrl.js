@@ -12,6 +12,16 @@
         "email":'',
         "isDirty":false
       }];
+      refer.isActive=true;
+      refer.show=true;
+      $scope.registerNow = function () {
+
+        ngDialog.open({
+          templateUrl: '/app/main/form.html',
+          controller: 'registerNow'
+        });
+
+      };
 
       refer.addMore = function (obj){
         obj = angular.copy(obj);
@@ -29,6 +39,7 @@
       }
 
       refer.sendEmail = function(){
+        refer.isActive=false;
         var email ={"emails":[]};
         for (var i = 0; i < refer.referingList.length; i++) {
           if(refer.referingList[i].email){
@@ -41,6 +52,7 @@
          },function(response){
           console.log(response);
          });
+
       }
 
       var gmailFactory = function(data,token){
@@ -70,7 +82,7 @@
 
       refer.auth = function() {
         var config = {
-          'client_id': '353240185538-6pe7fmks74sfl1md3i8ha74ugror60hp.apps.googleusercontent.com',
+          'client_id': '256115019583-da6p5j4g0d27muhbv02vkvqhogi9ga1u.apps.googleusercontent.com',
           'scope': 'https://www.google.com/m8/feeds'
         };
         gapi.auth.authorize(config, function() {
@@ -106,6 +118,7 @@
      },function(response){
          console.log(response);
        });
+        refer.show=false;
       }
 
 
