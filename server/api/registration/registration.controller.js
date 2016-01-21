@@ -191,7 +191,7 @@ export function referFriends(req, res) {
 
     if(emailList.length) {
         console.log("Sending mails to", emailList.length, "people");
-        MailService.sendMailWithTemplate(null, emailList, "[FE-CONF] Referral", Templates.REFERRAL, {})
+        MailService.sendMailWithTemplate(null, emailList, "You're Invited to Frontend/UI Conf.", Templates.REFERRAL, {})
             .once("ERROR", function (err) {
                 console.log("Error sending mail", err);
             })

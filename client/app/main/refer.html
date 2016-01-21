@@ -66,8 +66,8 @@
       <div class="refer_wrapper">
       <ul class="mannual__refer" ng-form="referForm">
         <li class="refer_input" ng-repeat="candidate in refer.referingList">
-            <input type="text"  name="name-{{$index}}" class="mannual__refer--name form-control" data-ng-model="candidate.name"/>
-            <input type="text" name="email-{{$index}}" ng-blur="candidate.isDirty = true" class="mannual__refer--email form-control" ng-trim="true" ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" data-ng-model="candidate.email" required/>
+        <!--    <input type="text"  name="name-{{$index}}" class="mannual__refer&#45;&#45;name form-control" data-ng-model="candidate.name"/>-->
+            <input type="text" name="email-{{$index}}" ng-blur="candidate.isDirty = true" class="mannual__refer--email form-control" ng-trim="true" ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" data-ng-model="candidate.email" placeholder="Enter the email id"required/>
             <span class="mannual__refer--button plus" ng-show="refer.referingList.length -1  == $index" ng-click="refer.addMore(candidate)">+</span>
             <span class="mannual__refer--button minus" ng-show="$index + 1 != refer.referingList.length" ng-click="refer.removeMore(candidate)">-</span>
             <span class="mannual__refer--error"  ng-show="candidate.isDirty && referForm['email-{{$index}}'].$error.pattern">
@@ -75,7 +75,8 @@
             </span>
         </li>
         <span class="or_span">OR</span>
-        <button ng-click="refer.sendEmail()" class="btn refer_submit">Submit</button>
+        <div class="button_referSubmit">
+        <button ng-click="refer.sendEmail()" class="btn refer_submit">Submit</button></div>
       </ul>
       <div class="google_refer">
         <div ng-click="refer.auth()" style="cursor:pointer">
@@ -96,7 +97,7 @@
       <table class="table refer_table table-hover table-striped">
         <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList">
           <td valign="middle" class=""> <span class="content-center"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/></span></td>
-          <td class="" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='https://success.salesforce.com/resource/1452988800000/sharedlayout/img/new-user-image-default.png'" alt="" class="image_friend"/></td>
+          <td class="" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='../assets/images/no-image.png'" alt="" class="image_friend"/></td>
           <td valign="middle"><span class="content-center">{{contact.name}}</span></td>
           <td valign="middle" class=""><span class="content-center">{{contact.email}}</span></td>
         </tr>
@@ -120,6 +121,8 @@
 
 </div>
 
-
+<div class="footer-conf"  id="footer-conf">
+  <span><i class="fa fa-copyright"></i> www.fe-conf.com 2016</span>
+</div>
 <!--<script src="../../bower_components/jquery/dist/jquery.min.js"></script>-->
 

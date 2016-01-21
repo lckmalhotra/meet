@@ -1242,7 +1242,7 @@ nav.nav-bar ul li a.active:hover {
   background: #313030;
   padding:15px 60px;
   float:left;
-
+  margin-top:20px;
 }
 .footer-conf span {
   color:#fff;
@@ -1293,19 +1293,24 @@ text-align: center;
 margin-top: 0;
 margin-bottom: 20px;
 }
-button.btn.refer_submit {
+/*button.btn.refer_submit {
   position: absolute;
   bottom: 0;
   right: 20%;
-}
+}*/
 p.refer-text {
   font-size: 18px;
   text-align: center;
   margin-bottom: 25px;
 }
+.button_referSubmit {
+  width: 100%;
+  text-align: right;
+  padding: 0 125px;
+}
 .google_refer {
   display: inline-block;
-  width: 33%;
+  width: 49%;
   min-height:300px;
   vertical-align: top;
   text-align: center;
@@ -1323,17 +1328,18 @@ span.google-text {
   position: relative;
   list-style: none;
   padding: 0;
-  width: 64%;
-  float:left;
+  width: 50%;
+  float: left;
   border-right: 1px solid #a1a99a;
-  text-align:center;
-  min-height:300px;
+  text-align: center;
+  min-height: 150px;
 }
 .mannual__refer li {
   margin-top: 0;
   padding: 10px 20px;
   position:relative;
   float:left;
+  width:100%;
 }
 span.or_span {
   background: #a1a99a;
@@ -1364,11 +1370,16 @@ span.plus {
   border-radius: 50%;
   color: #fff;
   cursor: pointer;
-}
-li.refer_input input {
-  width: 280px;
   float: left;
-  margin-right: 23px;
+  margin-left: 15px;
+  margin-top: 4px;
+}
+
+
+
+li.refer_input input {
+  width: 80%;
+  float: left;
   border-radius:0 ;
 }
 span.minus {
