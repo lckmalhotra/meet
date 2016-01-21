@@ -87,26 +87,45 @@
     </div>--></header>
 
   <article class="container">
+    <div ng-show="!refer.googleContactList.length">
     <div class="col-xs-6">
       <h2>Refer a friend</h2>
       <ul class="mannual__refer" ng-form="referForm">
         <li ng-repeat="candidate in refer.referingList">
             <input type="text" name="name-{{$index}}" class="mannual__refer--name" data-ng-model="candidate.name"/>
             <input type="text" name="email-{{$index}}" ng-blur="candidate.isDirty = true" class="mannual__refer--email" ng-trim="true" ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" data-ng-model="candidate.email" required/>
-            <span class="mannual__refer--button" ng-click="refer.addMore(candidate)">+</span>
-            <span class="mannual__refer--button" ng-show="$index != 0 || refer.referingList.length > 1" ng-click="refer.removeMore(candidate)">-</span>
+            <span class="mannual__refer--button" ng-show="refer.referingList.length -1  == $index" ng-click="refer.addMore(candidate)">+</span>
+            <span class="mannual__refer--button" ng-show="$index + 1 != refer.referingList.length" ng-click="refer.removeMore(candidate)">-</span>
             <span class="mannual__refer--error"  ng-show="candidate.isDirty && referForm['email-{{$index}}'].$error.pattern">
                   Email is Invalid
             </span>
         </li>
       </ul>
+      <div class="col-xs-12">
+        <button ng-click="refer.sendEmail()">Click</button>
+      </div>
     </div>
     <div class="col-xs-6">
-    a
+    <span ng-click="refer.auth()">google</span>
     </div>
-     <div class="col-xs-12">
-       <button ng-click="refer.sendEmail()">Click</button>
-     </div>
+    </div>
+
+    <div class="col-xs-12" ng-show="refer.googleContactList.length">
+      <button ng-click="refer.selectAllReferFriend()">Select All</button>
+      <ul>
+        <li data-ng-repeat="contact in refer.googleContactList">
+          <label>
+            <input type="checkbox" ng-model="contact.isSelected"/>
+          </label>
+          <div class="image"><img ng-src="{{contact.imageUrl}}" alt=""/></div>
+          <div class="name">{{contact.name}}</div>
+          <div class="email">{{contact.email}}</div>
+        </li>
+      </ul>
+      <div class="">
+        <button ng-click="refer.sendGoogleEmail()">Send mail</button>
+      </div>
+    </div>
   </article>
 
 
