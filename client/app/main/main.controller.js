@@ -7,7 +7,7 @@
       $scope.registerNow = function () {
 
         ngDialog.open({
-            templateUrl: '/app/main/form.html',
+            templateUrl: 'app/main/form.html',
             controller: 'registerNow'
         });
       };
