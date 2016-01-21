@@ -11,7 +11,7 @@ angular.module('meetApp')
             }, function () {
             });
         };
-
+    $scope.expression=false;
         $scope.fetch();
 
         $scope.sendTicket = function (user, idx) {

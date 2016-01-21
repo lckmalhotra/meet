@@ -112,13 +112,14 @@
             email.emails.push(refer.googleContactList[i].email)
           }
         }
-
+        if(email.emails.length){
        $http.post('/api/registrations/refer', email).then(function(response){
        console.log(response);
      },function(response){
          console.log(response);
        });
         refer.show=false;
+        }
       }
 
 
