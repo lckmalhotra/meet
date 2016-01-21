@@ -25,6 +25,7 @@ angular.module('meetApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
+  'vcRecaptcha',
   'validation.match',
   'ngDialog',
   'ngAnimate'

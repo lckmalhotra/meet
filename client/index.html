@@ -66,10 +66,14 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
+
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
       <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-recaptcha/release/angular-recaptcha.js"></script>
+
       <script src="bower_components/angular-resource/angular-resource.js"></script>
       <script src="bower_components/angular-cookies/angular-cookies.js"></script>
       <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -82,6 +86,7 @@
       <script src="bower_components/angular-floating-label/dist/floating-label.js"></script>
       <script src="bower_components/angular-better-placeholders/src/angular-better-placeholders.js"></script>
       <script src="bower_components/angular-animate/angular-animate.js"></script>
+
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js(.tmp) app/app.js -->

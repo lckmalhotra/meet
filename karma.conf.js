@@ -26,6 +26,7 @@ module.exports = function(config) {
       'client/bower_components/angular-floating-label/dist/floating-label.js',
       'client/bower_components/angular-better-placeholders/src/angular-better-placeholders.js',
       'client/bower_components/angular-animate/angular-animate.js',
+      'client/bower_components/angular-recaptcha/release/angular-recaptcha.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',
