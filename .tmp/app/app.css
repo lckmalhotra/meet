@@ -9029,7 +9029,8 @@ span.minus {
   border-radius: 50%;
   cursor: pointer;
   float: left;
-  margin-left: 17px; }
+  margin-left: 17px;
+  margin-top: 7px; }
 
 img.image_friend {
   width: 50px;
