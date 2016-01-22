@@ -9109,6 +9109,9 @@ table.refer_table td input.refer_checkbox {
   top: 13px;
   left: 20px; }
 
+.refer_refresh {
+  margin: 25px 0; }
+
 .sent-refer {
   background: #ef3458;
   color: #fff; }
@@ -9363,9 +9366,6 @@ span.refer_thanks {
 
   .refer_header .bannerimg {
     width: 100%; }
-
-  .refer_refresh {
-    margin: 15px 0; }
 
   span.or_span {
     display: none; }
