@@ -49,7 +49,14 @@
     </div>
 </header>
   <div class="background_bottom"></div>
-  <article class="container refer_container">
+  <div class="container clearfix" ng-show="refer.loading" style="min-height: 230px; padding-top: 30px">
+    <div style="text-align: center">
+      <img width="10%" src="../../assets/images/loader.gif" alt="loading">
+      <p>Loading Contacts....Please wait</p>
+    </div>
+  </div>
+
+  <article class="container refer_container" ng-hide="refer.loading">
     <div ng-show="!refer.googleContactList.length">
     <div class="refer-section">
       <h2>Refer a friend</h2>
@@ -95,16 +102,19 @@
       <div ng-show="refer.show">
         <div class="select_search">
       <button ng-click="refer.selectAllReferFriend()" class="select_all">Select All/None</button>
-        
+        <div class="pull-right">
+          Search by name: <input type="text" ng-model="contact">
         </div>
-      <table class="table refer_table table-hover table-striped">
-        <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList">
-          <td valign="middle" class=""><span class="content-center"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/></span></td>
-          <td class="img_td" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='../assets/images/no-image.png'" alt="" class="image_friend"/></td>
-          <td valign="middle"><span class="content-center">{{contact.name}}</span></td>
-          <td valign="middle" class=""><span class="content-center contact_mail">{{contact.email}}</span></td>
-        </tr>
-      </table>
+      <div class="referFriendListTable">
+        <table class="table refer_table table-hover table-striped">
+          <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList | filter:contact">
+            <td width="5%" valign="middle" class=""><span class="content-center"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/></span></td>
+            <td width="10%" class="img_td" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='../assets/images/no-image.png'" alt="" class="image_friend"/></td>
+            <td width="35%" valign="middle"><span class="content-center">{{contact.name}}</span></td>
+            <td valign="middle" class=""><span class="content-center contact_mail">{{contact.email}}</span></td>
+          </tr>
+        </table>
+      </div>
         <ul class="mobile-table">
           <li data-ng-repeat="contact in refer.googleContactList"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/><div class="text_content"><span>{{contact.name}}</span><span>{{contact.email}}</span></div></li>
         </ul>
