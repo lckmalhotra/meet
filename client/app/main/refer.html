@@ -54,7 +54,7 @@
     <div class="refer-section">
       <h2>Refer a friend</h2>
       <p class="refer-text">
-        Enter manually the name and email id of the person you want to refer for this conf or use your existing Gmail contacts.
+        Enter Email id of the person you want to refer for this conf or use your existing Gmail contacts.
       </p>
       <div class="refer_wrapper">
       <ul class="mannual__refer" ng-show="refer.isActive" ng-form="referForm">
@@ -93,7 +93,10 @@
 
     <div class="col-xs-12" ng-show="refer.googleContactList.length">
       <div ng-show="refer.show">
+        <div class="select_search">
       <button ng-click="refer.selectAllReferFriend()" class="select_all">Select All/None</button>
+        
+        </div>
       <table class="table refer_table table-hover table-striped">
         <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList">
           <td valign="middle" class=""><span class="content-center"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/></span></td>
