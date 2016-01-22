@@ -96,11 +96,14 @@
       <table class="table refer_table table-hover table-striped">
         <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList">
           <td valign="middle" class=""><span class="content-center"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/></span></td>
-          <td class="" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='../assets/images/no-image.png'" alt="" class="image_friend"/></td>
+          <td class="img_td" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='../assets/images/no-image.png'" alt="" class="image_friend"/></td>
           <td valign="middle"><span class="content-center">{{contact.name}}</span></td>
           <td valign="middle" class=""><span class="content-center contact_mail">{{contact.email}}</span></td>
         </tr>
       </table>
+        <ul class="mobile-table">
+          <li data-ng-repeat="contact in refer.googleContactList"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/><div class="text_content"><span>{{contact.name}}</span><span>{{contact.email}}</span></div></li>
+        </ul>
   <!--    <ul>
         <li data-ng-repeat="contact in refer.googleContactList">
           <label>
