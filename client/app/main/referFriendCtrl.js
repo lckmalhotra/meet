@@ -17,7 +17,7 @@
       $scope.registerNow = function () {
 
         ngDialog.open({
-          templateUrl: '/app/main/form.html',
+          templateUrl: 'app/main/form.html',
           controller: 'registerNow'
         });
 
@@ -66,19 +66,17 @@
 
       var fetch = function (token) {
         $.ajax({
-          url: "https://www.google.com/m8/feeds/contacts/default/full?access_token=" + token.access_token + "&alt=json",
+          url: "https://www.google.com/m8/feeds/contacts/default/full?max-results=250&access_token=" + token.access_token + "&alt=json",
           dataType: "jsonp",
           success:function(data) {
-            console.log(data)
+            console.log(data,"------");
             for (var i = 0; i < data.feed.entry.length; i++) {
               refer.googleContactList.push(new gmailFactory(data.feed.entry[i],token));
             }
             $scope.$digest();
           }
         });
-
-
-      }
+      };
 
 
       refer.auth = function() {
@@ -87,9 +85,10 @@
           'scope': 'https://www.google.com/m8/feeds'
         };
         gapi.auth.authorize(config, function() {
+          console.log("------99");
           fetch(gapi.auth.getToken());
         });
-      }
+      };
 
       refer.selectAllReferFriend = function(){
         if(!refer.selectAll){

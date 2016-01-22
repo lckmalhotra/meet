@@ -8913,6 +8913,7 @@ nav.nav-bar ul li a.active:hover {
   width: 100%;
   background: #313030;
   padding: 15px 60px;
+  float: left;
   margin-top: 20px; }
 
 .footer-conf span {
@@ -9078,8 +9079,7 @@ span.minus {
   border-radius: 50%;
   cursor: pointer;
   float: left;
-  margin-left: 17px;
-  margin-top: 5px; }
+  margin-left: 17px; }
 
 img.image_friend {
   width: 50px;
@@ -9180,14 +9180,7 @@ span.refer_thanks {
     font-size: 14px; }
 
   .bannerText p {
-    padding: 0; }
-
-  .refer_header .logo {
-    width: 100% !important;
-    display: block; }
-
-  .refer_header .bannerimg {
-    width: 100%; } }
+    padding: 0; } }
 @media (max-width: 768px) {
   header {
     background: none; }
@@ -9350,36 +9343,7 @@ span.refer_thanks {
     color: #2c3d4f; }
 
   .bottom_btn .register_btn {
-    font-size: 14px; }
-
-  .refer_header .logo a {
-    width: 250px;
-    display: block; }
-
-  .refer_header .bannerimg {
-    width: 100%; }
-
-  .mannual__refer {
-    width: 100%;
-    border: none; }
-
-  span.or_span {
-    display: none; }
-
-  .google_refer {
-    width: 100%;
-    padding-top: 30px; }
-
-  img.image_friend {
-    display: none; }
-
-  .refer_confirmation {
-    width: 100%;
-    border: none; }
-
-  .refer_header .logo a {
-    margin: 0 auto;
-    margin-top: 3px; } }
+    font-size: 14px; } }
 @media (max-width: 480px) {
   .bannerText {
     width: auto;
