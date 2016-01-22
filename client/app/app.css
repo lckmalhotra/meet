@@ -9112,6 +9112,17 @@ table.refer_table td input.refer_checkbox {
 .refer_refresh {
   margin: 25px 0; }
 
+.refer_search {
+  float: right;
+  vertical-align: middle;
+  margin: 25px 0 0; }
+
+.refer_search input {
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 3px;
+  width: 200px; }
+
 .sent-refer {
   background: #ef3458;
   color: #fff; }
