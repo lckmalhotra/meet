@@ -61,7 +61,7 @@
     <div class="refer-section">
       <h2>Refer a friend</h2>
       <p class="refer-text">
-        Enter mannually the name and email id of the person you want to refer for this conf or use your existing Gmail contacts.
+        Enter manually the name and email id of the person you want to refer for this conf or use your existing Gmail contacts.
       </p>
       <div class="refer_wrapper">
       <ul class="mannual__refer" ng-show="refer.isActive" ng-form="referForm">
@@ -81,6 +81,7 @@
         <div class="refer_confirmation" ng-show="!refer.isActive">
           <span class="refer_success">Success !!</span>
           <span class="refer_thanks">Thanks for your referral. </span>
+          <button ng-click="refer.backLinkClick()" class="btn refer_submit refer_refresh" >Let's refer more friends </button>
         </div>
       <div class="google_refer">
         <div ng-click="refer.auth()" style="cursor:pointer">
@@ -106,11 +107,14 @@
       <table class="table refer_table table-hover table-striped">
         <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList | filter:contact">
           <td valign="middle" class=""><span class="content-center"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/></span></td>
-          <td class="" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='../assets/images/no-image.png'" alt="" class="image_friend"/></td>
+          <td class="img_td" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='../assets/images/no-image.png'" alt="" class="image_friend"/></td>
           <td valign="middle"><span class="content-center">{{contact.name}}</span></td>
           <td valign="middle" class=""><span class="content-center contact_mail">{{contact.email}}</span></td>
         </tr>
       </table>
+        <ul class="mobile-table">
+          <li data-ng-repeat="contact in refer.googleContactList"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/><div class="text_content"><span>{{contact.name}}</span><span>{{contact.email}}</span></div></li>
+        </ul>
   <!--    <ul>
         <li data-ng-repeat="contact in refer.googleContactList">
           <label>
@@ -128,7 +132,9 @@
 
       <div class="google_referSuccess" ng-show="!refer.show">
       <span class="refer_success">Success !!</span>
-      <span class="refer_thanks">Thanks for your referral. </span></div>
+      <span class="refer_thanks">Thanks for your referral. </span>
+        <button ng-click="refer.backLinkClick()" class="btn refer_submit refer_refresh" >Let's refer more friends </button>
+      </div>
 </div>
   </article>
 
