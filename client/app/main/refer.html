@@ -49,7 +49,14 @@
     </div>
 </header>
   <div class="background_bottom"></div>
-  <article class="container refer_container">
+  <div class="container clearfix" ng-show="refer.loading" style="min-height: 230px; padding-top: 30px">
+    <div style="text-align: center">
+      <img width="10%" src="../../assets/images/loader.gif" alt="loading">
+      <p>Loading Contacts....Please wait</p>
+    </div>
+  </div>
+
+  <article class="container refer_container" ng-hide="refer.loading">
     <div ng-show="!refer.googleContactList.length">
     <div class="refer-section">
       <h2>Refer a friend</h2>

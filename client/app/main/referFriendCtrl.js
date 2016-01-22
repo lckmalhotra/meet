@@ -7,6 +7,7 @@
       var refer=this;
       refer.googleContactList = [];
       refer.selectAll = false;
+      refer.loading = false;
       refer.referingList= [{
         "name":'',
         "email":'',
@@ -65,27 +66,33 @@
 
 
       var fetch = function (token) {
+
         $.ajax({
           url: "https://www.google.com/m8/feeds/contacts/default/full?max-results=250&access_token=" + token.access_token + "&alt=json",
           dataType: "jsonp",
           success:function(data) {
-            console.log(data,"------");
+            refer.loading = false;
             for (var i = 0; i < data.feed.entry.length; i++) {
+              if(data.feed.entry[i].hasOwnProperty('gd$email')){
               refer.googleContactList.push(new gmailFactory(data.feed.entry[i],token));
+              }
             }
             $scope.$digest();
+          },
+          complete:function(){
+            refer.loading = false;
           }
         });
       };
 
 
       refer.auth = function() {
+        refer.loading = true;
         var config = {
           'client_id': '256115019583-da6p5j4g0d27muhbv02vkvqhogi9ga1u.apps.googleusercontent.com',
           'scope': 'https://www.google.com/m8/feeds'
         };
         gapi.auth.authorize(config, function() {
-          console.log("------99");
           fetch(gapi.auth.getToken());
         });
       };
