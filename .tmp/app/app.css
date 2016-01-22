@@ -9328,6 +9328,9 @@ span.refer_thanks {
   .refer_header .bannerimg {
     width: 100%; }
 
+  .refer_refresh {
+    margin: 15px 0; }
+
   span.or_span {
     display: none; }
 

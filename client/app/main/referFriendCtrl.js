@@ -22,7 +22,9 @@
         });
 
       };
-
+      refer.backLinkClick=function(){
+        window.location.reload();
+      }
       refer.addMore = function (obj){
         obj = angular.copy(obj);
         obj.name="";

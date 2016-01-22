@@ -54,7 +54,7 @@
     <div class="refer-section">
       <h2>Refer a friend</h2>
       <p class="refer-text">
-        Enter mannually the name and email id of the person you want to refer for this conf or use your existing Gmail contacts.
+        Enter manually the name and email id of the person you want to refer for this conf or use your existing Gmail contacts.
       </p>
       <div class="refer_wrapper">
       <ul class="mannual__refer" ng-show="refer.isActive" ng-form="referForm">
@@ -74,6 +74,7 @@
         <div class="refer_confirmation" ng-show="!refer.isActive">
           <span class="refer_success">Success !!</span>
           <span class="refer_thanks">Thanks for your referral. </span>
+          <button ng-click="refer.backLinkClick()" class="btn refer_submit refer_refresh" >Let's refer more friends </button>
         </div>
       <div class="google_refer">
         <div ng-click="refer.auth()" style="cursor:pointer">
@@ -121,7 +122,9 @@
 
       <div class="google_referSuccess" ng-show="!refer.show">
       <span class="refer_success">Success !!</span>
-      <span class="refer_thanks">Thanks for your referral. </span></div>
+      <span class="refer_thanks">Thanks for your referral. </span>
+        <button ng-click="refer.backLinkClick()" class="btn refer_submit refer_refresh" >Let's refer more friends </button>
+      </div>
 </div>
   </article>
 
