@@ -615,13 +615,22 @@ font-weight: 600;
 .btn_wrapper {
   margin: 20px 0 10px;
 }
+.field i.fa.fa-asterisk {
+  color: #c83434;
+  font-size: 7px;
+  vertical-align: top;
+  margin-top: 5px;
+}
 .mail_field input {
   text-transform: lowercase;
 }
 .btn_wrapper {
   text-align: center;
 }
-
+.disabled{
+  pointer-events: none;
+  opacity:0.8;
+}
 .short-input {
   max-width: 400px;
   display: block;
@@ -1241,7 +1250,6 @@ nav.nav-bar ul li a.active:hover {
   width: 100%;
   background: #313030;
   padding:15px 60px;
-  float:left;
   margin-top:20px;
 }
 .footer-conf span {
@@ -1408,6 +1416,7 @@ span.minus {
   cursor: pointer;
   float:left;
   margin-left:17px;
+  margin-top:5px;
 }
 img.image_friend {
   width: 50px;
@@ -1510,6 +1519,14 @@ span.refer_thanks {
   .bannerText p {
     padding:0;
   }
+  .refer_header .logo {
+    width: 100% !important;
+    display: block;
+  }
+  .refer_header .bannerimg {
+    width: 100%;
+  }
+
 }
 
 @media(max-width:768px){
@@ -1676,6 +1693,36 @@ span.refer_thanks {
   .bottom_btn .register_btn {
     font-size: 14px;
   }
+  .refer_header .logo a {
+    width: 250px;
+    display: block;
+  }
+  .refer_header .bannerimg {
+    width: 100%;
+  }
+  .mannual__refer{
+    width:100%;
+    border:none;
+  }
+  span.or_span{
+    display:none;
+  }
+  .google_refer {
+    width: 100%;
+    padding-top:30px;
+  }
+
+  img.image_friend{
+    display:none;
+  }
+  .refer_confirmation{
+    width:100%;
+    border:none;
+  }
+  .refer_header .logo a {
+    margin: 0 auto;
+    margin-top: 3px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1767,6 +1814,16 @@ span.refer_thanks {
   }
   div#succes_div {
     min-height: 300px;
+  }
+  .refer_table .contact_mail{
+    display: none;
+  }
+  .refer_header .bannerimg {
+    text-align:center;
+  }
+  .button_referSubmit{
+    padding:0;
+    text-align:center;
   }
 }
 
