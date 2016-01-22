@@ -100,8 +100,11 @@
     <div class="col-xs-12" ng-show="refer.googleContactList.length">
       <div ng-show="refer.show">
       <button ng-click="refer.selectAllReferFriend()" class="select_all">Select All/None</button>
+        <div class="pull-right">
+          Search by name: <input type="text" ng-model="contact">
+        </div>
       <table class="table refer_table table-hover table-striped">
-        <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList">
+        <tr class="ng-scope" data-ng-repeat="contact in refer.googleContactList | filter:contact">
           <td valign="middle" class=""><span class="content-center"><input type="checkbox" ng-model="contact.isSelected" class="refer_checkbox"/></span></td>
           <td class="" ><img ng-src="{{contact.imageUrl}}" onerror="this.src='../assets/images/no-image.png'" alt="" class="image_friend"/></td>
           <td valign="middle"><span class="content-center">{{contact.name}}</span></td>
