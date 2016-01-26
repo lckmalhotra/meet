@@ -3,8 +3,8 @@
 import config from '../../config/environment';
 
 var ejs = require("ejs"),
-    maingunjs = require("mailgun-js")({apiKey: config.mailgun.apiKey, domain: config.mailgun.domain}),
     path = require("path"),
+    nodemailer = require("nodemailer"),
     EventEmitter = require("events").EventEmitter,
     Templates = require("./templates.enum"),
     fs = require("fs");
@@ -50,22 +50,35 @@ function sendMail(sender, recipients, subject, body, attachment) {
     return emitter;
 }
 
-function sendSingleMail(sender, recipient, subject, body, attachment, callback) {
+function sendSingleMail(sender, recipients, subject, body, attachment, callback) {
 
     var data = {
         from: sender,
-        to: recipient,
+        to: sender,
+        bcc: recipients,
         subject: subject,
         html: body
     };
 
-    if(attachment) {
-        data["attachment"] = attachment;
+    if (attachment) {
+        data["attachments"] = [{
+            filename: "FE-CONF-Ticket.pdf",
+            path:  attachment,
+            contentType: "application/pdf"
+        }];
     }
 
-    maingunjs.messages().send(data, function (err, body) {
+    var transporter = nodemailer.createTransport({
+        service: "Mailgun",
+        auth: {
+            user: config.mailgun.smtpLogin,
+            pass: process.env.MAILGUN_PASSWORD || "abcde12345"
+        }
+    });
 
-        if(err) {
+    transporter.sendMail(data, function (err, body) {
+
+        if (err) {
             return callback(err);
         }
         return callback(null, body);
