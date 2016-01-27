@@ -44,7 +44,7 @@ section {
   width: 75%; }
 
 .header-top.smaller .logo {
-  padding: 8px 0 0 27px; }
+  padding: 8px 0 0 0; }
 
 .header-top.smaller nav.nav-bar {
   padding: 16px 0; }
@@ -61,7 +61,7 @@ section {
 nav.nav-bar {
   text-align: right;
   float: right;
-  padding: 47px 0; }
+  padding: 47px 0 0 0; }
 
 nav.nav-bar ul {
   list-style: none;
@@ -131,7 +131,7 @@ nav.nav-bar ul li a.active {
   color: #222;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  padding: 6px 80px 32px 0;
+  padding: 6px 0px 32px 0;
   font-weight: 400; }
 
 .bannerText ul {
@@ -252,9 +252,10 @@ nav.nav-bar ul li a.active {
 
 .aboutUs ul li p {
   font-size: 14px;
+    line-height: 16px;
   font-weight: 700;
   color: #2c3d4f;
-  margin: 12px 0; }
+  margin: 12px 0 0 0; }
 
 .aboutUs ul li span {
   border: 2px solid #2c3d4f;
@@ -285,6 +286,7 @@ nav.nav-bar ul li a.active {
   text-align: center;
   background: #ef3458;
   color: #fff;
+  padding-top: 70px;
   padding-bottom: 70px; }
 
 #speakers h2 {
@@ -293,15 +295,11 @@ nav.nav-bar ul li a.active {
   text-align: center;
   display: inline-block;
   margin: 0;
-  padding: 80px 0 60px;
+  padding: 0 0 60px;
   line-height: 40px; }
 
-.speakers_detail {
-  width: auto;
-  margin: auto;
-  margin-bottom: 50px; }
 
-ul.speakers_ul {
+#speakers ul{
   width: 100%;
   display: block;
   margin: 0;
@@ -309,24 +307,27 @@ ul.speakers_ul {
   margin-top: 40px;
   text-align: center; }
 
-.speakers_ul li {
-  width: 24%;
-  padding: 10px;
-  margin: 10px 0;
+#speakers ul li {
+  width: 24.6%;
+  padding: 0 10px;
+  margin: 0;
   text-align: center;
   border-right: 1px solid rgba(255, 255, 255, 0.44);
   list-style-type: none;
   display: inline-block;
   vertical-align: top; }
 
-.speakers_ul .image {
+.image_wrapper{
+    margin-bottom: 40px;
+}
+.image_wrapper img {
   display: block;
-  width: 94px;
-  height: 94px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   margin: 0 auto; }
 
-.speakers_ul .text {
+.image_wrapper .speaker-name {
   display: block;
   margin: 10px 0 20px;
   font-size: 18px;
@@ -335,15 +336,11 @@ ul.speakers_ul {
 .image_container {
   margin: auto; }
 
-.image_wrapper .image img {
-  width: 94px;
-  height: 94px; }
-
-.content_heading {
+.speakers-position {
   text-align: center;
   display: block;
   font-size: 16px;
-  margin: 0 0 39px 0;
+  margin: 0;
   text-transform: uppercase; }
 
 .content_detail {
