@@ -1554,3 +1554,10 @@ nav.nav-bar ul li a.active:hover {
 /****************************** End Responsive code ***********/
 
 /*# sourceMappingURL=main.css.map */
+.referFriendListTable {
+  max-height: 500px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-bottom: 30px;
+  border: 1px solid#ccc;
+}
