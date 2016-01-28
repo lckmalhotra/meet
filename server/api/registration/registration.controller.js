@@ -21,8 +21,8 @@ var path = require("path");
 export function generateAndSendTicket(req, res, next) {
     var userId = req.body._id;
 
-    console.log(req.body);
     Registration.findOne({_id: userId}, {name: 1, email: 1}).lean().exec(function (err, user) {
+        console.log(err, user);
         if (err) {
             console.log("Error fetching user", err);
             return handleError(res);
@@ -37,12 +37,15 @@ export function generateAndSendTicket(req, res, next) {
                     } else {
                         console.log("Mail sent", resp);
                         Registration.update({
-                            _id: userId
+                            _id: user._id
                         }, {
                             $set: {ticketSent: true}
+                        }, function(err, c) {
+                            console.log("Updated ticketSent value for", user.name);
+                            console.log(err, c);
                         });
                     }
-                })
+                });
             });
             res.json({message: "Processing request"});
         }

@@ -726,6 +726,10 @@ button.send_btn {
   color: #fff;
   border: none; }
 
+button.send_btn.sent {
+  background: forestgreen;
+}
+
 .custom_wrapper .time_detail {
   position: absolute;
   top: 0;
