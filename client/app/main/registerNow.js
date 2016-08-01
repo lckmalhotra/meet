@@ -14,7 +14,6 @@
 
             $scope.addThing = function () {
               if($scope.userForm.$valid) {
-                console.log("run");
                 if ($scope.formData) {
                   $http.post('/api/registrations', $scope.formData);
                   $scope.formData = {};

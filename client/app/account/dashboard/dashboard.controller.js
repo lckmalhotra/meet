@@ -5,6 +5,11 @@
 angular.module('meetApp')
     .controller('dashboardController', function ($scope, $http) {
 
+      $scope.Dec2015 = '2015-12-31T22:00:00.000Z';
+      $scope.Feb2016 = '2016-02-30T22:00:00.000Z';
+      $scope.Jun2016 = '2016-06-30T22:00:00.000Z';
+      $scope.Sep2016 = '2016-08-30T22:00:00.000Z';
+
         $scope.fetch = function () {
             $http.get("/api/registrations").then(function (res) {
                 $scope.items = res;
@@ -28,6 +33,19 @@ angular.module('meetApp')
                 $scope.fetch();
             });
         };
+
+
+      $scope.tab = 1;
+
+      $scope.setTab = function(newTab){
+        $scope.tab = newTab;
+      };
+
+      $scope.isSet = function(tabNum){
+        return $scope.tab === tabNum;
+      };
+
+
 
     });
 

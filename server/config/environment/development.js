@@ -6,7 +6,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/meet-dev'
+    uri: 'mongodb://localhost/meet'
   },
 
   mailgun: {

@@ -1889,4 +1889,25 @@ span.refer_thanks {
   }
 }
 
-/****************************** End Responsive code ***********/
+.nav-dater{
+  padding: 0px;
+  display: block;
+  max-width: 200px;
+  text-align: center;
+  margin: 20px auto;
+  li{
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+    background: #cccccc;
+    &.active{
+      background: #0d6aad;
+    }
+    a{
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}
+
