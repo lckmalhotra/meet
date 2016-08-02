@@ -180,6 +180,7 @@ nav{
 }
 //global sass styling end
 //sectional sass styling
+
 #first-section{
     @include background-img-box("../assets/images/bg-1.png");
     position: relative;
@@ -802,4 +803,35 @@ Main Components
   .cd-vertical-nav {
     display: block;
   }
+}
+#first-section > .container
+{
+  height: 100%;
+}
+#first-section .information
+{
+  position:absolute;
+  bottom:0;
+  padding-bottom: 0;
+  margin-bottom: 2.3em;
+  height: 200px;
+}
+.days{
+position: absolute;
+  left:0;
+  bottom:0;
+}
+.days ul
+{
+  margin-bottom: 0;
+}
+#first-section .information > .register{
+  position: absolute;
+  right:0;
+  bottom:0;
+}
+.container-inner
+{
+  position: relative;
+  height: 100%;
 }

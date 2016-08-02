@@ -8604,6 +8604,33 @@ Main Components
 @media only screen and (min-width: 1050px) {
   .cd-vertical-nav {
     display: block; } }
+#first-section > .container {
+  height: 100%; }
+
+#first-section .information {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 2.3em;
+  height: 200px; }
+
+.days {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
+.days ul {
+  margin-bottom: 0; }
+
+#first-section .information > .register {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+.container-inner {
+  position: relative;
+  height: 100%; }
+
 @media only screen and (min-width: 768px) {
   section {
     height: 100%; }
@@ -8968,7 +8995,8 @@ Main Components
   #first-section {
     padding-top: 10%;
     padding-bottom: 10%;
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 2%; }
     #first-section .header-b {
       padding-top: 6vh; }
     #first-section figure {
@@ -9009,7 +9037,8 @@ Main Components
         font-size: 2.2vw; }
       #first-section .information .register a {
         font-size: 2.2vw;
-        padding: 2vh; }
+        padding: 2vh;
+        margin-top: 3vh; }
 
   #second-section {
     padding-top: 5%;
