@@ -8049,7 +8049,7 @@ nav#menu {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 9;
+  z-index: 1000;
   background-color: rgba(22, 10, 49, 0.95); }
   nav#menu ul {
     padding-top: 3em; }
@@ -8878,7 +8878,7 @@ Main Components
       width: 13vw;
       overflow: hidden; }
       #third-section figure .image {
-        height: 14vh; }
+        height: auto; }
       #third-section figure figcaption h4 {
         font-size: 2.1vw; }
       #third-section figure figcaption p {
@@ -9079,7 +9079,7 @@ Main Components
       width: 13vw;
       overflow: hidden; }
       #third-section figure .image {
-        height: 24vh; }
+        height: auto; }
       #third-section figure figcaption h4 {
         font-size: 1.8vw; }
       #third-section figure figcaption p {
@@ -9093,11 +9093,12 @@ Main Components
     #forth-section .left {
       width: 24vw; }
       #forth-section .left article {
-        padding: 2.5vh 2.5vh 9.5vh 2.5vh; }
+        padding: 2.5vh 2.5vh 4vh 2.5vh; }
         #forth-section .left article h2 {
-          font-size: 5.8vh; }
+          font-size: 5.8vh;
+          margin-bottom: 3vh; }
         #forth-section .left article p {
-          line-height: 1.8em;
+          line-height: 1.5em;
           font-size: 3vh; }
           #forth-section .left article p#tagline {
             font-size: 1.2vw; }
@@ -9107,7 +9108,7 @@ Main Components
       width: 45vw; }
       #forth-section .right li {
         font-size: 1.2vw;
-        margin-bottom: 3vh; }
+        margin-bottom: 1.7vh; }
         #forth-section .right li .text-yellow, #forth-section .right li .text-red {
           font-size: 1.8vw; }
 

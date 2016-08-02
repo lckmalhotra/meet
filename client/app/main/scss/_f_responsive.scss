@@ -331,7 +331,7 @@
       width: 13vw;
       overflow: hidden;
       .image {
-        height: 14vh;
+        height: auto;
       }
       figcaption {
         h4 {
@@ -599,7 +599,7 @@
       width: 13vw;
       overflow: hidden;
       .image {
-        height: 24vh;
+        height: auto;
       }
       figcaption {
         h4 {
@@ -620,12 +620,13 @@
     .left {
       width: 24vw;
       article {
-        padding: 2.5vh 2.5vh 9.5vh 2.5vh;
+        padding: 2.5vh 2.5vh 4vh 2.5vh;
         h2 {
           font-size: 5.8vh;
+          margin-bottom: 3vh;
         }
         p {
-          line-height: 1.8em;
+          line-height: 1.5em;
           font-size: 3vh;
           &#tagline {
             font-size: 1.2vw;
@@ -642,7 +643,7 @@
       width: 45vw;
       li {
         font-size: 1.2vw;
-        margin-bottom: 3vh;
+        margin-bottom: 1.7vh;
         .text-yellow, .text-red {
           font-size: 1.8vw;
         }
