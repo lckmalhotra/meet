@@ -40,6 +40,14 @@ angular.module('meetApp', [
       scope.toggleMenu = false;
       jQuery(document).ready(function($){
         //variables
+
+        $('.jumpTo').on('click',function(e){
+          var sectionClass = '.'+this.id;
+          if(!$(sectionClass).hasClass('visible')){
+            jumpSection(e,sectionClass);
+          }
+        });
+
         var hijacking= $(elem).data('hijacking'),
           animationType = $(elem).data('animation'),
           delta = 0,
@@ -209,6 +217,43 @@ angular.module('meetApp', [
 
           resetScroll();
         }
+
+        function jumpSection(event,section) {
+          setTimeout(function(){
+
+            if($(elem).children('.cd-section:nth-child(1)').hasClass('visible')){
+              $('.home_menu').removeClass('active');
+            }else{
+              $('.home_menu').addClass('active');
+            }
+
+          },0)
+
+          //go to previous section
+          typeof event !== 'undefined' && event.preventDefault();
+
+          var visibleSection = sectionsAvailable.filter('.visible'),
+            middleScroll = ( hijacking == 'off' && $(window).scrollTop() != visibleSection.offset().top) ? true : false;
+          visibleSection = middleScroll ? visibleSection.siblings(section).eq(0) : visibleSection;
+
+          var animationParams = selectAnimation(animationType, middleScroll, 'prev');
+          unbindScroll(visibleSection.prev('.cd-section'), animationParams[3]);
+
+          if( !animating ) {
+            animating = true;
+            visibleSection.removeClass('visible').children('div').velocity(animationParams[2], animationParams[3], animationParams[4])
+              .end().siblings(section).eq(0).addClass('visible').children('div').velocity(animationParams[0] , animationParams[3], animationParams[4], function(){
+              animating = false;
+              if( hijacking == 'off') $(window).on('scroll', scrollAnimation);
+            });
+
+            actual = actual - 1;
+          }
+
+          resetScroll();
+        }
+
+
 
         function nextSection(event) {
           setTimeout(function(){

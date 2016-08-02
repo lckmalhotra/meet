@@ -449,7 +449,7 @@ nav{
 
     }
 }
-// fifthe section
+// fifth section
 #fifth-section{
     background-color: #222339;
     @include vertical-padding(2em);
@@ -476,9 +476,37 @@ nav{
         margin: 0;
         padding: 0;
         position:relative;
+        li
+        {
+          img
+          {
+            height: 100%;
+            max-width: 100%;
+            width: 100%;
+          }
+          .wrap-img
+          {
+            height: 161px;
+            width: 210px;
+          }
+        }
+         .border-topLeft
+         {
+           border-left: 2px solid #fff;
+           border-top: 2px solid #fff;
+         }
+         .border-left
+         {
+           border-left: 2px solid #fff;
+         }
+         .border-topright
+         {
+           border-right: 2px solid #fff;
+           border-top: 2px solid #fff;
+         }
     }
 }
-//sixth secction
+//sixth section
 
 #sixth-section{
     background-color: #e9e5dc;
