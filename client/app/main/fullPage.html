@@ -68,6 +68,11 @@
         </article>
       </div>
     </section>
+  </div>
+</section>
+
+<section class="cd-section">
+  <div class="wrapper-b">
     <section id="third-section">
       <div class="container">
         <h2>speakers</h2>
@@ -302,7 +307,7 @@
 </section>
 
 <div class="home_menu">
-  <a href="#"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+  <a href="#" ng-click="toggleMenu = !toggleMenu"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
 </div>
 
 <nav>
@@ -312,20 +317,20 @@
   </ul>
 </nav> <!-- .cd-vertical-nav -->
 
-<nav style="display: none" id="menu" class="close">
+<nav id="menu" ng-show="toggleMenu">
   <div class="container">
     <ul>
       <li>
-        <a href="#">home</a>
+        <a href="#0">home</a>
       </li>
       <li>
-        <a href="#">about</a>
+        <a href="#1">about</a>
       </li>
       <li>
-        <a href="#">speakers</a>
+        <a href="#2">speakers</a>
       </li>
       <li>
-        <a href="#">agenda</a>
+        <a href="#3">agenda</a>
       </li>
       <li>
         <a href="#">venue</a>

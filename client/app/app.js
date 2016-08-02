@@ -37,6 +37,7 @@ angular.module('meetApp', [
     restrict: 'E',
     templateUrl: 'app/main/fullPage.html',
     link: function(scope, elem, attrs) {
+      scope.toggleMenu = false;
       jQuery(document).ready(function($){
         //variables
         var hijacking= $(elem).data('hijacking'),
