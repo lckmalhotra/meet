@@ -8456,7 +8456,8 @@ nav#menu {
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
-  color: #ffffff; }
+  color: #ffffff;
+  overflow: hidden; }
 
 body::before {
   /* never visible - this is used in jQuery to check the current MQ */
@@ -8606,6 +8607,33 @@ Main Components
     -moz-transform: translateX(0%);
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%); }
+
+#first-section > .container {
+  height: 100%; }
+
+#first-section .information {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 2.3em;
+  height: 200px; }
+
+.days {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
+.days ul {
+  margin-bottom: 0; }
+
+#first-section .information > .register {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+.container-inner {
+  position: relative;
+  height: 100%; }
 
 @media only screen and (min-width: 768px) {
   section {
@@ -8881,7 +8909,8 @@ Main Components
         margin-bottom: 2.5vh; }
         #forth-section .right li small {
           font-size: 1.1vw; }
-        #forth-section .right li .text-yellow, #forth-section .right li .text-red {
+        #forth-section .right li .text-yellow,
+        #forth-section .right li .text-red {
           font-size: 2.1vw; }
 
   #fifth-section {
@@ -8970,7 +8999,8 @@ Main Components
   #first-section {
     padding-top: 10%;
     padding-bottom: 10%;
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 2%; }
     #first-section .header-b {
       padding-top: 6vh; }
     #first-section figure {
@@ -8991,6 +9021,8 @@ Main Components
         line-height: 8vh;
         width: 40vw;
         float: right; }
+        #first-section article.main h1 span {
+          margin-top: 3px; }
     #first-section .information .days {
       width: 30vw; }
       #first-section .information .days h2 {
@@ -9009,7 +9041,8 @@ Main Components
         font-size: 2.2vw; }
       #first-section .information .register a {
         font-size: 2.2vw;
-        padding: 2vh; }
+        padding: 2vh;
+        margin-top: 3vh; }
 
   #second-section {
     padding-top: 5%;
@@ -9141,8 +9174,18 @@ Main Components
         font-size: 2.6vh; }
         #seventh-section .foot ul li > h2 {
           font-size: 1.3vw;
-          margin-bottom: 2vh; } }
+          margin-bottom: 2vh; }
+
+  #nav-bullets ul li a {
+    width: 1.1vh;
+    height: 1.1vh; }
+    #nav-bullets ul li a.active {
+      width: 1.5vh;
+      height: 1.5vh; } }
 @media only screen and (min-width: 1400px) {
+  #first-section article.main h1 span {
+    margin-top: 10px; }
+
   #fifth-section ul li {
     width: 12%; } }
 footer.footer {

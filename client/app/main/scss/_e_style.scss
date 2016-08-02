@@ -617,6 +617,7 @@ body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
+  overflow: hidden;
 }
 body::before {
   /* never visible - this is used in jQuery to check the current MQ */
@@ -803,4 +804,35 @@ Main Components
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
   }
+}
+#first-section > .container
+{
+  height: 100%;
+}
+#first-section .information
+{
+  position:absolute;
+  bottom:0;
+  padding-bottom: 0;
+  margin-bottom: 2.3em;
+  height: 200px;
+}
+.days{
+  position: absolute;
+  left:0;
+  bottom:0;
+}
+.days ul
+{
+  margin-bottom: 0;
+}
+#first-section .information > .register{
+  position: absolute;
+  right:0;
+  bottom:0;
+}
+.container-inner
+{
+  position: relative;
+  height: 100%;
 }
