@@ -34,10 +34,10 @@
     }
   }
   #second-section {
-    h2 {
+   /* h2 {
       top: 1.9em;
       right: 6em;
-    }
+    }*/
     article {
       width: 70vh;
       margin-left: 5.1vh;
@@ -146,6 +146,7 @@
     }
     article {
       width: 40vh;
+      position: relative;
       p {
         font-size: 1.7vh;
         line-height: 3vh;
@@ -153,11 +154,9 @@
     }
     h2 {
       font-size: 3vh;
-      position: static;
+      position: absolute;
       display: inline;
       float: right;
-      margin-top: -3.1em;
-      margin-right: -6em;
     }
   }
   #third-section {
@@ -309,12 +308,9 @@
     }
     h2 {
       font-size: 5vw;
-      position: static;
       display: inline;
       float: right;
       padding: 1.2em .5em 1.2em .5em;
-      margin-top: -2.1em;
-      margin-right: -6em;
     }
   }
   #third-section {
@@ -502,7 +498,7 @@
   #first-section {
     @include vertical-padding(10%);
     padding-top: 0;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
     .header-b {
       padding-top: 6vh;
     }
@@ -528,7 +524,7 @@
         width: 40vw;
         float: right;
         span {
-          margin-top: 3px;
+          margin-top: 2.5vh;
         }
       }
     }
@@ -573,16 +569,13 @@
         font-size: 1.32vw;
         line-height: 4.2vh;
         margin-top: 0px;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
       }
     }
     h2 {
       font-size: 3.1vw;
-      position: static;
       display: inline;
       float: right;
-      margin-top: -1.8em;
-      margin-right: -6.5em;
     }
   }
   #third-section {

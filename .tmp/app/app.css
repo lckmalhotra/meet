@@ -8217,18 +8217,21 @@ nav#menu {
     padding: 1.3em .6em 1.3em .6em;
     font-family: 'raleway-heavy';
     text-transform: uppercase;
+    position: absolute;
     color: #ffffff;
-    display: inline;
-    float: right;
+    right: -5.2em;
+    top: -1.3em;
+    /* display: inline;*/
+    /*float: right;
     margin-top: -3.1em;
-    margin-right: 0em; }
+    margin-right: 0em;*/ }
   #second-section article {
     padding: 1.2em 1.2em 1.2em 1.2em;
     background-color: #f4ee6f;
-    margin-top: 3em;
     color: #000000;
     line-height: 1.2em;
-    margin-top: 10%; }
+    margin-top: 10%;
+    position: relative; }
     #second-section article p {
       margin-top: 0px; }
 
@@ -8653,14 +8656,16 @@ Main Components
   #first-section a.site-logo {
     background-size: 100%; }
 
-  #second-section h2 {
-    top: 1.9em;
-    right: 6em; }
-  #second-section article {
-    width: 70vh;
-    margin-left: 5.1vh;
-    padding: 2.9em 2.9em 2.9em 2.9em;
-    background-color: #f4ee6f; }
+  #second-section {
+    /* h2 {
+       top: 1.9em;
+       right: 6em;
+     }*/ }
+    #second-section article {
+      width: 70vh;
+      margin-left: 5.1vh;
+      padding: 2.9em 2.9em 2.9em 2.9em;
+      background-color: #f4ee6f; }
 
   #third-section .speaker-list {
     margin: 0 -1.5em; }
@@ -8727,17 +8732,16 @@ Main Components
   #second-section .container {
     margin-top: 7%; }
   #second-section article {
-    width: 40vh; }
+    width: 40vh;
+    position: relative; }
     #second-section article p {
       font-size: 1.7vh;
       line-height: 3vh; }
   #second-section h2 {
     font-size: 3vh;
-    position: static;
+    position: absolute;
     display: inline;
-    float: right;
-    margin-top: -3.1em;
-    margin-right: -6em; }
+    float: right; }
 
   #third-section .container {
     padding-top: 10%; }
@@ -8851,12 +8855,9 @@ Main Components
         margin-bottom: 5vh; }
     #second-section h2 {
       font-size: 5vw;
-      position: static;
       display: inline;
       float: right;
-      padding: 1.2em .5em 1.2em .5em;
-      margin-top: -2.1em;
-      margin-right: -6em; }
+      padding: 1.2em .5em 1.2em .5em; }
 
   #third-section {
     padding-top: 3%; }
@@ -8996,7 +8997,7 @@ Main Components
     padding-top: 10%;
     padding-bottom: 10%;
     padding-top: 0;
-    padding-bottom: 2%; }
+    padding-bottom: 5%; }
     #first-section .header-b {
       padding-top: 6vh; }
     #first-section figure {
@@ -9018,7 +9019,7 @@ Main Components
         width: 40vw;
         float: right; }
         #first-section article.main h1 span {
-          margin-top: 3px; }
+          margin-top: 2.5vh; }
     #first-section .information .days {
       width: 30vw; }
       #first-section .information .days h2 {
@@ -9052,14 +9053,11 @@ Main Components
         font-size: 1.32vw;
         line-height: 4.2vh;
         margin-top: 0px;
-        margin-bottom: 5vh; }
+        margin-bottom: 3vh; }
     #second-section h2 {
       font-size: 3.1vw;
-      position: static;
       display: inline;
-      float: right;
-      margin-top: -1.8em;
-      margin-right: -6.5em; }
+      float: right; }
 
   #third-section {
     padding-top: 3%; }

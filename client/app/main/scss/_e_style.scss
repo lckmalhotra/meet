@@ -309,18 +309,21 @@ nav{
         padding:1.3em .6em 1.3em .6em;
         font-family: 'raleway-heavy';
         text-transform: uppercase;
+        position: absolute;
         color: $white;
-            display: inline;
-            float: right;
-              margin-top: -3.1em;
-    margin-right: 0em;
+        right: -5.2em;
+        top: -1.3em;
+       /* display: inline;*/
+        /*float: right;
+        margin-top: -3.1em;
+        margin-right: 0em;*/
     }
     article{
-         @include color-background(1.2em,1.2em,1.2em,1.2em, #f4ee6f);
-        margin-top: 3em;
+        @include color-background(1.2em,1.2em,1.2em,1.2em, #f4ee6f);
         color: $black;
         line-height: 1.2em;
         margin-top: 10%;
+        position: relative;
         p{
             margin-top: 0px;
         }
