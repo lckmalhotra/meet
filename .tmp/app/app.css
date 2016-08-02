@@ -8762,11 +8762,28 @@ Main Components
 
   /* section third */
   #forth-section, #sixth-section, #seventh-section {
-    padding-top: 3em; } }
-@media only screen and (min-width: 768px) {
-  body {
-    overflow: auto; }
+    padding-top: 3em; }
 
+  /* section fifth */
+  #fifth-section li {
+    border: 2px solid #fff;
+    max-width: 320px;
+    margin: 0 auto;
+    overflow: hidden; }
+    #fifth-section li img {
+      min-width: 100%; }
+    #fifth-section li:last-child {
+      width: 100%;
+      border: none;
+      text-align: center;
+      max-width: 280px;
+      margin: 0 auto;
+      float: none;
+      padding: 30px 0;
+      height: auto; }
+
+  /* section fifth */ }
+@media only screen and (min-width: 768px) {
   section {
     height: 100%; }
 
@@ -8822,9 +8839,20 @@ Main Components
   #fifth-section ul li {
     float: left;
     width: 33%;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 159px;
+    border: 2px solid #fff; }
     #fifth-section ul li img {
       min-width: 100%; }
+    #fifth-section ul li:last-child {
+      width: 100%;
+      border: none;
+      text-align: center;
+      max-width: 280px;
+      margin: 0 auto;
+      float: none;
+      padding: 30px 0;
+      height: auto; }
 
   #seventh-section .foot ul {
     display: -ms-inline-flexbox;
@@ -9021,8 +9049,6 @@ Main Components
       float: left; }
       #forth-section .left article {
         padding: 2.5vh 2.5vh 9.5vh 2.5vh; }
-        #forth-section .left article h2 {
-          font-size: 5vw; }
         #forth-section .left article p {
           line-height: 1.8em;
           font-size: 2vw; }
@@ -9049,28 +9075,44 @@ Main Components
       #fifth-section ul li {
         float: left;
         overflow: hidden;
-        margin: 0 2px;
+        margin: 0;
+        border-left: 2px solid #fff;
         position: relative; }
         #fifth-section ul li img {
-          min-width: 100%; }
+          min-width: 100%;
+          vertical-align: top; }
         #fifth-section ul li:last-child {
-          height: 180px; }
+          border-left: none;
+          width: 35%; }
+      #fifth-section ul .border-none {
+        border: none; }
       #fifth-section ul .first {
-        width: 270px; }
+        width: 30.92%;
+        height: 320px;
+        border-bottom: 2px solid #fff; }
       #fifth-section ul .second {
-        width: 210px; }
+        width: 21.64%;
+        border-bottom: 2px solid #fff;
+        height: 320px; }
+        #fifth-section ul .second img {
+          border-bottom: 2px solid #fff;
+          vertical-align: top; }
       #fifth-section ul .third {
-        width: 418px; }
+        width: 46.9%;
+        height: 320px;
+        border-bottom: 2px solid #fff; }
       #fifth-section ul .forth {
-        width: 240px; }
+        width: 21.64%;
+        height: 159px; }
     #fifth-section .highlight-tag {
       display: inline-block;
       vertical-align: bottom;
       float: right; }
     #fifth-section .view {
       position: absolute;
-      bottom: 0;
-      left: 5px; }
+      top: 15px;
+      right: 5px;
+      left: auto; }
     #fifth-section h1 {
       font-size: 2.5em; }
 
@@ -9240,37 +9282,8 @@ Main Components
         #forth-section .right li .text-yellow, #forth-section .right li .text-red {
           font-size: 1.8vw; }
 
-  #fifth-section {
-    padding-top: 5%; }
-    #fifth-section ul {
-      margin: 0 -2px; }
-      #fifth-section ul li {
-        float: left;
-        overflow: hidden;
-        margin: 0 2px;
-        position: relative; }
-        #fifth-section ul li img {
-          min-width: 100%; }
-        #fifth-section ul li:last-child {
-          height: 180px; }
-      #fifth-section ul .first {
-        width: 298px; }
-      #fifth-section ul .second {
-        width: 236px; }
-      #fifth-section ul .third {
-        width: 418px; }
-      #fifth-section ul .forth {
-        width: 267px; }
-    #fifth-section .highlight-tag {
-      display: inline-block;
-      vertical-align: bottom;
-      float: right; }
-    #fifth-section .view {
-      position: absolute;
-      bottom: 0;
-      left: 5px; }
-    #fifth-section h1 {
-      font-size: 2.5em; }
+  #fifth-section ul li {
+    width: 12%; }
 
   #sixth-section {
     padding-top: 4%;
