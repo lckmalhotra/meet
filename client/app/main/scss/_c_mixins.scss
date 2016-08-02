@@ -1,0 +1,78 @@
+@mixin background-img-box($url) {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url($url);
+    background-attachment: fixed;
+}
+@mixin color-background($top, $right, $bottom, $left, $bg-color){
+    padding: $top $right $bottom $left;
+    background-color: $bg-color;
+}
+@mixin vertical-padding($value){
+    padding-top: $value;
+    padding-bottom: $value;
+}
+@mixin hamburger($width, $height){
+    cursor: pointer;
+    height: $height;
+    width: $width;
+    background: white;
+    position: relative;
+    display: block;
+    content: '';
+}
+@mixin font-face($font-name,$font-url){
+    font-family: $font-name;
+    font-size: normal;
+    src: url($font-url);
+}
+@mixin menu-transition($type, $time){
+    -webkit-transition: all $type $time;
+    -moz-transition: all $type $time;
+    -ms-transition: all $type $time;
+    -o-transition: all $type $time;
+    transition: all $type $time;
+}
+@mixin rotate-element($degree){
+    -webkit-transform: rotate($degree);
+    -moz-transform: rotate($degree);
+    -ms-transform: rotate($degree);
+    -o-transform: rotate($degree);
+    transform: rotate($degree);
+}
+// responsive mixins start
+@mixin style-for($media){
+    @if $media == mobile-large {
+        @media only screen and (min-width: 375px){
+            @content;
+        }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: 768px){
+            @content;
+        }
+    }
+    @else if $media == desktop {
+        @media only screen and (min-width: 1024px){
+            @content;
+        }
+    }
+    @else if $media == desktop-large {
+        @media only screen and (min-width: 1170px){
+            @content;
+        }
+    }
+     @else if $media == large-screen {
+        @media only screen and (min-width: 1400px){
+            @content;
+        }
+    }
+    
+    @else if $media == ipad-landscape {
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+            @content;
+        }
+    }
+}
+//responsive mixins end

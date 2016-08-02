@@ -3,28 +3,29 @@
 
   <ul class="nav-dater">
     <li ng-class="{ active: isSet(1) }">
-      <a href ng-click="setTab(1)">January 2016</a>
+      <a href ng-click="setTab(1)">July 2016</a>
     </li>
     <li ng-class="{ active: isSet(2) }">
-      <a href ng-click="setTab(2)">July 2016</a>
+      <a href ng-click="setTab(2)">January 2016</a>
     </li>
+
   </ul>
   <div ng-show="isSet(1)">
-    <table class="table table-hover table-striped">
+    <table class="table table-hover table-condensed table-bordered custom-table">
       <thead>
       <tr>
-        <th>#Id</th>
-        <th>Name</th>
-        <th>Company</th>
-        <th class="text-center">Email</th>
-        <th class="text-center">Date</th>
-        <th class="text-center">Phone</th>
-        <th class="text-center">Message</th>
-        <th class="text-center">Action</th>
+        <th width="5">#Id</th>
+        <th width="10">Name</th>
+        <th width="15">Company</th>
+        <th width="25" class="text-center">Email</th>
+        <th width="10" class="text-center">Date</th>
+        <th width="10" class="text-center">Phone</th>
+        <th width="10" class="text-center">Message</th>
+        <th width="20" class="text-center">Action</th>
       </tr>
       </thead>
       <tbody>
-      <tr class="" ng-repeat="item in items.data | dateFilter:Dec2015:Feb2016">
+      <tr class="" ng-repeat="item in items.data.slice().reverse() | dateFilter:Jun2016:Sep2016">
         <td>{{$index+1}}</td>
         <td>{{item.name}}</td>
         <td><strong class="">{{item.company}}</strong></td>
@@ -35,9 +36,9 @@
         <td class="text-center ">
           <div>
             <button type="button" ng-click="sendTicket(item, $index)" ng-class="{sent: item.ticketSent}" ng-disabled="item.ticketSent"
-                    class="send_btn">Send Ticket
+                    class="btn btn-success">Send Ticket
             </button>
-            <button type="button" ng-click="deleteThing(item)" class="delete_btn">Remove</button>
+            <button type="button" ng-click="deleteThing(item)" class="btn btn-danger">Remove</button>
           </div>
         </td>
       </tr>
@@ -47,21 +48,20 @@
     </table>
   </div>
   <div ng-show="isSet(2)">
-    <table class="table table-hover table-striped">
+    <table class="table table-hover table-condensed table-bordered custom-table">
       <thead>
       <tr>
-        <th>#Id</th>
-        <th>Name</th>
-        <th>Company</th>
-        <th class="text-center">Email</th>
-        <th class="text-center">Date</th>
-        <th class="text-center">Phone</th>
-        <th class="text-center">Message</th>
-        <th class="text-center">Action</th>
+        <th width="5">#Id</th>
+        <th width="10">Name</th>
+        <th width="15">Company</th>
+        <th width="25" class="text-center">Email</th>
+        <th width="10" class="text-center">Date</th>
+        <th width="10" class="text-center">Phone</th>
+        <th width="10" class="text-center">Message</th>
       </tr>
       </thead>
       <tbody>
-      <tr class="" ng-repeat="item in items.data | dateFilter:Jun2016:Sep2016">
+      <tr class="" ng-repeat="item in items.data.slice().reverse() | dateFilter:Dec2015:Feb2016">
         <td>{{$index+1}}</td>
         <td>{{item.name}}</td>
         <td><strong class="">{{item.company}}</strong></td>
@@ -69,20 +69,13 @@
         <td class="">{{item.date | date }}</td>
         <td class="text-center ">{{item.phone}}</td>
         <td class="text-center "><span class="message_width">{{item.message}}</span></td>
-        <td class="text-center ">
-          <div>
-            <button type="button" ng-click="sendTicket(item, $index)" ng-class="{sent: item.ticketSent}" ng-disabled="item.ticketSent"
-                    class="send_btn">Send Ticket
-            </button>
-            <button type="button" ng-click="deleteThing(item)" class="delete_btn">Remove</button>
-          </div>
-        </td>
       </tr>
 
       </tbody>
 
     </table>
   </div>
+
 
 </div>
 

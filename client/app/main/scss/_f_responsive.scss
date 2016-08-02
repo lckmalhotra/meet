@@ -1,0 +1,784 @@
+// tablet
+@include style-for(tablet){
+    section{
+        height: 100%;
+    }
+    .container{
+        min-width:100%;
+        padding:0 5vh;
+    }
+    #first-section{
+        .main{
+            h1{
+                width: 50%;
+                float: right;
+            }
+        }
+        .information{
+            >.days{
+                width: 45%;
+                float: left;
+                .venue-details{
+                    width: 15em;
+                }
+            }
+            >.register{
+                width: 50%;
+                float: right;
+            }
+        }
+
+           a {
+                &.site-logo{
+                    background-size: 100%;
+                }
+            }
+
+    }
+    #second-section{
+        h2{
+            top: 1.9em;
+            right: 6em;
+        }
+        article{
+            width: 70vh;
+            margin-left: 5.1vh;
+            @include color-background(2.9em,2.9em,2.9em,2.9em, #f4ee6f);
+        }
+    }
+      #third-section{
+       .speaker-list{
+        margin: 0 -1.5em;
+
+    }
+    figure{
+           margin: 0px 2vw;
+    height: 8.8em;
+    width: 20vh;
+        }
+        h2{
+            font-size: 2em;
+        }
+    }
+    #forth-section{
+        .left{
+            width: 40%;
+            float: left;
+        }
+        .right{
+            width: 55%;
+            float: right;
+                margin: 0px;
+                padding: 0px;
+                li{
+                    margin-bottom: 0.6em;
+                }
+
+        }
+    }
+    #fifth-section{
+        ul{
+            li{
+                float: left;
+                width: 33%;
+                overflow: hidden;
+                img{
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+    #seventh-section{
+        .foot{
+            ul{
+                    display: inline-flex;
+                li{
+                    text-align: left;
+                    padding-left: 10%;
+                }
+            }
+        }
+    }
+}
+
+
+@include style-for(ipad-landscape){
+    #first-section{
+        article.main{
+            h1{
+                width: 50%;
+                float: none;
+                    margin-top: 10vh;
+                font-size: 6vh;
+            }
+        }
+        .information{
+            margin-top: 4vh;
+            .days{
+                width: 45%;
+                float: none;
+                .venue-details{
+                    width: 15em;
+                }
+                h2{
+                    font-size: 3.5vh;
+                    .light-text{
+                        font-size: 2vh;
+                    }
+                }
+            }
+            >.register{
+                width: 50%;
+                float: none;
+                margin-top: 5vh;
+            }
+        }
+        figure{
+            width: 12em;
+            h1{
+                .site-logo{
+                    background-size: 100%;
+                }
+            }
+            h2{
+                font-size: 1em;
+                margin-top: -10px;
+            }
+        }
+    }
+    #second-section{
+
+        .container{
+            margin-top: 7%;
+        }
+        article{
+            width: 40vh;
+            p{
+                    font-size: 1.7vh;
+    line-height: 3vh;
+            }
+        }
+        h2{
+             font-size: 3vh;
+            position: static;
+            display: inline;
+            float: right;
+
+            margin-top: -3.1em;
+            margin-right: -6em;
+        }
+    }
+    #third-section{
+        .container{
+            padding-top: 10%;
+            figure{
+            width: 19vh;
+        }
+        }
+
+    }
+    #forth-section{
+        .container{
+            padding-top: 5%;
+        }
+        a.submit-talk{
+            font-size: inherit;
+        }
+        article{
+                margin-left: 0;
+            width: 50%;
+            float: left;
+            p#tagline{
+                font-size: 1.5vh;
+            }
+        }
+        .left{
+            width: 100%;
+    float: none;
+            margin-bottom:5%;
+        }
+        .right{
+            width: 100%;
+            float: none;
+
+                li{
+                    font-size: 2.6vh;
+                    small{
+                        font-size: 1.8vh;
+                    }
+                }
+
+        }
+    }
+    #fifth-section{
+        padding-top: 20%;
+
+    }
+    #sixth-section{
+        padding-top: 25%;
+        #location{
+            height: 77%;
+        }
+    }
+    #seventh-section{
+        .container{
+        padding-top: 30%;
+        }
+    }
+}
+
+
+@include style-for(desktop){
+
+    nav{
+        &#menu{
+            ul{
+                width: 74.1vh;
+                float: right;
+                li{
+                   font-size: 3vw;
+                }
+            }
+        }
+    }
+    section{
+        min-height:100%;
+        height: 100%;
+
+    }
+    .container{
+        min-width:100%;
+        padding:0 5vw;
+        overflow: hidden;
+    }
+
+    #first-section{
+        @include vertical-padding(10%);
+        padding-top: 0;
+      .header-b{
+            padding-top: 6vh;
+        }
+        figure{
+            width: $logo-width;
+            height: $logo-height;
+            h1 .site-logo{
+
+                margin-bottom: 19px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+            }
+            span{
+                font-size: $logo-text-size;
+            }
+        }
+        article.main{
+            margin-bottom: 2vh;
+            margin-top: 10vh;
+            h1{
+                font-size: $tag-size;
+                line-height: 8vh;
+                width: 45vw;
+                float: right;
+            }
+        }
+        .information{
+            .days{
+                width: 30vw;
+                float: left;
+                h2{
+                    font-size: 5vw;
+                    margin-bottom: 4vh;
+                }
+                .venue-details{
+                    width: 100%;
+
+                        li{
+                            font-size: 2.5vh;
+                        }
+
+                }
+            }
+            .register{
+                width: 45vw;
+                float: right;
+                padding-right: 10vh;
+                font-family: 'raleway-thin';
+                h3{
+                    font-size: 2.4vw;
+                }
+                a{
+                    font-size: 2.5vw;
+                    padding: 2vh;
+                }
+            }
+        }
+    }
+    #second-section{
+        @include vertical-padding(5%);
+        article{
+            width: 50vw;
+            height: 68.5vh;
+            margin-left: 10.1vh;
+            p{
+                font-size :1.6vw;
+                line-height:4.2vh;
+                margin-top: 0px;
+                margin-bottom: 5vh;
+            }
+        }
+        h2{
+            font-size: 5vw;
+            position: static;
+            display: inline;
+            float: right;
+            padding: 1.2em .5em 1.2em .5em;
+            margin-top: -2.1em;
+            margin-right: -6em;
+        }
+    }
+    #third-section{
+        padding-top: 3%;
+        article {
+            p{
+                font-size: 2.5vw;
+                margin: 0 0 2.2vh 0;
+            }
+        }
+        .speaker-list{
+            margin: 0 -4.7vh;
+            margin-top: 10vh;
+        }
+        figure{
+            height: auto;
+            margin: 0px 3.5vh;
+            width: 13vw;
+            overflow: hidden;
+            .image{
+                height: 14vh;
+            }
+            figcaption{
+                h4{
+                    font-size: 2.1vw;
+                }
+                p{
+                    font-size:1.6vw;
+                }
+            }
+        }
+        h2{
+            font-size: 6vw;
+            margin-bottom: 5vh;
+        }
+    }
+    #forth-section{
+        padding-top: 8%;
+        .left{
+            width: 40vw;
+            float: left;
+            article{
+                padding:2.5vh 2.5vh 9.5vh 2.5vh;
+
+                h2{
+                    font-size: 5vw;
+                }
+                p{
+                    line-height: 1.8em;
+                    font-size: 2vw;
+                    &#tagline{
+                        font-size: 1.7vw;
+                    }
+                }
+            }
+            .submit-links{
+                a{
+                    font-size: 2vh;
+                }
+            }
+        }
+        .right{
+            width:43vw;
+            float: right;
+
+                li{
+                    font-size: 1.47vw;
+                    small{
+                        font-size: 1.1vw;
+                    }
+                    margin-bottom: 2.5vh;
+                    .text-yellow, .text-red{
+                        font-size:2.1vw;
+                    }
+                }
+
+        }
+    }
+    #fifth-section{
+        ul{
+            margin: 0 -2px;
+            li{
+                float: left;
+                overflow: hidden;
+                img{
+                    min-width: 100%;
+                }
+                margin: 0 2px;
+                position: relative;
+                &:last-child{
+                    height: 180px;
+                }
+            }
+            .first{
+                width: 270px;
+            }
+            .second{
+                width: 210px;
+            }
+            .third{
+                width: 418px;
+            }
+            .forth{
+                width:240px;
+            }
+
+        }
+        padding-top: 5%;
+        .highlight-tag{
+            display: inline-block;
+            vertical-align: bottom;
+            float: right;
+        }
+        .view{
+            position: absolute;
+            bottom: 0;
+            left:5px;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+    }
+    #sixth-section{
+        @include vertical-padding(4%);
+        padding-right: 0px;
+        padding-left: 0px;
+        #top{
+            padding: $section-padding;
+        }
+        h2{
+            font-size: 5.7vh;
+            margin: 0 0 5vh 0;
+        }
+        p{
+            font-size: 3.5vh;
+            margin: 0 0 2vh 0;
+        }
+        #location{
+            width: 100%;
+            height: 60%;
+
+        }
+    }
+    #seventh-section{
+        @include vertical-padding(10%);
+        p{
+            font-size: 2vh;
+        }
+        h2{
+            font-size: 5.5vh;
+            margin-bottom:9vh;
+        }
+        .foot{
+            ul{
+                margin: 0;
+                padding:0;
+                display: inline-flex;
+                li{
+                    font-size: 2.6vh;
+                    text-align: left;
+                    padding-left: 10%;
+                    >h2{
+                        font-size: 3.5vh;
+                        margin-bottom: 2vh;
+                    }
+                }
+            }
+        }
+    }
+    #nav-bullets{
+        display: block;
+    }
+}
+
+
+@include style-for(desktop-large){
+    nav{
+        &#menu{
+            ul{
+               width: 82.1vh;
+            }
+        }
+    }
+    section{
+        min-height:100%;
+        height: 100%;
+
+    }
+    .container{
+        padding:0 10vw;
+    }
+
+    #first-section{
+        @include vertical-padding(10%);
+        padding-top: 0;
+      .header-b{
+            padding-top: 6vh;
+        }
+        figure{
+            width: $logo-width;
+            height: $logo-height;
+            h1 .site-logo{
+
+                margin-bottom: 19px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+            }
+            span{
+                font-size: $logo-text-size;
+            }
+        }
+        article.main{
+            margin-bottom: 2vh;
+            margin-top: 5%;
+            h1{
+                font-size: $tag-size;
+                line-height: 8vh;
+                width: 40vw;
+                float: right;
+            }
+        }
+        .information{
+            .days{
+                width: 30vw;
+                h2{
+                    font-size: 3.6vw;
+                    margin-bottom: 5vh;
+                }
+                .venue-details{
+                    width: 21.6vw;
+
+                        li{
+                            font-size: 2.5vh;
+                        }
+
+                }
+            }
+            .register{
+                width: 40vw;
+                float: right;
+                padding-right: 10vh;
+                font-family: 'raleway-thin';
+                h3{
+                    font-size: 2.2vw;
+                }
+                a{
+                    font-size: 2.2vw;
+                    padding: 2vh;
+                }
+            }
+        }
+    }
+    #second-section{
+        @include vertical-padding(5%);
+        article{
+            width: 48vw;
+            height: 68.5vh;
+            margin-left: 10.1vh;
+            margin-top: 8%;
+            p{
+                font-size: 1.32vw;
+                line-height:4.2vh;
+                margin-top: 0px;
+                margin-bottom: 5vh;
+            }
+        }
+        h2{
+            font-size: 3.1vw;
+            position: static;
+            display: inline;
+            float: right;
+            margin-top: -1.8em;
+            margin-right: -6.5em;
+        }
+    }
+    #third-section{
+        padding-top: 3%;
+        article {
+            p{
+                font-size: 1.8vw;
+                margin: 0 0 2.2vh 0;
+            }
+        }
+       .speaker-list{
+           margin: 0 -4.7vh;
+        margin-top: 10vh;
+        }
+    figure{
+        margin: 0px 1.5vw;
+        width: 13vw;
+        overflow: hidden;
+        .image{
+            height: 24vh;
+        }
+        figcaption{
+            h4{
+                font-size: 1.8vw;
+            }
+            p{
+                font-size: 1.34vw;
+            }
+        }
+        }
+        h2{
+            font-size: 3.52vw;
+            margin-bottom: 5vh;
+        }
+    }
+    #forth-section{
+        padding-top: 5%;
+        .left{
+            width: 24vw;
+            article{
+                padding:2.5vh 2.5vh 9.5vh 2.5vh;
+
+                h2{
+                    font-size: 5.8vh;
+                }
+                p{
+                    line-height: 1.8em;
+                    font-size: 3vh;
+                    &#tagline{
+                        font-size: 1.2vw;
+                    }
+                }
+            }
+            .submit-links{
+                a{
+                    font-size: 1.3vw;
+                }
+            }
+        }
+        .right{
+            width:45vw;
+
+                li{
+                    font-size: 1.2vw;
+                    margin-bottom: 3vh;
+                    .text-yellow, .text-red{
+                        font-size: 1.8vw;
+                    }
+                }
+
+        }
+    }
+    #fifth-section{
+        ul{
+            margin: 0 -2px;
+            li{
+                float: left;
+                overflow: hidden;
+                img{
+                    min-width: 100%;
+                }
+                margin: 0 2px;
+                position: relative;
+                &:last-child{
+                    height: 180px;
+                }
+            }
+            .first{
+                width: 298px;
+            }
+            .second{
+                width: 236px;
+            }
+            .third{
+                width: 418px;
+            }
+            .forth{
+                width:267px;
+            }
+
+        }
+        padding-top: 5%;
+        .highlight-tag{
+            display: inline-block;
+            vertical-align: bottom;
+            float: right;
+        }
+        .view{
+            position: absolute;
+            bottom: 0;
+            left:5px;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+    }
+    #sixth-section{
+       @include vertical-padding(4%);
+        padding-right: 0px;
+        padding-left: 0px;
+        #top{
+            padding: $section-padding;
+        }
+        h2{
+            font-size: 2.98vw;
+            margin: 0 0 5vh 0;
+        }
+        p{
+            font-size: 1.8vw;
+            margin: 0 0 2vh 0;
+        }
+        #location{
+            width: 100%;
+            height: 66%;
+
+        }
+    }
+    #seventh-section{
+        @include vertical-padding(10%);
+        p{
+            font-size: 1vw;
+        }
+        h2{
+            font-size: 2.7vw;
+            margin-bottom:9vh;
+        }
+        .foot{
+        ul{
+            margin: 0;
+            padding:0;
+            li{
+                font-size: 2.6vh;
+                >h2{
+                    font-size:1.3vw;
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+    }
+    }
+}
+@include style-for(large-screen){
+
+    #fifth-section{
+         ul{
+            li{
+                width: 12%;
+            }
+        }
+    }
+}
