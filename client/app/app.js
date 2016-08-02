@@ -147,11 +147,6 @@ angular.module('meetApp', [
             animationVisible = animationParams[0],
             animationTop = animationParams[1],
             animationBottom = animationParams[2];
-
-          console.log(animationVisible);
-          console.log(animationTop);
-          console.log(animationBottom);
-
           visibleSection.children('div').velocity(animationVisible, 1, function(){
             visibleSection.css('opacity', 1);
             topSection.css('opacity', 1);
@@ -162,6 +157,12 @@ angular.module('meetApp', [
         }
 
         function scrollHijacking (event) {
+          if($(elem).children('.cd-section:nth-child(1)').hasClass('visible')){
+            $('.home_menu').removeClass('active');
+          }else{
+            $('.home_menu').addClass('active');
+          }
+
           // on mouse scroll - check if animate section
           if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
             delta--;
@@ -174,6 +175,16 @@ angular.module('meetApp', [
         }
 
         function prevSection(event) {
+          setTimeout(function(){
+
+            if($(elem).children('.cd-section:nth-child(1)').hasClass('visible')){
+              $('.home_menu').removeClass('active');
+            }else{
+              $('.home_menu').addClass('active');
+            }
+
+          },0)
+
           //go to previous section
           typeof event !== 'undefined' && event.preventDefault();
 
@@ -199,6 +210,15 @@ angular.module('meetApp', [
         }
 
         function nextSection(event) {
+          setTimeout(function(){
+
+            if($(elem).children('.cd-section:nth-child(1)').hasClass('visible')){
+              $('.home_menu').removeClass('active');
+            }else{
+              $('.home_menu').addClass('active');
+            }
+
+          },0)
           //go to next section
           typeof event !== 'undefined' && event.preventDefault();
 
@@ -604,7 +624,7 @@ angular.module('meetApp', [
             [ { translateY: '-50%'}, 1]
           ]
         });
-      console.log('runn')
+
     }
   };
 });

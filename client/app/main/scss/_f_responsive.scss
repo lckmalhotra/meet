@@ -562,14 +562,18 @@
     @include vertical-padding(5%);
     article {
       width: 48vw;
-      height: 68.5vh;
-      margin-left: 10.1vh;
+      height: auto;
       margin-top: 8%;
+      padding-bottom: 4em;
       p {
         font-size: 1.32vw;
         line-height: 4.2vh;
         margin-top: 0px;
         margin-bottom: 3vh;
+        &:last-child
+        {
+          margin-bottom: 0;
+        }
       }
     }
     h2 {

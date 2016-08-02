@@ -8199,7 +8199,7 @@ nav#menu {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   z-index: 2; }
   #second-section:before {
     background: #160a31;
@@ -8460,7 +8460,8 @@ nav#menu {
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
-  color: #ffffff; }
+  color: #ffffff;
+  overflow: hidden; }
 
 body::before {
   /* never visible - this is used in jQuery to check the current MQ */
@@ -8509,26 +8510,6 @@ Main Components
 
 .cd-section:nth-of-type(5) > div {
   background-color: #f06a59; }
-
-[data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-[data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
-  background-image: url("../img/img-1.jpg"); }
-
-[data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
-  background-image: url("../img/img-2.jpg"); }
-
-[data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
-  background-image: url("../img/img-3.jpg"); }
-
-[data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
-  background-image: url("../img/img-4.jpg"); }
-
-[data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
-  background-image: url("../img/img-5.jpg"); }
 
 @media only screen and (min-width: 1050px) {
   [data-hijacking="on"] .cd-section {
@@ -8585,18 +8566,17 @@ Main Components
   transform: translateY(-50%);
   display: none; }
 
+.cd-vertical-nav li {
+  text-align: center; }
+
 .cd-vertical-nav a {
   display: block;
   height: 40px;
   width: 40px;
-  /* image replace */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  background: url(../img/cd-icon-arrow.svg) no-repeat center center; }
+  font-size: 40px !important;
+  color: #00a651; }
 
 .cd-vertical-nav a.cd-prev {
-  transform: rotate(180deg);
   margin-bottom: 10px; }
 
 .cd-vertical-nav a.inactive {
@@ -8607,6 +8587,31 @@ Main Components
 @media only screen and (min-width: 1050px) {
   .cd-vertical-nav {
     display: block; } }
+.home_menu {
+  position: absolute;
+  z-index: 10;
+  color: #ffffff;
+  top: 5%;
+  right: 0;
+  transition: all 0.3s;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  font-weight: 100; }
+  .home_menu a {
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px; }
+  .home_menu.active {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%); }
+
 #first-section > .container {
   height: 100%; }
 
@@ -9046,14 +9051,16 @@ Main Components
     padding-bottom: 5%; }
     #second-section article {
       width: 48vw;
-      height: 68.5vh;
-      margin-left: 10.1vh;
-      margin-top: 8%; }
+      height: auto;
+      margin-top: 8%;
+      padding-bottom: 4em; }
       #second-section article p {
         font-size: 1.32vw;
         line-height: 4.2vh;
         margin-top: 0px;
         margin-bottom: 3vh; }
+        #second-section article p:last-child {
+          margin-bottom: 0; }
     #second-section h2 {
       font-size: 3.1vw;
       display: inline;
