@@ -11,9 +11,12 @@
               </h1>
               <span>2016, Season 2</span>
             </figure>
-            <a href="#" id="menu-button">
-    <span class="hamburger-icon">
-    </span>
+            <a href="#"  ng-click="autoOpen = !autoOpen" >
+              <div id="nav-icon1" ng-class="autoOpen ? 'open' : ''">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </a>
           </div>
           <article class="main clearfix">
