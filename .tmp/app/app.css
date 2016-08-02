@@ -8467,10 +8467,6 @@ body::before {
   body::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'desktop'; } }
-a {
-  color: #267481;
-  text-decoration: none; }
-
 /* --------------------------------
 
 Main Components
