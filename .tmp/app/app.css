@@ -8618,22 +8618,18 @@ Main Components
     display: block; } }
 .home_menu {
   position: absolute;
-  z-index: 10;
+  z-index: 10000;
   color: #ffffff;
-  top: 5%;
-  right: 0;
+  top: 8%;
+  right: 10%;
+  width: 50px;
   transition: all 0.3s;
-  transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
+  transform: translateX(500%);
+  -webkit-transform: translateX(500%);
+  -moz-transform: translateX(500%);
+  -ms-transform: translateX(500%);
+  -o-transform: translateX(500%);
   font-weight: 100; }
-  .home_menu a {
-    font-size: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    padding: 10px; }
   .home_menu.active {
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
@@ -8668,17 +8664,32 @@ Main Components
   position: relative;
   height: 100%; }
 
-#nav-icon1 {
-  width: 50px;
-  height: 30px;
+.ham-ic {
   position: absolute;
   top: 8%;
-  right: 0%;
+  right: 10%;
+  z-index: 10000;
+  opacity: 1;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%); }
+  .ham-ic.active {
+    opacity: 0;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%); }
+
+.nav-icon1 {
+  width: 50px;
+  height: 30px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer; }
 
-#nav-icon1 span {
+.nav-icon1 span {
   display: block;
   position: absolute;
   height: 2px;
@@ -8690,24 +8701,24 @@ Main Components
   transform: rotate(0deg);
   transition: .25s ease-in-out; }
 
-#nav-icon1 span:nth-child(1) {
+.nav-icon1 span:nth-child(1) {
   top: 0px; }
 
-#nav-icon1 span:nth-child(2) {
+.nav-icon1 span:nth-child(2) {
   top: 18px; }
 
-#nav-icon1 span:nth-child(3) {
+.nav-icon1 span:nth-child(3) {
   top: 36px; }
 
-#nav-icon1.open span:nth-child(1) {
+.nav-icon1.open span:nth-child(1) {
   top: 18px;
   transform: rotate(135deg); }
 
-#nav-icon1.open span:nth-child(2) {
+.nav-icon1.open span:nth-child(2) {
   opacity: 0;
   left: -60px; }
 
-#nav-icon1.open span:nth-child(3) {
+.nav-icon1.open span:nth-child(3) {
   top: 18px;
   transform: rotate(-135deg); }
 
@@ -8996,7 +9007,7 @@ Main Components
   /* section fifth */
   #sixth-section h2 {
     margin-bottom: 1.6em; } }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
     overflow: auto; }
 

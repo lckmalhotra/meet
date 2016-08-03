@@ -168,8 +168,10 @@ angular.module('meetApp', [
         function scrollHijacking (event) {
           if($(elem).children('.cd-section:nth-child(1)').hasClass('visible')){
             $('.home_menu').removeClass('active');
+            $('.ham-ic').removeClass('active');
           }else{
             $('.home_menu').addClass('active');
+            $('.ham-ic').addClass('active');
           }
 
           // on mouse scroll - check if animate section
@@ -188,9 +190,12 @@ angular.module('meetApp', [
 
             if($(elem).children('.cd-section:nth-child(1)').hasClass('visible')){
               $('.home_menu').removeClass('active');
+              $('.ham-ic').removeClass('active');
             }else{
               $('.home_menu').addClass('active');
+              $('.ham-ic').addClass('active');
             }
+
 
           },0)
 
@@ -223,9 +228,12 @@ angular.module('meetApp', [
 
             if($(elem).children('.cd-section:nth-child(1)').hasClass('visible')){
               $('.home_menu').removeClass('active');
+              $('.ham-ic').removeClass('active');
             }else{
               $('.home_menu').addClass('active');
+              $('.ham-ic').addClass('active');
             }
+
 
           },0)
 
@@ -260,9 +268,12 @@ angular.module('meetApp', [
 
             if($(elem).children('.cd-section:nth-child(1)').hasClass('visible')){
               $('.home_menu').removeClass('active');
+              $('.ham-ic').removeClass('active');
             }else{
               $('.home_menu').addClass('active');
+              $('.ham-ic').addClass('active');
             }
+
 
           },0)
           //go to next section

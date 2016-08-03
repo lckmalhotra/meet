@@ -11,13 +11,6 @@
               </h1>
               <span>2016, Season 2</span>
             </figure>
-            <a href="#"  ng-click="autoOpen = !autoOpen" >
-              <div id="nav-icon1" ng-class="autoOpen ? 'open' : ''">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </a>
           </div>
           <article class="main clearfix">
             <h1>
@@ -323,8 +316,25 @@
 
 </section>
 
-<div class="home_menu">
-  <a href="#" ng-click="toggleMenu = !toggleMenu"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+<div class="home_menu" ng-click="toggleMenu = !toggleMenu">
+
+    <a href="#"  ng-click="autoOpen = !autoOpen" >
+    <div class="nav-icon1" ng-class="autoOpen ? 'open' : ''">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </a>
+</div>
+
+<div class="ham-ic">
+  <a href="#"  ng-click="toggleMenu = !toggleMenu;autoOpen = !autoOpen" >
+    <div class="nav-icon1" ng-class="autoOpen ? 'open' : ''">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </a>
 </div>
 
 <nav>
