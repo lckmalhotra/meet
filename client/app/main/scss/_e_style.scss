@@ -281,6 +281,7 @@ nav{
         line-height: 1.2em;
         margin-top: 10%;
         position: relative;
+        padding: 2.2em 2.2em 2.2em 2.2em;
         p{
             margin-top: 0px;
         }
@@ -342,11 +343,12 @@ nav{
             font-weight: 900;
             text-transform: uppercase;
             font-family: 'raleway-heavy';
-            font-size: 2em;
+            font-size: 5.8vh;
         }
         p{
             line-height: 1.5em;
             font-family: 'raleway-thin';
+            margin-top: 1.5em;
             &#tagline{
                 font-size: 1em;
                 font-style: italic;
@@ -375,6 +377,7 @@ nav{
 
             @include vertical-padding(2em);
             @extend .no-padding;
+            padding-top: 0;
             color: #a5a8e7;
             font-family: 'roboto-light';
             font-size: 0.9em;
@@ -474,6 +477,16 @@ nav{
            border-right: 2px solid #fff;
          }
     }
+}
+#fifth-section ul li:last-child
+{
+  position: relative;
+  .highlight-tag
+  {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 //sixth section
 
