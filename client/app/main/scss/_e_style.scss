@@ -957,3 +957,200 @@ Main Components
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
+
+.ngdialog.ngdialog-theme-default{
+    padding: 5% 0px;
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content{
+    border-radius:0 ;
+    -webkit-border-radius:0 ;
+    -moz-border-radius:0 ;
+    background: #ffffff;
+    border-top: 5px #ffffff solid;
+    .form-control{
+        border-radius:0 ;
+        -webkit-border-radius:0 ;
+        -moz-border-radius:0 ;
+        border:none;
+        border-bottom: 1px solid #cccccc;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        padding: 5px 1px;
+    }
+    label{
+        font-weight: 100;
+        font-size: 12px;
+    }
+    .help-block{
+        font-size: 12px;
+        position: absolute;
+        bottom: 10px;
+    }
+}
+
+.input {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    max-width: 350px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+}
+
+.input__field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0.8em;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #aaa;
+    font-weight: 400;
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+    outline: none;
+}
+
+.input__label {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: #696969;
+    font-weight: bold;
+    font-size: 70.25%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input__label-content {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+}
+
+.graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+.icon {
+    color: #ddd;
+    font-size: 150%;
+}
+
+/* Individual styles */
+
+
+/* Nao */
+.input--nao {
+    overflow: hidden;
+    padding-top: 1em;
+    width: 100%;
+    margin: 0px;
+    max-width: 100%;
+}
+
+.input__field--nao {
+    padding: 0.5em 0em 0.25em;
+    width: 100%;
+    background: transparent;
+    color: #9da8b2;
+    font-size: 1.25em;
+}
+
+.input__label--nao {
+    position: absolute;
+    top: 0.95em;
+    font-size: 0.85em;
+    left: 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0em;
+    pointer-events: none;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: -webkit-transform 0.2s 0.15s, color 1s;
+    transition: transform 0.2s 0.15s, color 1s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.graphic--nao {
+    stroke: #92989e;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
+    transition: transform 0.7s, stroke 0.7s;
+    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.input__field--nao:focus + .input__label--nao,
+.input--filled .input__label--nao {
+    color: #8186f4;
+    -webkit-transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
+    transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
+}
+
+.input__field--nao:focus ~ .graphic--nao,
+.input--filled .graphic--nao {
+    stroke: #8186f4;
+    -webkit-transform: translate3d(-66.6%, 0, 0);
+    transform: translate3d(-66.6%, 0, 0);
+}
+
+.form-catcher{
+    position: relative;
+    .help-block{
+        color: red;
+        position: absolute;
+        top: 25px;
+        right:0px;
+        font-size: 11px;
+    }
+}
+.ngdialog-content h1{
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: -10px;
+}
+.ngdialog-content .topText{
+    font-size: 12px !important;
+}
+.regis-btn{
+    font-family: 'raleway-thin';
+    font-weight: 100;
+    background: #8186f4;
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+

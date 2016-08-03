@@ -1,70 +1,108 @@
-
-
-  <div id="form" ng-show="isActive" >
+<div id="form" ng-show="isActive">
 
     <h1>Registration Form</h1>
     <div class="topText">One of our representative will call you shortly to confirm your participation.</div>
+
     <div id="container">
-      <div class="inner">
-        <form  name="userForm" ng-submit="addThing()"  novalidate>
-          <div class="field form-group name_field" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
-            <label ng-class="{'effect':name.effect==true,'normal':name.effect==false}"  class="show-hide">Name <i class="fa fa-asterisk"></i></label>
-            <input type="text" name="name" ng-focus="name.effect=true" ng-blur="!formData.name ? name.effect=false : name.effect=true " class="form-control" ng-model="formData.name" required>
-            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</p>
-          </div>
-          <div class="field form-group" ng-class="{ 'has-error' : userForm.company.$invalid && !userForm.company.$pristine }">
-            <label ng-class="{'effect':company.effect==true,'normal':company.effect==false}" class="show-hide">Company <i class="fa fa-asterisk"></i></label>
-            <input type="text" ng-focus="company.effect=true" ng-blur="!formData.company ? company.effect=false : company.effect=true "  name="company" class="form-control" ng-model="formData.company"  required>
-            <p ng-show="userForm.company.$invalid && !userForm.company.$pristine" class="help-block">Your Company name is required.</p>
-          </div>
+        <div class="inner">
+            <form name="userForm" ng-submit="addThing()" novalidate>
 
-          <div class="form-group mail_field field" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                <div class="form-catcher">
+            <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" name="name" type="text"
+                           ng-model="formData.name" required/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Name</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+                         preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+                    <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is
+                        required.</p>
+                </div>
+                <div class="form-catcher">
+              <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="company"
+                           ng-model="formData.company" required/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Company</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+                         preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+                    <p ng-show="userForm.company.$invalid && !userForm.company.$pristine" class="help-block">Your
+                        Company name is required.</p>
+                </div>
+                <div class="form-catcher">
+             <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="email" name="email"
+                           ng-model="formData.email" required/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Email</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+                         preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+                    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid
+                        email.</p>
+                </div>
+                <div class="form-catcher">
+            <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="number" ng-minlength="10"
+                           maxlength="13" name="phone" ng-model="formData.phone" required/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Phone</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+                         preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+                    <p ng-show="userForm.phone.$error.minlength " class="help-block">Enter Valid Number</p>
+                    <p ng-show="userForm.phone.$error.maxlength" class="help-block">Your Number is exceeded by 10
+                        numbers</p>
 
-            <label ng-class="{'effect':email.effect==true,'normal':email.effect==false}"  class="show-hide">Email <i class="fa fa-asterisk"></i></label>
+                </div>
+                <div class="form-catcher">
+                    <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="message"
+                           ng-model="formData.message"/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Message</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+                         preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+                </div>
 
-            <input ng-focus="email.effect=true" ng-blur="!userForm.email.$viewValue.length? email.effect=false : email.effect=true " type="email" class="form-control" name="email" ng-model="formData.email" required/>
-            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
-          </div>
-
-          <div class="form-group field phone" ng-class="{ 'has-error' : userForm.phone.$invalid && !userForm.phone.$pristine }">
-            <label ng-class="{'effect':phone.effect,'normal':!phone.effect}" class="show-hide">Phone Number (Pl. Don't prefix +91 or 0 ) <i class="fa fa-asterisk"></i></label>
-            <span class="nine-one">+91</span>
-            <input type="integer"
-                   ng-focus="phone.effect=true"
-                   ng-blur="!userForm.phone.$viewValue.length? phone.effect=false : phone.effect=true "
-                   name="phone"
-                   class="form-control"
-                   ng-model="formData.phone"
-                   ng-minlength="10"
-                   maxlength="13"
-                   required
-                  >
-
-            <p ng-show="userForm.phone.$error.minlength " class="help-block">Enter Valid Number</p>
-            <!--  <p ng-show="userForm.phone.$error.maxlength" class="help-block">Your Number is exceeded by 10 numbers</p>-->
-
-          </div>
-          <div class="field form-group">
-            <label  ng-class="{'effect':message.effect==true,'normal':message.effect==false}" class="show-hide">Current Role/Designation</label>
-            <input type="text" ng-focus="message.effect=true" ng-blur="!formData.message ? message.effect=false : message.effect=true " name="message" class="form-control" ng-model="formData.message">
-
-          </div>
-
-
-          <div class="btn_wrapper">
-            <button type="submit" class="btn btn-primary" id="submitBtn" ng-class="{'disabled':userForm.$invalid}" >Submit</button></div>
-        </form>
-      </div>
-    </div></div>
-  <div id="succes_div" class="success_div" ng-show="!isActive">
+                <div class="btn_wrapper">
+                    <button type="submit" class="regis-btn btn" tabindex="-1" id="submitBtn"
+                            ng-class="{'disabled':userForm.$invalid}">Register Now
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="succes_div" class="success_div" ng-show="!isActive">
     <h1>Thank You</h1>
     <div class="success_msg">
-      <span class="image_right"><img src="../assets/images/tick_green.png" alt="right_image"</span>
-      <span class="request">Your request has been sent.</span>
-      <span class="contact">We will contact you shortly. </span>
+      <span class="image_right">
 
-      <button ng-click="closeThisDialog()" class="finish">Finish</button>
+      </span>
+        <span class="request">Your request has been sent.</span>
+        <span class="contact">We will contact you shortly. </span>
+
+        <button ng-click="closeThisDialog()" class="finish">Finish</button>
     </div>
-  </div>
+</div>
 
 
