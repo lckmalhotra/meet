@@ -469,6 +469,9 @@ nav{
             font-family: 'raleway-thin';
         }
     }
+    .show-mobile
+    { display:none;
+    }
     a{
         font-size: 0.8em;
     }
@@ -486,7 +489,7 @@ nav{
           }
           .wrap-img
           {
-            height: 161px;
+            height: 160px;
             width: 210px;
           }
         }
@@ -499,10 +502,23 @@ nav{
          {
            border-left: 2px solid #fff;
          }
+         .border-bot
+         {
+           border-bottom: 2px solid #fff;
+         }
+         .border-leftBot
+         {
+           border-left: 2px solid #fff;
+           border-bottom: 2px solid #fff;
+         }
          .border-topright
          {
            border-right: 2px solid #fff;
            border-top: 2px solid #fff;
+         }
+         .border-right
+         {
+           border-right: 2px solid #fff;
          }
     }
 }

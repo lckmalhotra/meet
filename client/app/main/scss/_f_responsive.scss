@@ -66,7 +66,7 @@
     h1
     {
       text-align: right;
-      font-size: 1.7em;
+      font-size: 1.5em;
       span
       {
         margin-top:6px;
@@ -76,12 +76,13 @@
   #first-section .information .days h2
   {
     margin-top: 6px;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   #first-section .information .days .venue-details
   {
-    margin-top: 4vh;
-    font-size: 5.5vw;
+    margin-top: 3vh;
+    font-size: 5vw;
+    padding: 12px 10px;
   }
   /* section first */
 
@@ -108,16 +109,19 @@
   /* section third */
 
 
-  #forth-section, #sixth-section, #seventh-section
+  #forth-section, #fifth-section, #sixth-section, #seventh-section
   {
     padding-top: 3em;
   }
-
   /* section fifth */
-  #fifth-section li {
+  #fifth-section ul li {
     max-width: 320px;
-    margin: 0 auto;
+    margin: 0 auto .5em auto;
     overflow: hidden;
+    img
+    {
+      border: 1px solid #fff;
+    }
     &:last-child {
       width: 100%;
       text-align: center;
@@ -126,11 +130,52 @@
       float: none;
       padding: 30px 0;
       height: auto;
+      .highlight-tag
+      {
+        display: none;
+      }
     }
   }
+  #fifth-section ul li .wrap-img
+  {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: .5em;
+
+  }
+  #fifth-section li .wrap-img + .wrap-img
+  {
+    margin-bottom: 0;
+  }
+  #fifth-section .show-mobile
+  {
+    display: block;
+    a
+    {
+      display: none;
+    }
+  }
+  #fifth-section .highlight-tag
+  {
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
   /* section fifth */
+  #sixth-section h2
+  {
+    margin-bottom: 1.6em;
+  }
 }
 @include style-for(tablet) {
+  body
+  {
+    overflow: auto;
+  }
+  .home_menu
+  {
+    display: none;
+  }
   section {
     height: 100%;
   }
@@ -235,11 +280,15 @@
   }
 }
 @include style-for(ipad-landscape) {
+  #nav-icon1
+  {
+    top: 3.5%;
+  }
   #first-section {
     article.main {
       h1 {
         width: 50%;
-        float: none;
+        float: right;
         margin-top: 10vh;
         font-size: 6vh;
       }
@@ -349,6 +398,10 @@
     .container {
       padding-top: 30%;
     }
+  }
+  #sixth-section h2
+  {
+    margin-bottom: 1em;
   }
 }
 @include style-for(desktop) {
