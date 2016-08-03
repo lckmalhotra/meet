@@ -316,10 +316,10 @@
 
 </section>
 
-<div class="home_menu" ng-click="toggleMenu = !toggleMenu">
+<div class="home_menu" >
 
-    <a href="#"  ng-click="autoOpen = !autoOpen" >
-    <div class="nav-icon1" ng-class="autoOpen ? 'open' : ''">
+    <a href="#" ng-click="toggleMenu = !toggleMenu" >
+    <div class="nav-icon1" ng-class="toggleMenu ? 'open' : ''">
       <span></span>
       <span></span>
       <span></span>
@@ -328,8 +328,8 @@
 </div>
 
 <div class="ham-ic">
-  <a href="#"  ng-click="toggleMenu = !toggleMenu;autoOpen = !autoOpen" >
-    <div class="nav-icon1" ng-class="autoOpen ? 'open' : ''">
+  <a href="#"  ng-click="toggleMenu = !toggleMenu;" >
+    <div class="nav-icon1" ng-class="toggleMenu ? 'open' : ''">
       <span></span>
       <span></span>
       <span></span>
@@ -344,29 +344,29 @@
   </ul>
 </nav> <!-- .cd-vertical-nav -->
 
-<nav id="menu" class="menu-de" ng-show="toggleMenu">
+<nav id="menu" class="menu-de" ng-class="toggleMenu ? 'active' : '' ">
   <div class="container">
     <ul>
       <li>
-        <a class="jumpTo" ng-click="toggleMenu = false"  id="home">home</a>
+        <a href="#" class="jumpTo" ng-click="toggleMenu = false"  id="home">home</a>
       </li>
       <li>
-        <a class="jumpTo" ng-click="toggleMenu = false" id="about">about</a>
+        <a href="#" class="jumpTo" ng-click="toggleMenu = false" id="about">about</a>
       </li>
       <li>
-        <a class="jumpTo" ng-click="toggleMenu = false" id="speakers">speakers</a>
+        <a href="#" class="jumpTo" ng-click="toggleMenu = false" id="speakers">speakers</a>
       </li>
       <li>
-        <a class="jumpTo" ng-click="toggleMenu = false" id="agenda">agenda</a>
+        <a href="#" class="jumpTo" ng-click="toggleMenu = false" id="agenda">agenda</a>
       </li>
       <li>
-        <a class="jumpTo" ng-click="toggleMenu = false" id="gallery">gallery</a>
+        <a href="#" class="jumpTo" ng-click="toggleMenu = false" id="gallery">gallery</a>
       </li>
       <li>
-        <a class="jumpTo" ng-click="toggleMenu = false" id="venue">venue</a>
+        <a href="#" class="jumpTo" ng-click="toggleMenu = false" id="venue">venue</a>
       </li>
       <li>
-        <a class="jumpTo" ng-click="toggleMenu = false" id="contact">contact</a>
+        <a href="#" class="jumpTo" ng-click="toggleMenu = false" id="contact">contact</a>
       </li>
     </ul>
   </div>
