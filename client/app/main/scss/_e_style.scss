@@ -32,7 +32,6 @@ body{
     font-family: 'raleway-regular';
     color: $white;
     min-height: 100%;
-  background: #0D3349;
 }
 
 ul{
@@ -580,7 +579,7 @@ nav{
 .nav-dater{
   padding: 0px;
   display: block;
-  max-width: 200px;
+  max-width: 400px;
   text-align: center;
   margin: 20px auto;
     li{
@@ -1144,4 +1143,8 @@ Main Components
   &.active{
     transform: translateY(0%);
   }
+}
+
+.full-page{
+  background: #2c4762;
 }

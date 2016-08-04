@@ -38,6 +38,7 @@ angular.module('meetApp', [
     templateUrl: 'app/main/fullPage.html',
     link: function(scope, elem, attrs) {
       scope.toggleMenu = false;
+
       jQuery(document).ready(function($){
         //variables
 
