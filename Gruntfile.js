@@ -448,8 +448,8 @@ module.exports = function (grunt) {
       },
       dist: [
         'newer:babel:client',
-        'sass',
-        'imagemin'
+        'sass'
+        // 'imagemin'
       ]
     },
 
