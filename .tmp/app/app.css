@@ -8136,7 +8136,8 @@ nav#menu {
     #first-section .information .days h2 {
       font-weight: 900;
       font-size: 2.6em;
-      margin-bottom: 0.4em; }
+      margin-bottom: 0.4em;
+      font-family: "raleway-regular"; }
       #first-section .information .days h2 .light-text {
         font-weight: 100;
         font-style: italic;
@@ -8160,6 +8161,9 @@ nav#menu {
       text-align: center;
       width: 100%;
       display: block; }
+
+#first-section .venue-details li {
+  font-family: 'raleway-regular'; }
 
 #second-section {
   background-repeat: no-repeat;
@@ -8395,6 +8399,8 @@ nav#menu {
   padding-bottom: 2em;
   background-color: #0f0931;
   text-align: center; }
+  #seventh-section p {
+    font-family: 'raleway-regular'; }
   #seventh-section h2.get-in-touch {
     padding: 0.5em 1em 0.5em 1em;
     background-color: #5388be;
@@ -9350,7 +9356,7 @@ Main Components
       display: -ms-inline-flexbox;
       display: inline-flex; }
       #seventh-section .foot ul li {
-        font-size: 2.6vh;
+        font-size: 18px;
         text-align: left;
         padding-left: 10%; }
         #seventh-section .foot ul li > h2 {
@@ -9543,7 +9549,7 @@ Main Components
     padding-top: 10%;
     padding-bottom: 10%; }
     #seventh-section p {
-      font-size: 1vw; }
+      font-size: 18px; }
     #seventh-section h2 {
       font-size: 2.7vw;
       margin-bottom: 9vh; }
@@ -9553,7 +9559,7 @@ Main Components
       #seventh-section .foot ul li {
         font-size: 2.6vh; }
         #seventh-section .foot ul li > h2 {
-          font-size: 1.3vw;
+          font-size: 24px;
           margin-bottom: 2vh; }
 
   #nav-bullets ul li a {
@@ -9562,6 +9568,20 @@ Main Components
     #nav-bullets ul li a.active {
       width: 1.5vh;
       height: 1.5vh; } }
+@media only screen and (min-width: 1300px) {
+  #first-section .information {
+    margin-bottom: 0; }
+
+  #first-section .information .days .venue-details {
+    width: 19.8vw;
+    padding: 16px 10px 14px 15px; }
+    #first-section .information .days .venue-details li {
+      margin-bottom: 4px; }
+
+  #second-section article {
+    padding: 3em 4em 4em 2em; }
+    #second-section article p {
+      line-height: 4.8vh; } }
 @media only screen and (min-width: 1400px) {
   #first-section article.main h1 span {
     margin-top: 10px; }

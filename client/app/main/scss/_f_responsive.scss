@@ -660,7 +660,7 @@
         padding: 0;
         display: inline-flex;
         li {
-          font-size: 2.6vh;
+          font-size: 18px;
           text-align: left;
           padding-left: 10%;
           >h2 {
@@ -917,7 +917,7 @@
   #seventh-section {
     @include vertical-padding(10%);
     p {
-      font-size: 1vw;
+      font-size: 18px;
     }
     h2 {
       font-size: 2.7vw;
@@ -930,7 +930,7 @@
         li {
           font-size: 2.6vh;
           >h2 {
-            font-size: 1.3vw;
+            font-size: 24px;
             margin-bottom: 2vh;
           }
         }
@@ -945,6 +945,30 @@
         width: 1.5vh;
         height: 1.5vh;
       }
+    }
+  }
+}
+@include style-for(mediumlarge-screen)
+{
+  #first-section .information
+  {
+    margin-bottom: 0;
+  }
+  #first-section .information .days .venue-details
+  {
+    width: 19.8vw;
+    padding: 16px 10px 14px 15px;
+    li
+    {
+      margin-bottom: 4px;
+    }
+  }
+  #second-section article
+  {
+    padding: 3em 4em 4em 2em;
+    p
+    {
+      line-height: 4.8vh;
     }
   }
 }
