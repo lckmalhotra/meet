@@ -497,6 +497,8 @@ nav{
 
 #sixth-section{
     background-color: #e9e5dc;
+    padding-left: 15px;
+    padding-right: 15px;
     @include vertical-padding(2em);
     text-align: center;
     padding-bottom: 0px;
@@ -533,6 +535,13 @@ nav{
             }
         }
     }
+}
+#sixth-section #location .iframe
+{
+  width: 970px;
+  height: 100%;
+  margin: 0 auto;
+  border: none;
 }
 // seventh section
 

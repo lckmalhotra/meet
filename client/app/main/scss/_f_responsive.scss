@@ -397,9 +397,9 @@
   }
   #sixth-section {
     padding-top: 25%;
-    #location {
+   /* #location {
       height: 77%;
-    }
+    }*/
   }
   #seventh-section {
     .container {
@@ -631,8 +631,6 @@
   }
   #sixth-section {
     @include vertical-padding(4%);
-    padding-right: 0px;
-    padding-left: 0px;
     #top {
       padding: $section-padding;
     }
@@ -644,10 +642,10 @@
       font-size: 3.5vh;
       margin: 0 0 2vh 0;
     }
-    #location {
+   /* #location {
       width: 100%;
       height: 60%;
-    }
+    }*/
   }
   #seventh-section {
     @include vertical-padding(10%);
@@ -900,8 +898,6 @@
   }
   #sixth-section {
     @include vertical-padding(4%);
-    padding-right: 0px;
-    padding-left: 0px;
     #top {
       padding: $section-padding;
     }
@@ -913,10 +909,10 @@
       font-size: 1.8vw;
       margin: 0 0 2vh 0;
     }
-    #location {
+   /* #location {
       width: 100%;
       height: 66%;
-    }
+    }*/
   }
   #seventh-section {
     @include vertical-padding(10%);
@@ -973,6 +969,13 @@
     p
     {
       line-height: 4.8vh;
+    }
+  }
+  #forth-section .left article
+  {
+    padding-top: 1.2vh;
+    p{
+      margin-top: 0.7em;
     }
   }
 }
