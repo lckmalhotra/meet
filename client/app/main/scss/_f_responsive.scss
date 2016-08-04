@@ -1,10 +1,14 @@
 // tablet
 @include style-for(mobile-large)
 {
-    body
-    {
-      overflow: auto;
-    }
+  body
+  {
+    overflow: auto;
+  }
+  nav#menu
+  {
+    display: none;
+  }
   .cd-section
   {
     height: 100%;
