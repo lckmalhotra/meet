@@ -63,6 +63,12 @@
             @content;
         }
     }
+    @else if $media == mediumlarge-screen
+    {
+      @media only screen and (min-width: 1300px){
+        @content;
+      }
+    }
      @else if $media == large-screen {
         @media only screen and (min-width: 1400px){
             @content;

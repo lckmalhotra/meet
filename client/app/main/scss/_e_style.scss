@@ -200,8 +200,9 @@ nav{
         .days{
             h2{
                 font-weight: 900;
-                    font-size: 2.6em;
-    margin-bottom: 0.4em;
+                font-size: 2.6em;
+                margin-bottom: 0.4em;
+                font-family: "raleway-regular";
                 .light-text{
                     font-weight: 100;
                     font-style: italic;
@@ -218,9 +219,11 @@ nav{
 
                     li{
                         margin-top: 0.5em;
+
                         &:first-child{
                             margin: 0;
                         }
+
                     }
                 }
             }
@@ -241,7 +244,10 @@ nav{
         }
     }
 }
-
+#first-section .venue-details li
+{
+  font-family: 'raleway-regular';
+}
 //Second Section styling
 #second-section{
     @include background-img-box("../assets/images/bg-2.png");
@@ -537,6 +543,7 @@ nav{
     text-align: center;
     p{
         @extend .no-margin;
+        font-family: 'raleway-regular';
     }
    h2.get-in-touch{
         @include color-background(0.5em,1em,0.5em,1em, #5388be);
