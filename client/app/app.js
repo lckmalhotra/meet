@@ -39,6 +39,11 @@ angular.module('meetApp', [
     link: function(scope, elem, attrs) {
       scope.toggleMenu = false;
 
+      var date1 = new Date(Date.now());
+      var date2 = new Date("9/9/2016");
+      var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+      scope.diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24))
+
       jQuery(document).ready(function($){
         //variables
 
