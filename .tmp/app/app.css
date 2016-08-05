@@ -8033,6 +8033,9 @@ a {
     content: '';
     bottom: -0.5em; }
 
+.ham-ic a {
+  display: block; }
+
 h1 .site-logo {
   padding: 1.7em 5em 0px 0px;
   height: 0;
@@ -8269,20 +8272,19 @@ nav#menu {
   #forth-section .submit-links {
     float: right; }
   #forth-section a.submit-talk {
-    padding: 1em 2.5em 1em 2.5em;
+    padding: 1em 1.8em 1em 1.8em;
     background-color: #f4ee6f;
-    color: #eb2242;
-    font-weight: 900;
     float: right;
     color: #eb2242;
-    margin-top: 1em; }
+    margin-top: 1em;
+    font-family: "raleway-thin"; }
   #forth-section a.book-seat {
-    padding: 0.8em 2em 0.8em 2em;
+    padding: 1em 1.8em 1em 1.8em;
     background-color: #eb2242;
     color: #ffffff;
-    font-weight: 900;
     float: right;
-    margin-top: 0.7em; }
+    margin-top: 0.7em;
+    font-family: "raleway-thin"; }
   #forth-section .time-schedule {
     padding-top: 2em;
     padding-bottom: 2em;
@@ -8295,7 +8297,7 @@ nav#menu {
       #forth-section .time-schedule li time {
         margin-right: 1em; }
       #forth-section .time-schedule li span.text-yellow {
-        font-family: 'roboto-regular';
+        font-family: 'roboto-light';
         font-weight: 700;
         color: #f4ee6f; }
       #forth-section .time-schedule li span.text-red {
@@ -8362,7 +8364,7 @@ nav#menu {
     bottom: 0; }
 
 #sixth-section {
-  background-color: #e9e5dc;
+  background-color: #d2d2d2;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 2em;
@@ -8377,12 +8379,14 @@ nav#menu {
     display: inline-block; }
   #sixth-section p {
     color: #000000;
+    padding: 0 15px;
     font-family: 'raleway-thin'; }
   #sixth-section #location {
-    height: 300px;
+    height: 380px;
     resize: none;
     max-width: 100%;
-    margin-top: 2em; }
+    margin-top: 2em;
+    pointer-events: none; }
     #sixth-section #location #gmap_canvas {
       height: 100%;
       width: 100%;
@@ -8407,26 +8411,24 @@ nav#menu {
   padding-bottom: 2em;
   background-color: #0f0931;
   text-align: center; }
-  #seventh-section p {
-    font-family: 'raleway-regular'; }
   #seventh-section h2.get-in-touch {
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.7em 1em 0.7em 1em;
     background-color: #5388be;
     font-family: 'raleway-heavy';
     text-transform: uppercase;
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 4vh; }
   #seventh-section .foot ul {
     list-style: none; }
     #seventh-section .foot ul li {
-      width: 100%; }
+      width: 100%;
+      font-family: 'raleway-thin'; }
       #seventh-section .foot ul li > h2 {
-        color: #6e6b76;
+        color: #f0ede5;
         text-transform: uppercase;
-        font-family: 'raleway-thin';
         background: none;
         padding: 0; }
       #seventh-section .foot ul li address {
-        font-family: 'raleway-regular';
         font-style: normal;
         line-height: 1.5em; }
 
@@ -8673,10 +8675,13 @@ Main Components
 
 .nav-icon1 {
   width: 50px;
-  height: 30px;
+  height: 45px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer; }
+
+.ham-ic a {
+  display: block; }
 
 .nav-icon1 span {
   display: block;
@@ -9261,7 +9266,7 @@ button#submitBtn {
       font-size: 5vw;
       display: inline;
       float: right;
-      padding: 1.2em .5em 1.2em .5em; }
+      padding: 1em .7em 1em .7em; }
 
   #third-section {
     padding-top: 3%; }
@@ -9492,9 +9497,8 @@ button#submitBtn {
     #forth-section .left {
       width: 24vw; }
       #forth-section .left article {
-        padding: 2.5vh 2.5vh 4vh 2.5vh; }
-        #forth-section .left article a
-        h2 {
+        padding: 4.5vh 2.5vh 4vh 4.5vh; }
+        #forth-section .left article h2 {
           font-size: 5.8vh;
           margin-bottom: 3vh; }
         #forth-section .left article p {
@@ -9508,9 +9512,9 @@ button#submitBtn {
       width: 45vw; }
       #forth-section .right li {
         font-size: 1.2vw;
-        margin-bottom: 1.7vh; }
+        margin-bottom: 2.2vh; }
         #forth-section .right li .text-yellow, #forth-section .right li .text-red {
-          font-size: 1.8vw; }
+          font-size: 1.5vw; }
 
   #fifth-section {
     padding-top: 9%; }
@@ -9552,6 +9556,8 @@ button#submitBtn {
   #sixth-section {
     padding-top: 4%;
     padding-bottom: 4%;
+    padding-left: 0;
+    padding-right: 0;
     /* #location {
        width: 100%;
        height: 66%;
@@ -9566,8 +9572,8 @@ button#submitBtn {
       margin: 0 0 2vh 0; }
 
   #seventh-section {
-    padding-top: 10%;
-    padding-bottom: 10%; }
+    padding-top: 8%;
+    padding-bottom: 8%; }
     #seventh-section p {
       font-size: 18px; }
     #seventh-section h2 {
@@ -9575,7 +9581,8 @@ button#submitBtn {
       margin-bottom: 9vh; }
     #seventh-section .foot ul {
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      width: 100%; }
       #seventh-section .foot ul li {
         font-size: 2.6vh; }
         #seventh-section .foot ul li > h2 {
@@ -9604,15 +9611,27 @@ button#submitBtn {
       line-height: 4.8vh; }
 
   #forth-section .left article {
-    padding-top: 1.2vh; }
-    #forth-section .left article p {
-      margin-top: 0.7em; } }
+    padding: 4.5vh 2.5vh 6vh 4.5vh; }
+    #forth-section .left article p#tagline {
+      margin-top: 4vh; }
+
+  #sixth-section #location {
+    height: 350px; } }
 @media only screen and (min-width: 1400px) {
+  #first-section .information .days h2 {
+    font-size: 2.5vw; }
+
   #first-section article.main h1 span {
     margin-top: 10px; }
 
   #fifth-section ul li {
-    width: 12%; } }
+    width: 12%; }
+
+  #sixth-section #location {
+    height: 400px; }
+
+  #seventh-section .foot ul li {
+    font-size: 2vh; } }
 footer.footer {
   text-align: center;
   padding: 30px 0;

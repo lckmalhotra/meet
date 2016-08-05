@@ -508,7 +508,7 @@
       font-size: 5vw;
       display: inline;
       float: right;
-      padding: 1.2em .5em 1.2em .5em;
+      padding: 1em .7em 1em .7em;
     }
   }
   #third-section {
@@ -817,7 +817,7 @@
     .left {
       width: 24vw;
       article {
-        padding: 2.5vh 2.5vh 4vh 2.5vh;a
+        padding: 4.5vh 2.5vh 4vh 4.5vh;
         h2 {
           font-size: 5.8vh;
           margin-bottom: 3vh;
@@ -840,9 +840,9 @@
       width: 45vw;
       li {
         font-size: 1.2vw;
-        margin-bottom: 1.7vh;
+        margin-bottom: 2.2vh;
         .text-yellow, .text-red {
-          font-size: 1.8vw;
+          font-size: 1.5vw;
         }
       }
     }
@@ -898,6 +898,8 @@
   }
   #sixth-section {
     @include vertical-padding(4%);
+    padding-left: 0;
+    padding-right: 0;
     #top {
       padding: $section-padding;
     }
@@ -915,7 +917,7 @@
     }*/
   }
   #seventh-section {
-    @include vertical-padding(10%);
+    @include vertical-padding(8%);
     p {
       font-size: 18px;
     }
@@ -927,6 +929,7 @@
       ul {
         margin: 0;
         padding: 0;
+        width: 100%;
         li {
           font-size: 2.6vh;
           >h2 {
@@ -973,21 +976,70 @@
   }
   #forth-section .left article
   {
-    padding-top: 1.2vh;
-    p{
-      margin-top: 0.7em;
+    padding: 4.5vh 2.5vh 6vh 4.5vh;
+    p#tagline{
+      margin-top: 4vh;
     }
+  }
+  #sixth-section #location
+  {
+    height: 350px;
   }
 }
 @include style-for(large-screen) {
+  #first-section .information .days h2
+  {
+    font-size: 2.5vw;
+  }
   #first-section article.main h1 span {
     margin-top: 10px;
   }
   #fifth-section {
     ul {
-      li {
-        width: 12%;
-      }
+        max-width: 100%;
+       .first
+       {
+         width: 30%;
+         height:450px;
+       }
+       .second
+       {
+         width: 25%;
+         height: 450px;
+         .wrap-img
+         {
+           width: 100%;
+           height: 225px;
+         }
+       }
+       .third
+       {
+         width: 45%;
+         height: 450px;
+       }
+       .forth
+       {
+         width: 25%;
+         height: 225px;
+       }
+       li:last-child
+       {
+         width: 25%;
+         height: 225px;
+       }
     }
+  }
+  #fifth-section .view {
+    top: 50px;
+    font-size: 24px;
+  }
+  #sixth-section #location
+  {
+    height: 400px;
+  }
+
+  #seventh-section .foot ul li
+  {
+    font-size: 2vh;
   }
 }

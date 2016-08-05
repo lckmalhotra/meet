@@ -63,6 +63,10 @@ a{
         bottom: -0.5em;
     }
 }
+.ham-ic a
+{
+  display: block;
+}
 h1{
     @extend .no-margin;
     .site-logo{
@@ -364,19 +368,18 @@ nav{
         float: right;
     }
     a.submit-talk{
-        @include color-background(1em, 2.5em, 1em, 2.5em, #f4ee6f);
-        color: #eb2242;
-        font-weight: 900;
+        @include color-background(1em, 1.8em, 1em, 1.8em, #f4ee6f);
         float: right;
         color: #eb2242;
         margin-top: 1em;
+        font-family: "raleway-thin";
     }
     a.book-seat{
-        @include color-background(0.8em,2em,0.8em,2em, #eb2242);
+        @include color-background(1em,1.8em, 1em,1.8em, #eb2242);
         color: #ffffff;
-        font-weight: 900;
         float: right;
         margin-top: 0.7em;
+        font-family: "raleway-thin";
     }
     .time-schedule{
 
@@ -392,7 +395,7 @@ nav{
                     margin-right: 1em;
                 }
                 span.text-yellow{
-                    font-family: 'roboto-regular';
+                    font-family: 'roboto-light';
                     font-weight: 700;
                     color: #f4ee6f;
                 }
@@ -496,7 +499,7 @@ nav{
 //sixth section
 
 #sixth-section{
-    background-color: #e9e5dc;
+    background-color: #d2d2d2;
     padding-left: 15px;
     padding-right: 15px;
     @include vertical-padding(2em);
@@ -512,13 +515,15 @@ nav{
     }
     p{
         color: #000000;
+        padding: 0 15px;
         font-family: 'raleway-thin';
     }
     #location{
-        height:300px;
+        height:380px;
         resize:none;
         max-width:100%;
         margin-top: 2em;
+        pointer-events: none;
         #gmap_canvas{
             height:100%;
             width:100%;
@@ -551,13 +556,13 @@ nav{
     text-align: center;
     p{
         @extend .no-margin;
-        font-family: 'raleway-regular';
     }
    h2.get-in-touch{
-        @include color-background(0.5em,1em,0.5em,1em, #5388be);
+        @include color-background(0.7em,1em,0.7em,1em, #5388be);
         font-family: 'raleway-heavy';
         text-transform: uppercase;
         display: inline-block;
+        margin-top: 4vh;
     }
   .foot{
         ul{
@@ -565,15 +570,14 @@ nav{
             list-style: none;
             li{
                 width: 100%;
+                font-family: 'raleway-thin';
                 >h2{
-                    color: #6e6b76;
+                    color: #f0ede5;
                     text-transform: uppercase;
-                    font-family: 'raleway-thin';
                     background: none;
                     padding:0;
                 }
                 address{
-                    font-family: 'raleway-regular';
                     font-style: normal;
                     line-height: 1.5em;
                 }
@@ -885,7 +889,7 @@ Main Components
 }
 .nav-icon1{
   width: 50px;
-  height: 30px;
+  height: 45px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -897,7 +901,12 @@ Main Components
   cursor: pointer;
 
 }
-
+.ham-ic
+{
+  a
+  { display: block;
+  }
+}
 .nav-icon1 span {
   display: block;
   position: absolute;
