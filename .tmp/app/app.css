@@ -9624,8 +9624,33 @@ button#submitBtn {
   #first-section article.main h1 span {
     margin-top: 10px; }
 
-  #fifth-section ul li {
-    width: 12%; }
+  #second-section article {
+    padding: 3em 4.3em 4em 2em; }
+
+  #fifth-section ul {
+    max-width: 100%; }
+    #fifth-section ul .first {
+      width: 30%;
+      height: 450px; }
+    #fifth-section ul .second {
+      width: 25%;
+      height: 450px; }
+      #fifth-section ul .second .wrap-img {
+        width: 100%;
+        height: 225px; }
+    #fifth-section ul .third {
+      width: 45%;
+      height: 450px; }
+    #fifth-section ul .forth {
+      width: 25%;
+      height: 225px; }
+    #fifth-section ul li:last-child {
+      width: 25%;
+      height: 225px; }
+
+  #fifth-section .view {
+    top: 50px;
+    font-size: 24px; }
 
   #sixth-section #location {
     height: 400px; }
