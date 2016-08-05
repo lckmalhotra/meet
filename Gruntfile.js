@@ -285,16 +285,16 @@ module.exports = function (grunt) {
     },
 
     // The following *-min tasks produce minified files in the dist folder
-    // imagemin: {
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: '<%= yeoman.client %>/assets/images',
-    //       src: '{,*/}*.{png,jpg,jpeg,gif,svg}',
-    //       dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images'
-    //     }]
-    //   }
-    // },
+    imagemin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.client %>/assets/images',
+          src: '{,*/}*.{png,jpg,jpeg,gif,svg}',
+          dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images'
+        }]
+      }
+    },
 
     // Allow the use of non-minsafe AngularJS files. Automatically makes it
     // minsafe compatible so Uglify does not destroy the ng references
@@ -447,7 +447,7 @@ module.exports = function (grunt) {
       },
       dist: [
         'newer:babel:client',
-        'sass',
+        'sass'
         // 'imagemin'
       ]
     },
