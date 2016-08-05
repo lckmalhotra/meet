@@ -8885,10 +8885,12 @@ Main Components
   -moz-border-radius: 0; }
 
 .menu-de {
-  transform: translateY(-100%);
-  transition: 0.9s cubic-bezier(0.87, 0.12, 0.43, 0.93); }
+  opacity: 0;
+  transition: all 0.2s;
+  visibility: hidden; }
   .menu-de.active {
-    transform: translateY(0%); }
+    opacity: 1;
+    visibility: visible; }
 
 .full-page {
   background: #2c4762; }

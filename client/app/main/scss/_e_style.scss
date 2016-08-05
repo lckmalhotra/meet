@@ -1155,10 +1155,12 @@ Main Components
     -moz-border-radius: 0;
 }
 .menu-de{
-  transform: translateY(-100%);
-  transition: 0.9s cubic-bezier(.87,.12,.43,.93);
+  opacity:0;
+  transition: all 0.2s;
+  visibility: hidden;
   &.active{
-    transform: translateY(0%);
+    opacity:1;
+    visibility: visible;
   }
 }
 
