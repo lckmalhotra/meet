@@ -8234,10 +8234,13 @@ nav#menu {
   #third-section figure {
     display: inline-block;
     width: 48%;
-    margin: 0px 0.1em; }
+    margin: 0px 0.1em;
+    vertical-align: top; }
     #third-section figure img {
-      height: 100%;
-      width: 100%; }
+      height: auto;
+      width: 100%;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%); }
     #third-section figure figcaption {
       text-transform: uppercase;
       margin: .4em 0 1em 0;
@@ -8370,7 +8373,8 @@ nav#menu {
   padding-top: 2em;
   padding-bottom: 2em;
   text-align: center;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  position: relative; }
   #sixth-section h2 {
     padding: 0.4em 1em 0.4em 1em;
     background-color: #a60027;
@@ -8386,7 +8390,10 @@ nav#menu {
     resize: none;
     max-width: 100%;
     margin-top: 2em;
-    pointer-events: none; }
+    pointer-events: none;
+    position: absolute;
+    bottom: 5px;
+    width: 100%; }
     #sixth-section #location #gmap_canvas {
       height: 100%;
       width: 100%;
@@ -9433,7 +9440,7 @@ button#submitBtn {
       width: 30vw; }
       #first-section .information .days h2 {
         font-size: 3.6vw;
-        margin-bottom: 5vh; }
+        margin-bottom: 3vh; }
       #first-section .information .days .venue-details {
         width: 21.6vw; }
         #first-section .information .days .venue-details li {
@@ -9480,14 +9487,14 @@ button#submitBtn {
       margin-top: 10vh; }
     #third-section figure {
       margin: 0px 1.5vw;
-      width: 13vw;
+      width: 10.6vw;
       overflow: hidden; }
       #third-section figure .image {
         height: auto; }
       #third-section figure figcaption h4 {
-        font-size: 1.8vw; }
+        font-size: 1.4vw; }
       #third-section figure figcaption p {
-        font-size: 1.34vw; }
+        font-size: 1.2vw; }
     #third-section h2 {
       font-size: 3.52vw;
       margin-bottom: 5vh; }

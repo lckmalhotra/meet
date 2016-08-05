@@ -320,9 +320,12 @@ nav{
         display: inline-block;
         width: 48%;
         margin: 0px 0.1em;
+        vertical-align: top;
         img{
-            height: 100%;
+            height: auto;
             width: 100%;
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
         }
         figcaption{
             text-transform: uppercase;
@@ -505,6 +508,7 @@ nav{
     @include vertical-padding(2em);
     text-align: center;
     padding-bottom: 0px;
+    position: relative;
     h2{
         @include color-background(0.4em,1em,0.4em,1em,#a60027);
         @extend .no-margin;
@@ -524,6 +528,9 @@ nav{
         max-width:100%;
         margin-top: 2em;
         pointer-events: none;
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
         #gmap_canvas{
             height:100%;
             width:100%;
