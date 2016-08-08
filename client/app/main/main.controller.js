@@ -12,9 +12,17 @@
         });
       };
 
+      $scope.submitTalk = function () {
+
+        ngDialog.open({
+          templateUrl: 'app/main/talkForm.html',
+          controller: 'talkForm'
+        });
+      };
+
      var _that=this;
       _that.init=function(){
-       
+
 
       }
     });

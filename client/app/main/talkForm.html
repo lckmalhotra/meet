@@ -1,0 +1,142 @@
+<div id="form" ng-show="isActive">
+
+  <h1>Submit Your Talk</h1>
+  <div class="topText">Content..</div>
+
+  <div id="container">
+    <div class="inner">
+      <form name="talkForm" ng-submit="addThing()" novalidate>
+
+        <div class="form-catcher">
+            <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" name="name" type="text"
+                 ng-model="formData.name" required/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Name</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+          <p ng-show="talkForm.name.$invalid && !talkForm.name.$pristine" class="help-block">Your name is
+            required.</p>
+        </div>
+
+
+        <div class="form-catcher">
+              <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="company"
+                 ng-model="formData.company" required/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Company</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+          <p ng-show="talkForm.company.$invalid && !talkForm.company.$pristine" class="help-block">Your
+            Company name is required.</p>
+        </div>
+
+        <div class="form-catcher">
+                    <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="biography"
+                 ng-model="formData.biography"/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Biography</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+        </div>
+
+        <div class="form-catcher">
+                    <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="category"
+                 ng-model="formData.category"/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Category</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+        </div>
+
+        <div class="form-catcher">
+                    <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="audience"
+                 ng-model="formData.audience"/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Audience</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+        </div>
+
+        <div class="form-catcher">
+                    <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="experience"
+                 ng-model="formData.experience"/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Experience</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+        </div>
+
+        <div class="form-catcher">
+                    <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="abstract"
+                 ng-model="formData.abstract"/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Abstract</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+        </div>
+
+        <div class="form-catcher">
+                    <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="text" name="benefits"
+                 ng-model="formData.benefits"/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Benefits to the Ecosystem</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+        </div>
+
+        <div class="btn_wrapper">
+          <button type="submit" class="regis-btn btn" tabindex="-1" id="submitBtn"
+                  ng-class="{'disabled':talkForm.$invalid}">Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="succes_div" class="success_div" ng-show="!isActive">
+  <h1>Thank You</h1>
+  <div class="topText">Your request has been sent. We will contact you shortly. </div>
+  <button ng-click="closeThisDialog()" class="regis-btn btn">Finish</button>
+</div>
+
+
