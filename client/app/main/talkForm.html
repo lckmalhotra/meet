@@ -23,6 +23,7 @@
             required.</p>
         </div>
 
+
         <div class="form-catcher company-name">
               <span class="input input--nao">
 					<input class="input__field input__field--nao" tabindex="-1" type="text" name="company"
@@ -41,8 +42,14 @@
 
         <div class="form-catcher experience">
                     <span class="input input--nao">
-					<input class="input__field input__field--nao" tabindex="-1" type="text" name="experience"
-                 ng-model="formData.experience"/>
+					<!--<input class="input__field input__field&#45;&#45;nao" tabindex="-1" type="text" name="experience"
+                 ng-model="formData.experience"/>-->
+           <select class="input__field input__field--nao" tabindex="-1" type="text" name="experience"
+                   ng-model="formData.experience">
+             <option>0-1 Year</option>
+             <option>2-3 Years</option>
+             <option>3-5 Years</option>
+           </select>
 					<label class="input__label input__label--nao">
 						<span class="input__label-content input__label-content--nao">Experience</span>
 					</label>
@@ -55,8 +62,10 @@
 
         <div class="form-catcher biography">
                     <span class="input input--nao">
-					<input class="input__field input__field--nao" tabindex="-1" type="text" name="biography"
-                 ng-model="formData.biography"/>
+					<!--<input class="input__field input__field&#45;&#45;nao" tabindex="-1" type="text" name="biography"
+                 ng-model="formData.biography"/>-->
+           <textarea class="input__field input__field--nao" tabindex="-1" type="text" name="biography"
+                     ng-model="formData.biography"></textarea>
 					<label class="input__label input__label--nao">
 						<span class="input__label-content input__label-content--nao">Biography</span>
 					</label>
@@ -69,8 +78,10 @@
 
         <div class="form-catcher abstract">
                     <span class="input input--nao">
-					<input class="input__field input__field--nao" tabindex="-1" type="text" name="abstract"
-                 ng-model="formData.abstract"/>
+					<!--<input class="input__field input__field&#45;&#45;nao" tabindex="-1" type="text" name="abstract"-->
+                 <!--ng-model="formData.abstract"/>-->
+           <textarea class="input__field input__field--nao" tabindex="-1" type="text" name="abstract"
+                     ng-model="formData.abstract"></textarea>
 					<label class="input__label input__label--nao">
 						<span class="input__label-content input__label-content--nao">Abstract</span>
 					</label>

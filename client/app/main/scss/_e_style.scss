@@ -998,7 +998,35 @@ Main Components
         bottom: 10px;
     }
 }
+.talk-form .ngdialog-content
+{
+  width: 900px!important;
+  .name, .company-name
+  {
+    width: 30%;
+    display: inline-block;
+    margin-right: 5%;
+  }
+  .experience
+  {
+    width: 10%;
+    display: inline-block;
+  }
+  .biography, .abstract
+  {
+    width: 45%;
+    display: inline-block;
+  }
+  .biography
+  {
+    margin-right: 5%;
+  }
+  .btn_wrapper
+  {
+    width: 30%;
+  }
 
+}
 .input {
     position: relative;
     z-index: 1;
