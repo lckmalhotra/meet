@@ -8,7 +8,8 @@
 
         ngDialog.open({
             templateUrl: 'app/main/form.html',
-            controller: 'registerNow'
+            controller: 'registerNow',
+            className: 'ngdialog-theme-default register-form'
         });
       };
 
@@ -16,7 +17,8 @@
 
         ngDialog.open({
           templateUrl: 'app/main/talkForm.html',
-          controller: 'talkForm'
+          controller: 'talkForm',
+          className: 'ngdialog-theme-default talk-form'
         });
       };
 
