@@ -30,6 +30,7 @@ html
 body{
     @include menu-transition(cubic-bezier(0.6, -0.28, 0.74, 0.05), 0.5s);
     font-family: 'raleway-regular';
+    background-color: #160a31;
     color: $white;
     min-height: 100%;
 }
@@ -355,7 +356,7 @@ nav{
             font-weight: 900;
             text-transform: uppercase;
             font-family: 'raleway-heavy';
-            font-size: 5.8vh;
+            font-size: 5.8vw;
         }
         p{
             line-height: 1.5em;
