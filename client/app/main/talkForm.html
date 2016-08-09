@@ -55,6 +55,40 @@
 
         </div>
 
+        <div class="form-catcher name">
+             <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="email" name="email"
+                 ng-model="formData.email" required/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Email</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+          <p ng-show="talkForm.email.$invalid && !talkForm.email.$pristine" class="help-block">Enter a valid
+            email.</p>
+        </div>
+
+        <div class="form-catcher company-name">
+            <span class="input input--nao">
+					<input class="input__field input__field--nao" tabindex="-1" type="number" ng-minlength="10"
+                 maxlength="13" name="phone" ng-model="formData.phone" required/>
+					<label class="input__label input__label--nao">
+						<span class="input__label-content input__label-content--nao">Phone</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60"
+               preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+          <p ng-show="talkForm.phone.$error.minlength " class="help-block">Enter Valid Number</p>
+          <p ng-show="talkForm.phone.$error.maxlength" class="help-block">Your Number is exceeded by 10
+            numbers</p>
+
+        </div>
+
         <div class="form-catcher biography">
                     <span class="input input--nao input-textarea">
            <textarea rows="6" class="input__field input__field--nao" tabindex="-1" name="biography"

@@ -8,6 +8,8 @@ var SpeakerSchema = new mongoose.Schema({
     experience: String,
     biography: String,
     abstract: String,
+    email:String,
+    phone:String,
     date : {type: Date, default: Date.now},
     ticketSent: {type: Boolean, default: false}
 });
