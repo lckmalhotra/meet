@@ -186,6 +186,32 @@
       position: static;
     }
   }
+  /* submit talk */
+  .talk-form .ngdialog-content {
+    width: 95%!important;
+    margin: 0 auto!important;
+    padding: 30px!important;
+    .name, .biography, .abstract, .company-name, .experience
+    {
+      display: block;
+      width: 100%;
+    }
+    .btn_wrapper
+    {
+      width: 70%;
+    }
+  }
+
+  /* submit talk */
+
+  /* register */
+  .register-form .ngdialog-content
+  {
+
+    width: 95%;
+    margin: 0 auto;
+  }
+  /* register */
 }
 @include style-for(tablet) {
   body
@@ -321,6 +347,14 @@
       }
     }
   }
+
+  /* register talk */
+  .talk-form .ngdialog-content {
+    width: 90% !important;
+    padding: 75px 30px !important;
+    margin: 0 auto!important;
+  }
+  /* register talk */
 }
 @include style-for(ipad-landscape) {
   #nav-icon1

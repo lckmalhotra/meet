@@ -9078,7 +9078,26 @@ button#submitBtn {
     #sixth-section h2 {
       margin-bottom: 1.6em; }
     #sixth-section #location {
-      position: static; } }
+      position: static; }
+
+  /* submit talk */
+  .talk-form .ngdialog-content {
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 30px !important; }
+    .talk-form .ngdialog-content .name, .talk-form .ngdialog-content .biography, .talk-form .ngdialog-content .abstract, .talk-form .ngdialog-content .company-name, .talk-form .ngdialog-content .experience {
+      display: block;
+      width: 100%; }
+    .talk-form .ngdialog-content .btn_wrapper {
+      width: 70%; }
+
+  /* submit talk */
+  /* register */
+  .register-form .ngdialog-content {
+    width: 95%;
+    margin: 0 auto; }
+
+  /* register */ }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
     overflow: auto; }
@@ -9169,7 +9188,15 @@ button#submitBtn {
     display: inline-flex; }
     #seventh-section .foot ul li {
       text-align: left;
-      padding-left: 10%; } }
+      padding-left: 10%; }
+
+  /* register talk */
+  .talk-form .ngdialog-content {
+    width: 90% !important;
+    padding: 75px 30px !important;
+    margin: 0 auto !important; }
+
+  /* register talk */ }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   #nav-icon1 {
     top: 3.5%; }
