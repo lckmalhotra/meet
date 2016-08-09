@@ -24,8 +24,6 @@
 
      var _that=this;
       _that.init=function(){
-
-
       }
     });
 

@@ -14,7 +14,7 @@
             $scope.addThing = function () {
               if($scope.talkForm.$valid) {
                 if ($scope.formData) {
-                  $http.post('/api/registrations', $scope.formData);
+                  $http.post('/api/speakers', $scope.formData);
                   $scope.formData = {};
                   $scope.isActive = false;
                 }
