@@ -13,13 +13,13 @@
   {
     height: 100%;
   }
-  .cd-section:first-of-type > div, #first-section
+  .cd-section:first-of-type > div, #landing-page
   {
     height: 100%;
   }
 
   /* header */
-  #first-section .header-b
+  #landing-page .header-b
   {
     padding-top: 1.5em;
   }
@@ -43,11 +43,11 @@
   {
     display: none;
   }
-  #first-section .information,#first-section .days, #first-section .information > .register
+  #landing-page .information,#landing-page .days, #landing-page .information > .register
   {
     position: static;
   }
-  #first-section
+  #landing-page
   {
     .information
     {
@@ -65,7 +65,7 @@
       }
     }
   }
-  #first-section article.main
+  #landing-page article.main
   {
     margin-top: 4%;
     padding-right: 15px;
@@ -79,12 +79,12 @@
       }
     }
   }
-  #first-section .information .days h2
+  #landing-page .information .days h2
   {
     margin-top: 6px;
     font-size: 1.3em;
   }
-  #first-section .information .days .venue-details
+  #landing-page .information .days .venue-details
   {
     margin-top: 3vh;
     font-size: 5vw;
@@ -93,7 +93,7 @@
   /* section first */
 
   /* section second */
-  #second-section
+  #about-us
   {
     padding-top: 5.5em;
     min-height: 100%;
@@ -105,27 +105,27 @@
       margin-top: 0;
     }
   }
-  #second-section article
+  #about-us article
   {
     padding: 2.2em 1.2em;
     text-align: center;
   }
-  /* section second */
+  /* section about-us */
 
-  /* section third */
-  #third-section h2
+  /* section speakers-info */
+  #speakers-info h2
   {
     margin-top: 0;
   }
   /* section third */
 
 
-  #forth-section, #fifth-section, #sixth-section, #seventh-section
+  #schedule, #highlights, #location-info, #contact-us
   {
     padding-top: 3em;
   }
-  /* section fifth */
-  #fifth-section ul li {
+  /* highlights section */
+  #highlights ul li {
     max-width: 320px;
     margin: 0 auto .5em auto;
     overflow: hidden;
@@ -147,7 +147,7 @@
       }
     }
   }
-  #fifth-section ul li .wrap-img
+  #highlights ul li .wrap-img
   {
     height: auto;
     width: 100%;
@@ -155,11 +155,11 @@
     margin-bottom: .5em;
 
   }
-  #fifth-section li .wrap-img + .wrap-img
+  #highlights li .wrap-img + .wrap-img
   {
     margin-bottom: 0;
   }
-  #fifth-section .show-mobile
+  #highlights .show-mobile
   {
     display: block;
     a
@@ -167,13 +167,15 @@
       display: none;
     }
   }
-  #fifth-section .highlight-tag
+  #highlights .highlight-tag
   {
     margin-top: 0;
     margin-bottom: 2em;
   }
-  /* section fifth */
-  #sixth-section
+  /* highlights section */
+
+  /* location-info section */
+  #location-info
   {
     padding-left: 0;
     padding-right: 0;
@@ -242,7 +244,7 @@
     margin-bottom: 0.4em;
     font-size: 6vw;
   }
-  #first-section {
+  #landing-page {
     .main {
       h1 {
         width: 50%;
@@ -268,7 +270,7 @@
       }
     }
   }
-  #second-section {
+  #about-us {
     /* h2 {
        top: 1.9em;
        right: 6em;
@@ -279,7 +281,7 @@
       @include color-background(2.9em, 2.9em, 2.9em, 2.9em, #f4ee6f);
     }
   }
-  #third-section {
+  #speakers-info {
     .speaker-list {
       margin: 0 -1.5em;
     }
@@ -293,7 +295,7 @@
       margin-bottom: 1em;
     }
   }
-  #forth-section {
+  #schedule {
     .left {
       width: 40%;
       float: left;
@@ -308,7 +310,7 @@
       }
     }
   }
-  #fifth-section{
+  #highlights{
     ul{
       li{
         float: left;
@@ -325,7 +327,7 @@
       }
     }
   }
-  #sixth-section
+  #location-info
   {
     #location
     {
@@ -336,7 +338,7 @@
       margin-bottom: 1em;
     }
   }
-  #seventh-section {
+  #contact-us {
     .foot {
       ul {
         display: inline-flex;
@@ -361,7 +363,7 @@
   {
     top: 3.5%;
   }
-  #first-section {
+  #landing-page {
     article.main {
       h1 {
         width: 50%;
@@ -404,7 +406,7 @@
       }
     }
   }
-  #second-section {
+  #about-us {
     .container {
       margin-top: 7%;
     }
@@ -423,7 +425,7 @@
       float: right;
     }
   }
-  #third-section {
+  #speakers-info {
     .container {
       padding-top: 10%;
       figure {
@@ -432,7 +434,7 @@
       }
     }
   }
-  #forth-section {
+  #schedule {
     .container {
       padding-top: 5%;
     }
@@ -462,24 +464,25 @@
       }
     }
   }
-  #fifth-section {
+  #highlights {
     padding-top: 20%;
   }
-  #sixth-section {
+  #location-info {
     padding-top: 25%;
     /* #location {
        height: 77%;
      }*/
   }
-  #seventh-section {
+  #contact-us {
     .container {
       padding-top: 30%;
     }
   }
-  #sixth-section h2
+  #location-info h2
   {
     margin-bottom: 1em;
   }
+
 }
 @include style-for(desktop) {
   nav {
@@ -502,7 +505,7 @@
     padding: 0 5vw;
     overflow: hidden;
   }
-  #first-section {
+  #landing-page {
     @include vertical-padding(10%);
     padding-top: 0;
     .header-b {
@@ -561,7 +564,7 @@
       }
     }
   }
-  #second-section {
+  #about-us {
     @include vertical-padding(5%);
     article {
       width: 50vw;
@@ -581,7 +584,7 @@
       padding: 1em .7em 1em .7em;
     }
   }
-  #third-section {
+  #speakers-info {
     padding-top: 3%;
     article {
       p {
@@ -615,7 +618,7 @@
       margin-bottom: 5vh;
     }
   }
-  #forth-section {
+  #schedule {
     padding-top: 8%;
     .left {
       width: 40vw;
@@ -652,7 +655,7 @@
       }
     }
   }
-  #fifth-section{
+  #highlights{
     ul{
       margin: 0 -2px;
       li{
@@ -699,7 +702,7 @@
       font-size: 2.5em;
     }
   }
-  #sixth-section {
+  #location-info {
     @include vertical-padding(4%);
     #top {
       padding: $section-padding;
@@ -717,7 +720,7 @@
        height: 60%;
      }*/
   }
-  #seventh-section {
+  #contact-us {
     @include vertical-padding(10%);
     p {
       font-size: 2vh;
@@ -762,7 +765,7 @@
   .container {
     padding: 0 10vw;
   }
-  #first-section {
+  #landing-page {
     @include vertical-padding(10%);
     padding-top: 0;
     padding-bottom: 5%;
@@ -825,7 +828,7 @@
       }
     }
   }
-  #second-section {
+  #about-us {
     @include vertical-padding(5%);
     article {
       width: 48vw;
@@ -849,7 +852,7 @@
       float: right;
     }
   }
-  #third-section {
+  #speakers-info {
     padding-top: 3%;
     article {
       p {
@@ -882,7 +885,7 @@
       margin-bottom: 5vh;
     }
   }
-  #forth-section {
+  #schedule {
     padding-top: 5%;
     .left {
       width: 24vw;
@@ -917,7 +920,7 @@
       }
     }
   }
-  #fifth-section{
+  #highlights{
     ul{
       margin: 0 auto;
       max-width: 970px;
@@ -966,7 +969,7 @@
       font-size: 2em;
     }
   }
-  #sixth-section {
+  #location-info {
     @include vertical-padding(4%);
     padding-left: 0;
     padding-right: 0;
@@ -986,7 +989,7 @@
        height: 66%;
      }*/
   }
-  #seventh-section {
+  #contact-us {
     @include vertical-padding(8%);
     p {
       font-size: 18px;
@@ -1023,11 +1026,11 @@
 }
 @include style-for(mediumlarge-screen)
 {
-  #first-section .information
+  #landing-page .information
   {
     margin-bottom: 0;
   }
-  #first-section .information .days .venue-details
+  #landing-page .information .days .venue-details
   {
     width: 19.8vw;
     padding: 16px 10px 14px 15px;
@@ -1036,7 +1039,7 @@
       margin-bottom: 4px;
     }
   }
-  #second-section article
+  #about-us article
   {
     padding: 3em 4em 4em 2em;
     p
@@ -1044,7 +1047,7 @@
       line-height: 4.8vh;
     }
   }
-  #forth-section .left article
+  #schedule .left article
   {
     padding: 4.5vh 2.5vh 6vh 4.5vh;
     p#tagline{
@@ -1052,23 +1055,23 @@
     }
 
   }
-  #sixth-section #location
+  #location-info #location
   {
     height: 350px;
   }
 }
 @include style-for(large-screen) {
-  #first-section .information .days h2
+  #landing-page .information .days h2
   {
     font-size: 2.5vw;
   }
-  #first-section article.main h1 span {
+  #landing-page article.main h1 span {
     margin-top: 10px;
   }
-  #second-section article {
+  #about-us article {
     padding: 3em 4.3em 4em 2em;
   }
-  #fifth-section {
+  #highlights {
     ul {
       max-width: 100%;
       .first
@@ -1103,16 +1106,16 @@
       }
     }
   }
-  #fifth-section .view {
+  #highlights .view {
     top: 50px;
     font-size: 24px;
   }
-  #sixth-section #location
+  #location-info #location
   {
     height: 400px;
   }
 
-  #seventh-section .foot ul li
+  #contact-us .foot ul li
   {
     font-size: 2vh;
   }

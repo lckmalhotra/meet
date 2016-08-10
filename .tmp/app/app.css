@@ -1053,7 +1053,7 @@ mark,
 .text-right {
   text-align: right; }
 
-.text-center, #first-section figure, #first-section figure span {
+.text-center, #landing-page figure, #landing-page figure span {
   text-align: center; }
 
 .text-justify {
@@ -7954,13 +7954,13 @@ th {
 .viewport-height {
   height: 100vh; }
 
-.no-margin, h1, h1 .site-logo, #first-section figure, #first-section figure span, #first-section .information .days .venue-details ul, #third-section figure figcaption h4, #forth-section article h2, #fifth-section .highlight-tag h1, #fifth-section .highlight-tag h2, #sixth-section h2, #seventh-section p {
+.no-margin, h1, h1 .site-logo, #landing-page figure, #landing-page figure span, #landing-page .information .days .venue-details ul, #speakers-info figure figcaption h4, #schedule article h2, #highlights .highlight-tag h1, #highlights .highlight-tag h2, #location-info h2, #contact-us p {
   margin: 0px; }
 
-.no-padding, nav#menu ul, #first-section .information .days .venue-details ul, #forth-section .time-schedule, #seventh-section .foot ul {
+.no-padding, nav#menu ul, #landing-page .information .days .venue-details ul, #schedule .time-schedule, #contact-us .foot ul {
   padding: 0px; }
 
-.text-center, #first-section figure, #first-section figure span {
+.text-center, #landing-page figure, #landing-page figure span {
   text-align: center; }
 
 @font-face {
@@ -8086,7 +8086,7 @@ nav#menu {
         height: 2.1vh;
         background-color: #c3d6e2; }
 
-#first-section {
+#landing-page {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -8094,7 +8094,7 @@ nav#menu {
   background-attachment: fixed;
   position: relative;
   z-index: 2; }
-  #first-section:before {
+  #landing-page:before {
     background: #160a31;
     position: absolute;
     top: 0;
@@ -8105,71 +8105,71 @@ nav#menu {
     opacity: 0.9;
     z-index: -1;
     display: block; }
-  #first-section .header-b {
+  #landing-page .header-b {
     padding-top: 2em;
     width: 100%; }
-  #first-section figure {
+  #landing-page figure {
     float: left;
     width: 10em; }
-    #first-section figure span {
+    #landing-page figure span {
       display: block;
       font-weight: 100;
       font-size: 15px;
       margin-top: -15px; }
-  #first-section a#menu-button {
+  #landing-page a#menu-button {
     padding-top: 10px;
     padding-bottom: 10px;
     float: right; }
-  #first-section article.main {
+  #landing-page article.main {
     width: 100%;
     margin-top: 5%; }
-    #first-section article.main h1 {
+    #landing-page article.main h1 {
       font-size: 2.5em;
       font-weight: 100;
       font-family: 'raleway-thin';
       margin-bottom: 0px; }
-      #first-section article.main h1 span {
+      #landing-page article.main h1 span {
         text-transform: uppercase;
         font-family: 'raleway-heavy';
         display: block;
         margin-top: 25px;
         line-height: 1em; }
-  #first-section .information {
+  #landing-page .information {
     padding-bottom: 2.3em;
     width: 100%; }
-    #first-section .information .days h2 {
+    #landing-page .information .days h2 {
       font-weight: 900;
       font-size: 2.6em;
       margin-bottom: 0.4em;
       font-family: "raleway-regular"; }
-      #first-section .information .days h2 .light-text {
+      #landing-page .information .days h2 .light-text {
         font-weight: 100;
         font-style: italic;
         font-family: 'raleway-thin';
         font-size: 3vh; }
-    #first-section .information .days .venue-details {
+    #landing-page .information .days .venue-details {
       padding: 18px 10px 18px 15px;
       background-color: #f4ee6f;
       color: #000000; }
-      #first-section .information .days .venue-details ul li {
+      #landing-page .information .days .venue-details ul li {
         margin-top: 0.5em; }
-        #first-section .information .days .venue-details ul li:first-child {
+        #landing-page .information .days .venue-details ul li:first-child {
           margin: 0; }
-    #first-section .information .register h3 {
+    #landing-page .information .register h3 {
       font-weight: 100;
       font-family: 'raleway-thin';
       font-style: italic; }
-    #first-section .information .register a {
+    #landing-page .information .register a {
       padding: 0.7em 0em 0.7em 0em;
       background-color: #8186f4;
       text-align: center;
       width: 100%;
       display: block; }
 
-#first-section .venue-details li {
+#landing-page .venue-details li {
   font-family: 'raleway-regular'; }
 
-#second-section {
+#about-us {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -8180,7 +8180,7 @@ nav#menu {
   position: relative;
   overflow: hidden;
   z-index: 2; }
-  #second-section:before {
+  #about-us:before {
     background: #160a31;
     position: absolute;
     top: 0;
@@ -8191,7 +8191,7 @@ nav#menu {
     opacity: 0.9;
     z-index: -1;
     display: block; }
-  #second-section h2 {
+  #about-us h2 {
     background-color: #eb2242;
     padding: 1.3em .6em 1.3em .6em;
     font-family: 'raleway-heavy';
@@ -8204,7 +8204,7 @@ nav#menu {
     /*float: right;
     margin-top: -3.1em;
     margin-right: 0em;*/ }
-  #second-section article {
+  #about-us article {
     padding: 1.2em 1.2em 1.2em 1.2em;
     background-color: #f4ee6f;
     color: #000000;
@@ -8212,162 +8212,166 @@ nav#menu {
     margin-top: 10%;
     position: relative;
     padding: 2.2em 2.2em 2.2em 2.2em; }
-    #second-section article p {
+    #about-us article p {
       margin-top: 0px; }
 
-#third-section {
+/* Section speakers-info*/
+#speakers-info {
   background-color: #150957;
   padding-top: 3em;
   padding-bottom: 3em; }
-  #third-section h2 {
+  #speakers-info h2 {
     padding: 0.4em 0.7em 0.4em 0.7em;
     background-color: #eb2242;
     text-transform: uppercase;
     display: inline-block;
     font-family: 'raleway-heavy'; }
-  #third-section article {
+  #speakers-info article {
     font-weight: 100;
     font-family: 'raleway-thin'; }
-  #third-section .speaker-list {
+  #speakers-info .speaker-list {
     position: relative;
     margin: 0 -0.1em;
     overflow: hidden; }
-  #third-section figure {
+  #speakers-info figure {
     display: inline-block;
     width: 48%;
     margin: 0px 0.1em;
     vertical-align: top; }
-    #third-section figure img {
+    #speakers-info figure img {
       height: auto;
       width: 100%;
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%); }
-    #third-section figure figcaption {
+    #speakers-info figure figcaption {
       text-transform: uppercase;
       margin: .4em 0 1em 0;
       overflow: auto; }
-      #third-section figure figcaption h4 {
+      #speakers-info figure figcaption h4 {
         font-family: 'raleway-heavy';
         letter-spacing: 1px; }
-      #third-section figure figcaption p {
+      #speakers-info figure figcaption p {
         margin: 0; }
 
-#forth-section {
+/* section schedule */
+#schedule {
   padding-top: 3em;
   padding-bottom: 3em;
   background-color: #160a31; }
-  #forth-section article {
+  #schedule article {
     padding: 1em 1em 1em 1em;
     background-color: #222339;
     color: #a5a8e7;
     margin-bottom: 1em; }
-    #forth-section article h2 {
+    #schedule article h2 {
       font-weight: 900;
       text-transform: uppercase;
       font-family: 'raleway-heavy';
       font-size: 5.8vw; }
-    #forth-section article p {
+    #schedule article p {
       line-height: 1.5em;
       font-family: 'raleway-thin';
       margin-top: 1.5em; }
-      #forth-section article p#tagline {
+      #schedule article p#tagline {
         font-size: 1em;
         font-style: italic; }
-  #forth-section .submit-links {
+  #schedule .submit-links {
     float: right; }
-  #forth-section a.submit-talk {
+  #schedule a.submit-talk {
     padding: 1em 1.8em 1em 1.8em;
     background-color: #f4ee6f;
     float: right;
     color: #eb2242;
     margin-top: 1em;
     font-family: "raleway-thin"; }
-  #forth-section a.book-seat {
+  #schedule a.book-seat {
     padding: 1em 1.8em 1em 1.8em;
     background-color: #eb2242;
     color: #ffffff;
     float: right;
     margin-top: 0.7em;
     font-family: "raleway-thin"; }
-  #forth-section .time-schedule {
+  #schedule .time-schedule {
     padding-top: 2em;
     padding-bottom: 2em;
     padding-top: 0;
     color: #a5a8e7;
     font-family: 'roboto-light';
     font-size: 0.9em; }
-    #forth-section .time-schedule li {
+    #schedule .time-schedule li {
       margin-bottom: 1em; }
-      #forth-section .time-schedule li time {
+      #schedule .time-schedule li time {
         margin-right: 1em; }
-      #forth-section .time-schedule li span.text-yellow {
+      #schedule .time-schedule li span.text-yellow {
         font-family: 'roboto-light';
         font-weight: 700;
         color: #f4ee6f; }
-      #forth-section .time-schedule li span.text-red {
+      #schedule .time-schedule li span.text-red {
         font-family: 'roboto-regular';
         font-weight: 700;
         color: #eb2242; }
-      #forth-section .time-schedule li small {
+      #schedule .time-schedule li small {
         font-family: 'raleway-thin';
         font-style: italic;
         color: #9697a5; }
 
-#fifth-section {
+/* highlights section */
+#highlights {
   background-color: #222339;
   padding-top: 2em;
   padding-bottom: 2em;
   overflow: hidden; }
-  #fifth-section .highlight-tag {
+  #highlights .highlight-tag {
     padding: 1em 1em 1em 1em;
     background-color: #00a651;
     text-transform: uppercase;
     display: inline-block;
     margin-top: 2em; }
-    #fifth-section .highlight-tag h1 {
+    #highlights .highlight-tag h1 {
       font-family: 'raleway-heavy'; }
-    #fifth-section .highlight-tag h2 {
+    #highlights .highlight-tag h2 {
       font-size: 1.5em;
       font-family: 'raleway-thin'; }
-  #fifth-section .show-mobile {
+  #highlights .show-mobile {
     display: none; }
-  #fifth-section a {
+  #highlights a {
     font-size: 0.8em; }
-  #fifth-section ul {
+  #highlights ul {
     margin: 0;
     padding: 0;
     position: relative; }
-    #fifth-section ul li img {
+    #highlights ul li img {
       height: 100%;
       max-width: 100%;
       width: 100%; }
-    #fifth-section ul li .wrap-img {
+    #highlights ul li .wrap-img {
       height: 160px;
       width: 210px; }
-    #fifth-section ul .border-topLeft {
+    #highlights ul .border-topLeft {
       border-left: 2px solid #fff;
       border-top: 2px solid #fff; }
-    #fifth-section ul .border-left {
+    #highlights ul .border-left {
       border-left: 2px solid #fff; }
-    #fifth-section ul .border-bot {
+    #highlights ul .border-bot {
       border-bottom: 2px solid #fff; }
-    #fifth-section ul .border-leftBot {
+    #highlights ul .border-leftBot {
       border-left: 2px solid #fff;
       border-bottom: 2px solid #fff; }
-    #fifth-section ul .border-topright {
+    #highlights ul .border-topright {
       border-right: 2px solid #fff;
       border-top: 2px solid #fff; }
-    #fifth-section ul .border-right {
+    #highlights ul .border-right {
       border-right: 2px solid #fff; }
 
-#fifth-section ul li:last-child {
+#highlights ul li:last-child {
   position: relative; }
-  #fifth-section ul li:last-child .highlight-tag {
+  #highlights ul li:last-child .highlight-tag {
     position: absolute;
     right: 0;
     bottom: 0; }
 
-#sixth-section {
+/* section location-info */
+#location-info {
   background-color: #d2d2d2;
   padding-left: 15px;
   padding-right: 15px;
@@ -8376,17 +8380,17 @@ nav#menu {
   text-align: center;
   padding-bottom: 0px;
   position: relative; }
-  #sixth-section h2 {
+  #location-info h2 {
     padding: 0.4em 1em 0.4em 1em;
     background-color: #a60027;
     font-family: 'raleway-heavy';
     text-transform: uppercase;
     display: inline-block; }
-  #sixth-section p {
+  #location-info p {
     color: #000000;
     padding: 0 15px;
     font-family: 'raleway-thin'; }
-  #sixth-section #location {
+  #location-info #location {
     height: 380px;
     resize: none;
     max-width: 100%;
@@ -8395,51 +8399,53 @@ nav#menu {
     position: absolute;
     bottom: 5px;
     width: 100%; }
-    #sixth-section #location #gmap_canvas {
+    #location-info #location #gmap_canvas {
       height: 100%;
       width: 100%;
       max-width: 100%; }
-      #sixth-section #location #gmap_canvas iframe {
+      #location-info #location #gmap_canvas iframe {
         height: 100%;
         width: 100%;
         border: 0; }
-      #sixth-section #location #gmap_canvas img {
+      #location-info #location #gmap_canvas img {
         max-width: none !important;
         background: none !important;
         font-size: inherit; }
 
-#sixth-section #location .iframe {
+#location-info #location .iframe {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   border: none; }
 
-#seventh-section {
+/* contact-us section*/
+#contact-us {
   padding-top: 2em;
   padding-bottom: 2em;
   background-color: #0f0931;
   text-align: center; }
-  #seventh-section h2.get-in-touch {
+  #contact-us h2.get-in-touch {
     padding: 0.7em 1em 0.7em 1em;
     background-color: #5388be;
     font-family: 'raleway-heavy';
     text-transform: uppercase;
     display: inline-block;
     margin-top: 4vh; }
-  #seventh-section .foot ul {
+  #contact-us .foot ul {
     list-style: none; }
-    #seventh-section .foot ul li {
+    #contact-us .foot ul li {
       width: 100%;
       font-family: 'raleway-thin'; }
-      #seventh-section .foot ul li > h2 {
+      #contact-us .foot ul li > h2 {
         color: #f0ede5;
         text-transform: uppercase;
         background: none;
         padding: 0; }
-      #seventh-section .foot ul li address {
+      #contact-us .foot ul li address {
         font-style: normal;
         line-height: 1.5em; }
 
+/* contact-us section */
 .nav-dater {
   padding: 0px;
   display: block;
@@ -8636,10 +8642,10 @@ Main Components
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%); }
 
-#first-section > .container {
+#landing-page > .container {
   height: 100%; }
 
-#first-section .information {
+#landing-page .information {
   position: absolute;
   bottom: 0;
   padding-bottom: 0;
@@ -8654,7 +8660,7 @@ Main Components
 .days ul {
   margin-bottom: 0; }
 
-#first-section .information > .register {
+#landing-page .information > .register {
   position: absolute;
   right: 0;
   bottom: 0; }
@@ -8959,11 +8965,11 @@ button#submitBtn {
   .cd-section {
     height: 100%; }
 
-  .cd-section:first-of-type > div, #first-section {
+  .cd-section:first-of-type > div, #landing-page {
     height: 100%; }
 
   /* header */
-  #first-section .header-b {
+  #landing-page .header-b {
     padding-top: 1.5em; }
 
   .nav-icon1 {
@@ -8982,67 +8988,67 @@ button#submitBtn {
   .home_menu {
     display: none; }
 
-  #first-section .information, #first-section .days, #first-section .information > .register {
+  #landing-page .information, #landing-page .days, #landing-page .information > .register {
     position: static; }
 
-  #first-section .information {
+  #landing-page .information {
     height: auto; }
-    #first-section .information h2 {
+    #landing-page .information h2 {
       text-align: right; }
-    #first-section .information .register h3 {
+    #landing-page .information .register h3 {
       margin-bottom: 20px;
       font-size: 18px; }
 
-  #first-section article.main {
+  #landing-page article.main {
     margin-top: 4%;
     padding-right: 15px; }
-    #first-section article.main h1 {
+    #landing-page article.main h1 {
       text-align: right;
       font-size: 1.5em; }
-      #first-section article.main h1 span {
+      #landing-page article.main h1 span {
         margin-top: 6px; }
 
-  #first-section .information .days h2 {
+  #landing-page .information .days h2 {
     margin-top: 6px;
     font-size: 1.3em; }
 
-  #first-section .information .days .venue-details {
+  #landing-page .information .days .venue-details {
     margin-top: 3vh;
     font-size: 5vw;
     padding: 12px 10px; }
 
   /* section first */
   /* section second */
-  #second-section {
+  #about-us {
     padding-top: 5.5em;
     min-height: 100%; }
-    #second-section h2 {
+    #about-us h2 {
       padding: .8em .6em .8em .6em;
       right: calc(50% - 96px);
       top: -2.3em;
       margin-top: 0; }
 
-  #second-section article {
+  #about-us article {
     padding: 2.2em 1.2em;
     text-align: center; }
 
-  /* section second */
-  /* section third */
-  #third-section h2 {
+  /* section about-us */
+  /* section speakers-info */
+  #speakers-info h2 {
     margin-top: 0; }
 
   /* section third */
-  #forth-section, #fifth-section, #sixth-section, #seventh-section {
+  #schedule, #highlights, #location-info, #contact-us {
     padding-top: 3em; }
 
-  /* section fifth */
-  #fifth-section ul li {
+  /* highlights section */
+  #highlights ul li {
     max-width: 320px;
     margin: 0 auto .5em auto;
     overflow: hidden; }
-    #fifth-section ul li img {
+    #highlights ul li img {
       border: 1px solid #fff; }
-    #fifth-section ul li:last-child {
+    #highlights ul li:last-child {
       width: 100%;
       text-align: center;
       max-width: 280px;
@@ -9050,34 +9056,35 @@ button#submitBtn {
       float: none;
       padding: 30px 0;
       height: auto; }
-      #fifth-section ul li:last-child .highlight-tag {
+      #highlights ul li:last-child .highlight-tag {
         display: none; }
 
-  #fifth-section ul li .wrap-img {
+  #highlights ul li .wrap-img {
     height: auto;
     width: 100%;
     max-width: 100%;
     margin-bottom: .5em; }
 
-  #fifth-section li .wrap-img + .wrap-img {
+  #highlights li .wrap-img + .wrap-img {
     margin-bottom: 0; }
 
-  #fifth-section .show-mobile {
+  #highlights .show-mobile {
     display: block; }
-    #fifth-section .show-mobile a {
+    #highlights .show-mobile a {
       display: none; }
 
-  #fifth-section .highlight-tag {
+  #highlights .highlight-tag {
     margin-top: 0;
     margin-bottom: 2em; }
 
-  /* section fifth */
-  #sixth-section {
+  /* highlights section */
+  /* location-info section */
+  #location-info {
     padding-left: 0;
     padding-right: 0; }
-    #sixth-section h2 {
+    #location-info h2 {
       margin-bottom: 1.6em; }
-    #sixth-section #location {
+    #location-info #location {
       position: static; }
 
   /* submit talk */
@@ -9123,70 +9130,70 @@ button#submitBtn {
     margin-bottom: 0.4em;
     font-size: 6vw; }
 
-  #first-section .main h1 {
+  #landing-page .main h1 {
     width: 50%;
     float: right; }
-  #first-section .information > .days {
+  #landing-page .information > .days {
     width: 45%;
     float: left; }
-    #first-section .information > .days .venue-details {
+    #landing-page .information > .days .venue-details {
       width: 15em; }
-  #first-section .information > .register {
+  #landing-page .information > .register {
     width: 50%;
     float: right; }
-  #first-section a.site-logo {
+  #landing-page a.site-logo {
     background-size: 100%; }
 
-  #second-section {
+  #about-us {
     /* h2 {
        top: 1.9em;
        right: 6em;
      }*/ }
-    #second-section article {
+    #about-us article {
       width: 65vw;
       margin-left: 5.1vh;
       padding: 2.9em 2.9em 2.9em 2.9em;
       background-color: #f4ee6f; }
 
-  #third-section .speaker-list {
+  #speakers-info .speaker-list {
     margin: 0 -1.5em; }
-  #third-section figure {
+  #speakers-info figure {
     margin: 0 2vw 10vw 2vw;
     height: 12em;
     width: 20vh; }
-  #third-section h2 {
+  #speakers-info h2 {
     font-size: 2em;
     margin-bottom: 1em; }
 
-  #forth-section .left {
+  #schedule .left {
     width: 40%;
     float: left; }
-  #forth-section .right {
+  #schedule .right {
     width: 55%;
     float: right;
     margin: 0px;
     padding: 0px; }
-    #forth-section .right li {
+    #schedule .right li {
       margin-bottom: 0.6em; }
 
-  #fifth-section ul li {
+  #highlights ul li {
     float: left;
     width: 33%;
     overflow: hidden;
     height: 159px; }
-    #fifth-section ul li a {
+    #highlights ul li a {
       position: absolute;
       top: 25px; }
 
-  #sixth-section #location {
+  #location-info #location {
     position: static; }
-  #sixth-section h2 {
+  #location-info h2 {
     margin-bottom: 1em; }
 
-  #seventh-section .foot ul {
+  #contact-us .foot ul {
     display: -ms-inline-flexbox;
     display: inline-flex; }
-    #seventh-section .foot ul li {
+    #contact-us .foot ul li {
       text-align: left;
       padding-left: 10%; }
 
@@ -9201,88 +9208,88 @@ button#submitBtn {
   #nav-icon1 {
     top: 3.5%; }
 
-  #first-section article.main h1 {
+  #landing-page article.main h1 {
     width: 50%;
     float: right;
     margin-top: 10vh;
     font-size: 6vh; }
-  #first-section .information {
+  #landing-page .information {
     margin-top: 4vh; }
-    #first-section .information .days {
+    #landing-page .information .days {
       width: 45%;
       float: none; }
-      #first-section .information .days .venue-details {
+      #landing-page .information .days .venue-details {
         width: 15em; }
-      #first-section .information .days h2 {
+      #landing-page .information .days h2 {
         font-size: 3.5vh; }
-        #first-section .information .days h2 .light-text {
+        #landing-page .information .days h2 .light-text {
           font-size: 2vh; }
-    #first-section .information > .register {
+    #landing-page .information > .register {
       width: 50%;
       float: none;
       margin-top: 5vh; }
-  #first-section figure {
+  #landing-page figure {
     width: 12em; }
-    #first-section figure h1 .site-logo {
+    #landing-page figure h1 .site-logo {
       background-size: 100%; }
-    #first-section figure h2 {
+    #landing-page figure h2 {
       font-size: 1em;
       margin-top: -10px; }
 
-  #second-section .container {
+  #about-us .container {
     margin-top: 7%; }
-  #second-section article {
+  #about-us article {
     width: 40vh;
     position: relative; }
-    #second-section article p {
+    #about-us article p {
       font-size: 1.7vh;
       line-height: 3vh; }
-  #second-section h2 {
+  #about-us h2 {
     font-size: 3vh;
     position: absolute;
     display: inline;
     float: right; }
 
-  #third-section .container {
+  #speakers-info .container {
     padding-top: 10%; }
-    #third-section .container figure {
+    #speakers-info .container figure {
       width: 19vh;
       height: 12em; }
 
-  #forth-section .container {
+  #schedule .container {
     padding-top: 5%; }
-  #forth-section a.submit-talk {
+  #schedule a.submit-talk {
     font-size: inherit; }
-  #forth-section article {
+  #schedule article {
     margin-left: 0;
     float: left; }
-    #forth-section article p#tagline {
+    #schedule article p#tagline {
       font-size: 1.5vh; }
-  #forth-section .left {
+  #schedule .left {
     width: 100%;
     float: none;
     margin-bottom: 5%; }
-  #forth-section .right {
+  #schedule .right {
     width: 100%;
     float: none; }
-    #forth-section .right li {
+    #schedule .right li {
       font-size: 2vh; }
-      #forth-section .right li small {
+      #schedule .right li small {
         font-size: 1.8vh; }
 
-  #fifth-section {
+  #highlights {
     padding-top: 20%; }
 
-  #sixth-section {
+  #location-info {
     padding-top: 25%;
     /* #location {
        height: 77%;
      }*/ }
 
-  #seventh-section .container {
+  #contact-us .container {
     padding-top: 30%; }
 
-  #sixth-section h2 {
+  #location-info h2 {
     margin-bottom: 1em; } }
 @media only screen and (min-width: 1024px) {
   nav#menu ul {
@@ -9300,187 +9307,187 @@ button#submitBtn {
     padding: 0 5vw;
     overflow: hidden; }
 
-  #first-section {
+  #landing-page {
     padding-top: 10%;
     padding-bottom: 10%;
     padding-top: 0; }
-    #first-section .header-b {
+    #landing-page .header-b {
       padding-top: 6vh; }
-    #first-section figure {
+    #landing-page figure {
       width: 18.5vw;
       height: 7.5vh; }
-      #first-section figure h1 .site-logo {
+      #landing-page figure h1 .site-logo {
         margin-bottom: 19px;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center; }
-      #first-section figure span {
+      #landing-page figure span {
         font-size: 1.5vw; }
-    #first-section article.main {
+    #landing-page article.main {
       margin-bottom: 2vh;
       margin-top: 10vh; }
-      #first-section article.main h1 {
+      #landing-page article.main h1 {
         font-size: 4.4vw;
         line-height: 8vh;
         width: 45vw;
         float: right; }
-    #first-section .information .days {
+    #landing-page .information .days {
       width: 30vw;
       float: left; }
-      #first-section .information .days h2 {
+      #landing-page .information .days h2 {
         font-size: 5vw;
         margin-bottom: 4vh; }
-      #first-section .information .days .venue-details {
+      #landing-page .information .days .venue-details {
         width: 100%; }
-        #first-section .information .days .venue-details li {
+        #landing-page .information .days .venue-details li {
           font-size: 2.5vh; }
-    #first-section .information .register {
+    #landing-page .information .register {
       width: 45vw;
       float: right;
       padding-right: 10vh;
       font-family: 'raleway-thin'; }
-      #first-section .information .register h3 {
+      #landing-page .information .register h3 {
         font-size: 2.4vw; }
-      #first-section .information .register a {
+      #landing-page .information .register a {
         font-size: 2.5vw;
         padding: 2vh; }
 
-  #second-section {
+  #about-us {
     padding-top: 5%;
     padding-bottom: 5%; }
-    #second-section article {
+    #about-us article {
       width: 50vw;
       height: 68.5vh;
       margin-left: 10.1vh; }
-      #second-section article p {
+      #about-us article p {
         font-size: 1.6vw;
         line-height: 4.2vh;
         margin-top: 0px;
         margin-bottom: 5vh; }
-    #second-section h2 {
+    #about-us h2 {
       font-size: 5vw;
       display: inline;
       float: right;
       padding: 1em .7em 1em .7em; }
 
-  #third-section {
+  #speakers-info {
     padding-top: 3%; }
-    #third-section article p {
+    #speakers-info article p {
       font-size: 2.5vw;
       margin: 0 0 2.2vh 0; }
-    #third-section .speaker-list {
+    #speakers-info .speaker-list {
       margin: 0 -4.7vh;
       margin-top: 10vh; }
-    #third-section figure {
+    #speakers-info figure {
       height: auto;
       margin: 0px 3.5vh;
       width: 13vw;
       overflow: hidden; }
-      #third-section figure .image {
+      #speakers-info figure .image {
         height: auto; }
-      #third-section figure figcaption h4 {
+      #speakers-info figure figcaption h4 {
         font-size: 2.1vw; }
-      #third-section figure figcaption p {
+      #speakers-info figure figcaption p {
         font-size: 1.6vw; }
-    #third-section h2 {
+    #speakers-info h2 {
       font-size: 6vw;
       margin-bottom: 5vh; }
 
-  #forth-section {
+  #schedule {
     padding-top: 8%; }
-    #forth-section .left {
+    #schedule .left {
       width: 40vw;
       float: left; }
-      #forth-section .left article {
+      #schedule .left article {
         padding: 2.5vh 2.5vh 9.5vh 2.5vh; }
-        #forth-section .left article p {
+        #schedule .left article p {
           line-height: 1.8em;
           font-size: 2vw; }
-          #forth-section .left article p#tagline {
+          #schedule .left article p#tagline {
             font-size: 1.7vw; }
-      #forth-section .left .submit-links a {
+      #schedule .left .submit-links a {
         font-size: 2vh; }
-    #forth-section .right {
+    #schedule .right {
       width: 43vw;
       float: right; }
-      #forth-section .right li {
+      #schedule .right li {
         font-size: 1.47vw;
         margin-bottom: 2.5vh; }
-        #forth-section .right li small {
+        #schedule .right li small {
           font-size: 1.1vw; }
-        #forth-section .right li .text-yellow,
-        #forth-section .right li .text-red {
+        #schedule .right li .text-yellow,
+        #schedule .right li .text-red {
           font-size: 2.1vw; }
 
-  #fifth-section {
+  #highlights {
     padding-top: 5%; }
-    #fifth-section ul {
+    #highlights ul {
       margin: 0 -2px; }
-      #fifth-section ul li {
+      #highlights ul li {
         float: left;
         overflow: hidden;
         margin: 0;
         position: relative; }
-        #fifth-section ul li:last-child {
+        #highlights ul li:last-child {
           width: 35%; }
-      #fifth-section ul .first {
+      #highlights ul .first {
         width: 30.92%;
         height: 320px; }
-      #fifth-section ul .second {
+      #highlights ul .second {
         width: 21.64%;
         height: 320px; }
-      #fifth-section ul .third {
+      #highlights ul .third {
         width: 46.9%;
         height: 320px; }
-      #fifth-section ul .forth {
+      #highlights ul .forth {
         width: 21.64%;
         height: 159px; }
-    #fifth-section .highlight-tag {
+    #highlights .highlight-tag {
       display: inline-block;
       vertical-align: bottom;
       float: right; }
-    #fifth-section .view {
+    #highlights .view {
       position: absolute;
       top: 15px;
       right: 5px;
       left: auto; }
-    #fifth-section h1 {
+    #highlights h1 {
       font-size: 2.5em; }
 
-  #sixth-section {
+  #location-info {
     padding-top: 4%;
     padding-bottom: 4%;
     /* #location {
        width: 100%;
        height: 60%;
      }*/ }
-    #sixth-section #top {
+    #location-info #top {
       padding: 0px 25vh; }
-    #sixth-section h2 {
+    #location-info h2 {
       font-size: 5.7vh;
       margin: 0 0 5vh 0; }
-    #sixth-section p {
+    #location-info p {
       font-size: 3.5vh;
       margin: 0 0 2vh 0; }
 
-  #seventh-section {
+  #contact-us {
     padding-top: 10%;
     padding-bottom: 10%; }
-    #seventh-section p {
+    #contact-us p {
       font-size: 2vh; }
-    #seventh-section h2 {
+    #contact-us h2 {
       font-size: 5.5vh;
       margin-bottom: 9vh; }
-    #seventh-section .foot ul {
+    #contact-us .foot ul {
       margin: 0;
       padding: 0;
       display: -ms-inline-flexbox;
       display: inline-flex; }
-      #seventh-section .foot ul li {
+      #contact-us .foot ul li {
         font-size: 18px;
         text-align: left;
         padding-left: 10%; }
-        #seventh-section .foot ul li > h2 {
+        #contact-us .foot ul li > h2 {
           font-size: 3.5vh;
           margin-bottom: 2vh; }
 
@@ -9497,158 +9504,158 @@ button#submitBtn {
   .container {
     padding: 0 10vw; }
 
-  #first-section {
+  #landing-page {
     padding-top: 10%;
     padding-bottom: 10%;
     padding-top: 0;
     padding-bottom: 5%; }
-    #first-section .header-b {
+    #landing-page .header-b {
       padding-top: 6vh; }
-    #first-section figure {
+    #landing-page figure {
       width: 18.5vw;
       height: 7.5vh; }
-      #first-section figure h1 .site-logo {
+      #landing-page figure h1 .site-logo {
         margin-bottom: 19px;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center; }
-      #first-section figure span {
+      #landing-page figure span {
         font-size: 1.5vw; }
-    #first-section article.main {
+    #landing-page article.main {
       margin-bottom: 2vh;
       margin-top: 5%; }
-      #first-section article.main h1 {
+      #landing-page article.main h1 {
         font-size: 4.4vw;
         line-height: 8vh;
         width: 40vw;
         float: right; }
-        #first-section article.main h1 span {
+        #landing-page article.main h1 span {
           margin-top: 2.5vh; }
-    #first-section .information .days {
+    #landing-page .information .days {
       width: 30vw; }
-      #first-section .information .days h2 {
+      #landing-page .information .days h2 {
         font-size: 3.6vw;
         margin-bottom: 3vh; }
-      #first-section .information .days .venue-details {
+      #landing-page .information .days .venue-details {
         width: 21.6vw; }
-        #first-section .information .days .venue-details li {
+        #landing-page .information .days .venue-details li {
           font-size: 2.5vh; }
-    #first-section .information .register {
+    #landing-page .information .register {
       width: 40vw;
       float: right;
       padding-right: 10vh;
       font-family: 'raleway-thin'; }
-      #first-section .information .register h3 {
+      #landing-page .information .register h3 {
         font-size: 2.2vw; }
-      #first-section .information .register a {
+      #landing-page .information .register a {
         font-size: 2.2vw;
         padding: 2vh;
         margin-top: 3vh; }
 
-  #second-section {
+  #about-us {
     padding-top: 5%;
     padding-bottom: 5%; }
-    #second-section article {
+    #about-us article {
       width: 48vw;
       height: auto;
       margin-top: 8%;
       padding-bottom: 4em; }
-      #second-section article p {
+      #about-us article p {
         font-size: 1.32vw;
         line-height: 4.2vh;
         margin-top: 0px;
         margin-bottom: 3vh; }
-        #second-section article p:last-child {
+        #about-us article p:last-child {
           margin-bottom: 0; }
-    #second-section h2 {
+    #about-us h2 {
       font-size: 3.1vw;
       display: inline;
       float: right; }
 
-  #third-section {
+  #speakers-info {
     padding-top: 3%; }
-    #third-section article p {
+    #speakers-info article p {
       font-size: 1.8vw;
       margin: 0 0 2.2vh 0; }
-    #third-section .speaker-list {
+    #speakers-info .speaker-list {
       margin: 0 -4.7vh;
       margin-top: 10vh; }
-    #third-section figure {
+    #speakers-info figure {
       margin: 0px 1.5vw;
       width: 10.6vw;
       overflow: hidden; }
-      #third-section figure .image {
+      #speakers-info figure .image {
         height: auto; }
-      #third-section figure figcaption h4 {
+      #speakers-info figure figcaption h4 {
         font-size: 1.4vw; }
-      #third-section figure figcaption p {
+      #speakers-info figure figcaption p {
         font-size: 1.2vw; }
-    #third-section h2 {
+    #speakers-info h2 {
       font-size: 3.52vw;
       margin-bottom: 5vh; }
 
-  #forth-section {
+  #schedule {
     padding-top: 5%; }
-    #forth-section .left {
+    #schedule .left {
       width: 24vw; }
-      #forth-section .left article {
+      #schedule .left article {
         padding: 4.5vh 2.5vh 4vh 4.5vh; }
-        #forth-section .left article h2 {
+        #schedule .left article h2 {
           font-size: 3.8vw;
           margin-bottom: 3vh; }
-        #forth-section .left article p {
+        #schedule .left article p {
           line-height: 1.5em;
           font-size: 3vh; }
-          #forth-section .left article p#tagline {
+          #schedule .left article p#tagline {
             font-size: 1.2vw; }
-      #forth-section .left .submit-links a {
+      #schedule .left .submit-links a {
         font-size: 1.3vw; }
-    #forth-section .right {
+    #schedule .right {
       width: 45vw; }
-      #forth-section .right li {
+      #schedule .right li {
         font-size: 1.2vw;
         margin-bottom: 2.2vh; }
-        #forth-section .right li .text-yellow, #forth-section .right li .text-red {
+        #schedule .right li .text-yellow, #schedule .right li .text-red {
           font-size: 1.5vw; }
 
-  #fifth-section {
+  #highlights {
     padding-top: 9%; }
-    #fifth-section ul {
+    #highlights ul {
       margin: 0 auto;
       max-width: 970px; }
-      #fifth-section ul li {
+      #highlights ul li {
         float: left;
         overflow: hidden;
         margin: 0;
         position: relative; }
-        #fifth-section ul li:last-child {
+        #highlights ul li:last-child {
           height: 160px;
           width: 340px; }
-      #fifth-section ul .first {
+      #highlights ul .first {
         width: 300px;
         height: 320px; }
-      #fifth-section ul .second {
+      #highlights ul .second {
         width: 210px;
         height: 320px; }
-      #fifth-section ul .third {
+      #highlights ul .third {
         width: 455px;
         height: 320px; }
-      #fifth-section ul .forth {
+      #highlights ul .forth {
         width: 210px;
         height: 160px; }
-    #fifth-section .highlight-tag {
+    #highlights .highlight-tag {
       display: inline-block;
       vertical-align: bottom;
       float: right; }
-    #fifth-section .view {
+    #highlights .view {
       position: absolute;
       top: 25px;
       right: 5px;
       left: auto; }
-    #fifth-section h1 {
+    #highlights h1 {
       font-size: 2em; }
 
-  #sixth-section {
+  #location-info {
     padding-top: 4%;
     padding-bottom: 4%;
     padding-left: 0;
@@ -9657,30 +9664,30 @@ button#submitBtn {
        width: 100%;
        height: 66%;
      }*/ }
-    #sixth-section #top {
+    #location-info #top {
       padding: 0px 25vh; }
-    #sixth-section h2 {
+    #location-info h2 {
       font-size: 2.98vw;
       margin: 0 0 5vh 0; }
-    #sixth-section p {
+    #location-info p {
       font-size: 1.8vw;
       margin: 0 0 2vh 0; }
 
-  #seventh-section {
+  #contact-us {
     padding-top: 8%;
     padding-bottom: 8%; }
-    #seventh-section p {
+    #contact-us p {
       font-size: 18px; }
-    #seventh-section h2 {
+    #contact-us h2 {
       font-size: 2.7vw;
       margin-bottom: 9vh; }
-    #seventh-section .foot ul {
+    #contact-us .foot ul {
       margin: 0;
       padding: 0;
       width: 100%; }
-      #seventh-section .foot ul li {
+      #contact-us .foot ul li {
         font-size: 2.6vh; }
-        #seventh-section .foot ul li > h2 {
+        #contact-us .foot ul li > h2 {
           font-size: 24px;
           margin-bottom: 2vh; }
 
@@ -9691,66 +9698,66 @@ button#submitBtn {
       width: 1.5vh;
       height: 1.5vh; } }
 @media only screen and (min-width: 1300px) {
-  #first-section .information {
+  #landing-page .information {
     margin-bottom: 0; }
 
-  #first-section .information .days .venue-details {
+  #landing-page .information .days .venue-details {
     width: 19.8vw;
     padding: 16px 10px 14px 15px; }
-    #first-section .information .days .venue-details li {
+    #landing-page .information .days .venue-details li {
       margin-bottom: 4px; }
 
-  #second-section article {
+  #about-us article {
     padding: 3em 4em 4em 2em; }
-    #second-section article p {
+    #about-us article p {
       line-height: 4.8vh; }
 
-  #forth-section .left article {
+  #schedule .left article {
     padding: 4.5vh 2.5vh 6vh 4.5vh; }
-    #forth-section .left article p#tagline {
+    #schedule .left article p#tagline {
       margin-top: 4vh; }
 
-  #sixth-section #location {
+  #location-info #location {
     height: 350px; } }
 @media only screen and (min-width: 1400px) {
-  #first-section .information .days h2 {
+  #landing-page .information .days h2 {
     font-size: 2.5vw; }
 
-  #first-section article.main h1 span {
+  #landing-page article.main h1 span {
     margin-top: 10px; }
 
-  #second-section article {
+  #about-us article {
     padding: 3em 4.3em 4em 2em; }
 
-  #fifth-section ul {
+  #highlights ul {
     max-width: 100%; }
-    #fifth-section ul .first {
+    #highlights ul .first {
       width: 30%;
       height: 450px; }
-    #fifth-section ul .second {
+    #highlights ul .second {
       width: 25%;
       height: 450px; }
-      #fifth-section ul .second .wrap-img {
+      #highlights ul .second .wrap-img {
         width: 100%;
         height: 225px; }
-    #fifth-section ul .third {
+    #highlights ul .third {
       width: 45%;
       height: 450px; }
-    #fifth-section ul .forth {
+    #highlights ul .forth {
       width: 25%;
       height: 225px; }
-    #fifth-section ul li:last-child {
+    #highlights ul li:last-child {
       width: 25%;
       height: 225px; }
 
-  #fifth-section .view {
+  #highlights .view {
     top: 50px;
     font-size: 24px; }
 
-  #sixth-section #location {
+  #location-info #location {
     height: 400px; }
 
-  #seventh-section .foot ul li {
+  #contact-us .foot ul li {
     font-size: 2vh; } }
 footer.footer {
   text-align: center;

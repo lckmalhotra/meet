@@ -142,7 +142,7 @@ nav{
 }
 //global sass styling end
 //sectional sass styling
-#first-section{
+#landing-page{
     @include background-img-box("../assets/images/bg-1.png");
     position: relative;
     z-index: 2;
@@ -248,12 +248,12 @@ nav{
         }
     }
 }
-#first-section .venue-details li
+#landing-page .venue-details li
 {
   font-family: 'raleway-regular';
 }
 //Second Section styling
-#second-section{
+#about-us{
     @include background-img-box("../assets/images/bg-2.png");
     @include vertical-padding(2.5em);
      position: relative;
@@ -298,8 +298,8 @@ nav{
     }
 }
 
-//third section styling
-#third-section{
+/* Section speakers-info*/
+#speakers-info{
     background-color: $primary-light-color;
     @include vertical-padding(3em);
     h2{
@@ -343,8 +343,8 @@ nav{
         }
     }
 }
-//forth section styling
-#forth-section{
+/* section schedule */
+#schedule{
     @include vertical-padding(3em);
     background-color: $primary-color;
     article{
@@ -417,8 +417,8 @@ nav{
 
     }
 }
-// fifth section
-#fifth-section{
+/* highlights section */
+#highlights{
     background-color: #222339;
     @include vertical-padding(2em);
     overflow: hidden;
@@ -490,7 +490,7 @@ nav{
          }
     }
 }
-#fifth-section ul li:last-child
+#highlights ul li:last-child
 {
   position: relative;
   .highlight-tag
@@ -500,9 +500,9 @@ nav{
     bottom: 0;
   }
 }
-//sixth section
 
-#sixth-section{
+/* section location-info */
+#location-info{
     background-color: #d2d2d2;
     padding-left: 15px;
     padding-right: 15px;
@@ -549,16 +549,16 @@ nav{
         }
     }
 }
-#sixth-section #location .iframe
+#location-info #location .iframe
 {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   border: none;
 }
-// seventh section
 
-#seventh-section{
+/* contact-us section*/
+#contact-us{
     @include vertical-padding(2em);
     background-color: #0f0931;
     text-align: center;
@@ -594,7 +594,7 @@ nav{
     }
 
 }
-//sectional sass styling end
+/* contact-us section */
 
 
 .nav-dater{
@@ -845,11 +845,11 @@ Main Components
     -o-transform: translateX(0%);
   }
 }
-#first-section > .container
+#landing-page > .container
 {
   height: 100%;
 }
-#first-section .information
+#landing-page .information
 {
   position:absolute;
   bottom:0;
@@ -866,7 +866,7 @@ Main Components
 {
   margin-bottom: 0;
 }
-#first-section .information > .register{
+#landing-page .information > .register{
   position: absolute;
   right:0;
   bottom:0;
