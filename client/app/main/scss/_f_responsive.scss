@@ -310,7 +310,7 @@
       }
     }
   }
-  #highlights{
+  /*#highlights{
     ul{
       li{
         float: left;
@@ -324,6 +324,51 @@
           position: absolute;
           top: 25px;
         }
+      }
+    }
+  }*/
+  #highlights
+  {
+    ul
+    {
+      li
+      {
+        float: left;
+        overflow: hidden;
+        .highlight-tag {
+          padding: .8em .8em .8em .8em;
+          h1
+          {
+            font-size: 1.2em;
+          }
+          h2
+          {
+            font-size: 1em;
+          }
+        }
+      }
+      .first
+      { width: 30%;
+        height: 320px;
+      }
+      .second
+      {
+        width: 25%;
+        .wrap-img
+        {
+          width: 100%;
+          height: 160px;
+        }
+      }
+      .third
+      {
+        width: 45%;
+        height: 320px;
+      }
+      .forth
+      {
+        height: 160px;
+        width: 25%;
       }
     }
   }

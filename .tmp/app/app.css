@@ -9176,14 +9176,46 @@ button#submitBtn {
     #schedule .right li {
       margin-bottom: 0.6em; }
 
+  /*#highlights{
+    ul{
+      li{
+        float: left;
+        width: 33%;
+        overflow: hidden;
+        height: 159px;
+        &:last-child {
+
+        }
+        a {
+          position: absolute;
+          top: 25px;
+        }
+      }
+    }
+  }*/
   #highlights ul li {
     float: left;
-    width: 33%;
-    overflow: hidden;
-    height: 159px; }
-    #highlights ul li a {
-      position: absolute;
-      top: 25px; }
+    overflow: hidden; }
+    #highlights ul li .highlight-tag {
+      padding: .8em .8em .8em .8em; }
+      #highlights ul li .highlight-tag h1 {
+        font-size: 1.2em; }
+      #highlights ul li .highlight-tag h2 {
+        font-size: 1em; }
+  #highlights ul .first {
+    width: 30%;
+    height: 320px; }
+  #highlights ul .second {
+    width: 25%; }
+    #highlights ul .second .wrap-img {
+      width: 100%;
+      height: 160px; }
+  #highlights ul .third {
+    width: 45%;
+    height: 320px; }
+  #highlights ul .forth {
+    height: 160px;
+    width: 25%; }
 
   #location-info #location {
     position: static; }
