@@ -1235,3 +1235,75 @@ button#submitBtn {
   padding: 15px 5px;
 }
 /* Registration Form */
+
+/* thoughts */
+.thoughts{
+  #thoughts-section{
+    background-color: #222339;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    h2{
+      background-color: #00a651;
+      padding: 0.4em 0.7em 0.4em 0.7em;
+      text-transform: uppercase;
+      display: inline-block;
+      font-family: 'raleway-heavy';
+    }
+    article{
+      p{
+        margin: 20px 0 10px;
+        font-style: italic;
+      }
+    }
+    .speak{
+      margin-top: 40px;
+      > span{
+        text-transform: uppercase;
+        display: inline-block;
+        font-family: 'raleway';
+        font-size: 36px;
+        border: none;
+        border-right: 4px solid #ff3333;
+        padding-right: 35px;
+        line-height: 47px;
+        width: 25%;
+        span{
+          text-transform: uppercase;
+          display: block;
+          font-family: 'raleway-extrabold';
+          font-size: 50px;
+        }
+      }
+      ul{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 19px;
+        padding-left: 19px;
+        font-family: 'raleway';
+        li{
+          line-height: 48px;
+        }
+      }
+    }
+    .submit-links{
+      overflow: hidden;
+      margin-top: 35px;
+      a.submit-talk{
+        @include color-background(1em, 1.8em, 1em, 1.8em, #f4ee6f);
+        color: #eb2242;
+        margin-top: 1em;
+        font-family: "raleway-heavy";
+        strong{
+          padding: 12px 0px;
+          display: inline-block;
+        }
+      }
+    }
+    .note{
+      font-size: 14px;
+      font-family: 'raleway-thin' ;
+      margin-top: 40px;
+      font-style: italic;
+    }
+  }
+}

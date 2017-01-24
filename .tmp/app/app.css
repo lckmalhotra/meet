@@ -5690,8 +5690,7 @@ button.close {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
-          filter: none; }
+  filter: none; }
 
 .fa-stack {
   position: relative;
@@ -8577,6 +8576,7 @@ Main Components
     width: 100%;
     /* Force Hardware Acceleration */
     transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
 
   [data-hijacking="on"] .cd-section > div {
@@ -8949,6 +8949,63 @@ button#submitBtn {
   padding: 15px 5px; }
 
 /* Registration Form */
+/* thoughts */
+.thoughts #thoughts-section {
+  background-color: #222339;
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  .thoughts #thoughts-section h2 {
+    background-color: #00a651;
+    padding: 0.4em 0.7em 0.4em 0.7em;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: 'raleway-heavy'; }
+  .thoughts #thoughts-section article p {
+    margin: 20px 0 10px;
+    font-style: italic; }
+  .thoughts #thoughts-section .speak {
+    margin-top: 40px; }
+    .thoughts #thoughts-section .speak > span {
+      text-transform: uppercase;
+      display: inline-block;
+      font-family: 'raleway';
+      font-size: 36px;
+      border: none;
+      border-right: 4px solid #ff3333;
+      padding-right: 35px;
+      line-height: 47px;
+      width: 25%; }
+      .thoughts #thoughts-section .speak > span span {
+        text-transform: uppercase;
+        display: block;
+        font-family: 'raleway-extrabold';
+        font-size: 50px; }
+    .thoughts #thoughts-section .speak ul {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 19px;
+      padding-left: 19px;
+      font-family: 'raleway'; }
+      .thoughts #thoughts-section .speak ul li {
+        line-height: 48px; }
+  .thoughts #thoughts-section .submit-links {
+    overflow: hidden;
+    margin-top: 35px; }
+    .thoughts #thoughts-section .submit-links a.submit-talk {
+      padding: 1em 1.8em 1em 1.8em;
+      background-color: #f4ee6f;
+      color: #eb2242;
+      margin-top: 1em;
+      font-family: "raleway-heavy"; }
+      .thoughts #thoughts-section .submit-links a.submit-talk strong {
+        padding: 12px 0px;
+        display: inline-block; }
+  .thoughts #thoughts-section .note {
+    font-size: 14px;
+    font-family: "raleway-thin";
+    margin-top: 40px;
+    font-style: italic; }
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   body {
     overflow: auto; }
@@ -9752,6 +9809,64 @@ button#submitBtn {
 
   #seventh-section .foot ul li {
     font-size: 2vh; } }
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  /* thoughts start */
+  .thoughts #thoughts-section h2 {
+    margin-top: 0; }
+  .thoughts #thoughts-section .speak > span {
+    border: none;
+    border-right: none;
+    margin-bottom: 20px; }
+  .thoughts #thoughts-section .speak ul {
+    padding-left: 0px; }
+    .thoughts #thoughts-section .speak ul li {
+      line-height: 22px;
+      margin-bottom: 15px; }
+
+  /* thoughts end */ }
+@media only screen and (max-width: 991px) {
+  /* thoughts start */
+  .thoughts #thoughts-section h2 {
+    margin-top: 0; }
+  .thoughts #thoughts-section .speak {
+    margin-top: 40px;
+    display: table; }
+    .thoughts #thoughts-section .speak > span {
+      display: table-cell;
+      border: none;
+      border-right: 4px solid #ff3333;
+      width: 30%; }
+    .thoughts #thoughts-section .speak ul {
+      display: table-cell;
+      width: 67%; }
+      .thoughts #thoughts-section .speak ul li {
+        line-height: 36px; }
+
+  /* thoughts end */ }
+@media only screen and (max-width: 780px) {
+  /* thoughts start */
+  .thoughts #thoughts-section h2 {
+    margin-top: 0; }
+  .thoughts #thoughts-section .speak {
+    margin-top: 40px;
+    display: block; }
+    .thoughts #thoughts-section .speak > span {
+      display: block;
+      border: none;
+      border-right: none;
+      border-bottom: 4px solid #ff3333;
+      width: 100%;
+      font-size: 35px; }
+      .thoughts #thoughts-section .speak > span > span {
+        font-size: 35px;
+        display: inline-block; }
+    .thoughts #thoughts-section .speak ul {
+      display: block;
+      width: 100%; }
+      .thoughts #thoughts-section .speak ul li {
+        line-height: 36px; }
+
+  /* thoughts end */ }
 footer.footer {
   text-align: center;
   padding: 30px 0;

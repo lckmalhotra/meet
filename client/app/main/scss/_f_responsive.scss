@@ -355,6 +355,8 @@
     margin: 0 auto!important;
   }
   /* register talk */
+
+
 }
 @include style-for(ipad-landscape) {
   #nav-icon1
@@ -1117,3 +1119,97 @@
     font-size: 2vh;
   }
 }
+
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+  /* thoughts start */
+  .thoughts{
+    #thoughts-section{
+      h2{
+        margin-top: 0;
+      }
+      .speak{
+        > span{
+          border: none;
+          border-right: none;
+          margin-bottom: 20px;
+        }
+        ul{
+          padding-left: 0px;
+          li{
+            line-height: 22px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  /* thoughts end */
+}
+
+
+@media only screen and (max-width: 991px){
+  /* thoughts start */
+  .thoughts{
+    #thoughts-section{
+      h2{
+        margin-top: 0;
+      }
+      .speak{
+        margin-top: 40px;
+        display: table;
+        > span{
+          display: table-cell;
+          border: none;
+          border-right: 4px solid #ff3333;
+          width: 30%;
+        }
+        ul{
+          display: table-cell;
+          width: 67%;
+          li{
+            line-height: 36px;
+          }
+        }
+      }
+    }
+  }
+  /* thoughts end */
+}
+
+@media only screen and (max-width: 780px){
+  /* thoughts start */
+  .thoughts{
+    #thoughts-section{
+      h2{
+        margin-top: 0;
+      }
+      .speak{
+        margin-top: 40px;
+        display: block;
+        > span{
+          display:block;
+          border: none;
+          border-right: none;
+          border-bottom: 4px solid #ff3333;
+          width: 100%;
+          font-size: 35px;
+          > span{
+            font-size: 35px;
+            display: inline-block;
+          }
+        }
+        ul{
+          display: block;
+          width: 100%;
+          li{
+            line-height: 36px;
+          }
+        }
+      }
+    }
+  }
+  /* thoughts end */
+}
+
+
