@@ -7,8 +7,8 @@ angular.module('meetApp')
 
       $scope.Dec2015 = '2015-12-31T22:00:00.000Z';
       $scope.Feb2016 = '2016-02-30T22:00:00.000Z';
-      $scope.Jun2016 = '2016-06-30T22:00:00.000Z';
-      $scope.Sep2016 = '2016-08-30T22:00:00.000Z';
+      $scope.Jan2017 = '2017-01-30T22:00:00.000Z';
+      $scope.Mar2017 = '2017-03-01T22:00:00.000Z';
 
         $scope.fetch = function () {
             $http.get("/api/registrations").then(function (res) {

@@ -21,12 +21,12 @@ angular.module('meetApp', [
 
     return function (items, fromDate, toDate) {
       var filtered = [];
-
-      for (var i = 0; i < items.length; i++) {
-
-        var item = items[i];
-        if (item.date > fromDate && item.date < toDate){
-          filtered.push(item);
+      if(items){
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          if (item.date > fromDate && item.date < toDate){
+            filtered.push(item);
+          }
         }
       }
 
