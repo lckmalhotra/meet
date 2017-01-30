@@ -17,21 +17,13 @@ angular.module('meetApp', [
   .config(function($urlRouterProvider, $locationProvider) {
 
     $locationProvider.html5Mode(true);
-  }).filter('dateFilter', function () {
-
-    return function (items, fromDate, toDate) {
-      var filtered = [];
-      if(items){
-        for (var i = 0; i < items.length; i++) {
-          var item = items[i];
-          if (item.date > fromDate && item.date < toDate){
-            filtered.push(item);
-          }
-        }
-      }
-
-      return filtered;
-    };
+  }).filter('dateFilter', function($filter) {
+    return function(items, from, to) {
+      return $filter('filter')(items, 'date', function(v){
+        var date  = moment(v);
+        return date >= moment(from) && date <= moment(to);
+      });
+  };
   }).directive('fullPage',function() {
   return {
     restrict: 'E',
