@@ -221,6 +221,9 @@
       }
     }
 }
+  .foot .social-icons{
+    display: inline-block;
+  }
 
 }
 @include style-for(tablet) {
@@ -763,6 +766,10 @@
   #nav-bullets {
     display: block;
   }
+  #first-section .social-icons {
+    margin-right: 10em;
+    padding-top: 1.5%;
+  }
 }
 @include style-for(desktop-large) {
   nav {
@@ -1036,6 +1043,10 @@
         height: 1.5vh;
       }
     }
+  }
+  #first-section .social-icons {
+    margin-right: 7em;
+    padding-top: 1.1%;
   }
 }
 @include style-for(mediumlarge-screen)
