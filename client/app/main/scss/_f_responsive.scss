@@ -212,6 +212,16 @@
     margin: 0 auto;
   }
   /* register */
+
+  .social-icons{
+    #first-section{
+      .social-icons{
+        margin-right: 15px;
+        padding-top: 0;
+      }
+    }
+}
+
 }
 @include style-for(tablet) {
   body
@@ -355,6 +365,13 @@
     margin: 0 auto!important;
   }
   /* register talk */
+
+  #first-section{
+    .social-icons{
+      margin-right: 15px;
+      padding-top: 0;
+    }
+  }
 }
 @include style-for(ipad-landscape) {
   #nav-icon1
