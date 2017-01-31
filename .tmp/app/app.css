@@ -5690,8 +5690,7 @@ button.close {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
-          filter: none; }
+  filter: none; }
 
 .fa-stack {
   position: relative;
@@ -8577,6 +8576,7 @@ Main Components
     width: 100%;
     /* Force Hardware Acceleration */
     transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
 
   [data-hijacking="on"] .cd-section > div {
