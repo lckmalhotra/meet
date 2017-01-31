@@ -5,10 +5,10 @@
 angular.module('meetApp')
     .controller('dashboardController', function ($scope, $http) {
 
-      $scope.Dec2015 = '2015-12-31T22:00:00.000Z';
-      $scope.Feb2016 = '2016-02-30T22:00:00.000Z';
-      $scope.Jun2016 = '2016-06-30T22:00:00.000Z';
-      $scope.Sep2016 = '2016-08-30T22:00:00.000Z';
+      $scope.Dec2015 = '2015-12-31T00:00:00.000Z';
+      $scope.Feb2016 = '2016-02-30T00:00:00.000Z';
+      $scope.Jan2017 = '2017-01-01T00:00:00.000Z';
+      $scope.Mar2017 = '2017-03-01T00:00:00.000Z';
 
         $scope.fetch = function () {
             $http.get("/api/registrations").then(function (res) {
