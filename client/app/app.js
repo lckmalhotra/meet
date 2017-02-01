@@ -49,7 +49,7 @@ angular.module('meetApp', [
         var hijacking= $(elem).data('hijacking'),
           animationType = $(elem).data('animation'),
           delta = 0,
-          scrollThreshold = 0,
+          scrollThreshold = 1,
           actual = 1,
           animating = false;
 
