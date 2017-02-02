@@ -9249,33 +9249,37 @@ button#submitBtn {
   #nav-icon1 {
     top: 3.5%; }
 
-  #first-section article.main h1 {
-    width: 50%;
-    float: right;
-    margin-top: 10vh;
-    font-size: 6vh; }
-  #first-section .information {
-    margin-top: 4vh; }
-    #first-section .information .days {
-      width: 45%;
-      float: none; }
-      #first-section .information .days .venue-details {
-        width: 15em; }
-      #first-section .information .days h2 {
-        font-size: 3.5vh; }
-        #first-section .information .days h2 .light-text {
-          font-size: 2vh; }
-    #first-section .information > .register {
+  #first-section {
+    padding-bottom: 20%; }
+    #first-section article.main h1 {
       width: 50%;
-      float: none;
-      margin-top: 5vh; }
-  #first-section figure {
-    width: 12em; }
-    #first-section figure h1 .site-logo {
-      background-size: 100%; }
-    #first-section figure h2 {
-      font-size: 1em;
-      margin-top: -10px; }
+      float: right;
+      margin-top: 10vh;
+      font-size: 5vh; }
+      #first-section article.main h1 span.date {
+        font-size: 22px; }
+    #first-section .information {
+      margin-top: 4vh; }
+      #first-section .information .days {
+        width: 45%;
+        float: none; }
+        #first-section .information .days .venue-details {
+          width: 15em; }
+        #first-section .information .days h2 {
+          font-size: 3.5vh; }
+          #first-section .information .days h2 .light-text {
+            font-size: 2vh; }
+      #first-section .information > .register {
+        width: 50%;
+        float: none;
+        margin-top: 5vh; }
+    #first-section figure {
+      width: 12em; }
+      #first-section figure h1 .site-logo {
+        background-size: 100%; }
+      #first-section figure h2 {
+        font-size: 1em;
+        margin-top: -10px; }
 
   #second-section .container {
     margin-top: 7%; }
