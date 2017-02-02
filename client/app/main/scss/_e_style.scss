@@ -242,7 +242,8 @@ nav{
                 @include color-background(0.7em, 0em, 0.7em, 0em , #8186f4);
                 text-align: center;
                 width: 100%;
-                display: block
+                display: block;
+                border-bottom:5px solid  #393c78;
 
             }
         }
@@ -377,6 +378,7 @@ nav{
         color: #eb2242;
         margin-top: 1em;
         font-family: "raleway-thin";
+        border-bottom: 5px solid #797744;
     }
     a.book-seat{
         @include color-background(1em,1.8em, 1em,1.8em, #eb2242);
@@ -384,6 +386,7 @@ nav{
         float: right;
         margin-top: 0.7em;
         font-family: "raleway-thin";
+       border-bottom: 5px solid #481b23;
     }
     .time-schedule{
 

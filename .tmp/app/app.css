@@ -8166,7 +8166,8 @@ nav#menu {
       background-color: #8186f4;
       text-align: center;
       width: 100%;
-      display: block; }
+      display: block;
+      border-bottom: 5px solid  #393c78; }
 
 #first-section .venue-details li {
   font-family: 'raleway-regular'; }
@@ -8283,14 +8284,16 @@ nav#menu {
     float: right;
     color: #eb2242;
     margin-top: 1em;
-    font-family: "raleway-thin"; }
+    font-family: "raleway-thin";
+    border-bottom: 5px solid #797744; }
   #forth-section a.book-seat {
     padding: 1em 1.8em 1em 1.8em;
     background-color: #eb2242;
     color: #ffffff;
     float: right;
     margin-top: 0.7em;
-    font-family: "raleway-thin"; }
+    font-family: "raleway-thin";
+    border-bottom: 5px solid #481b23; }
   #forth-section .time-schedule {
     padding-top: 2em;
     padding-bottom: 2em;
@@ -9022,9 +9025,13 @@ button#submitBtn {
     padding-right: 15px; }
     #first-section article.main h1 {
       text-align: right;
-      font-size: 1.5em; }
+      font-size: 2em; }
       #first-section article.main h1 span {
         margin-top: 6px; }
+
+  #first-section article.main h1 span.date {
+    font-size: 14px;
+    margin: 20px 0 30px; }
 
   #first-section .information .days h2 {
     margin-top: 6px;
@@ -9048,7 +9055,8 @@ button#submitBtn {
 
   #second-section article {
     padding: 2.2em 1.2em;
-    text-align: center; }
+    text-align: center;
+    line-height: inherit; }
 
   /* section second */
   /* section third */
@@ -9094,6 +9102,13 @@ button#submitBtn {
   #fifth-section .highlight-tag {
     margin-top: 0;
     margin-bottom: 2em; }
+
+  /* section seventh */
+  #seventh-section .foot ul li {
+    margin-bottom: 35px; }
+
+  #seventh-section .foot ul li h2.follow-us {
+    margin-top: 35px; }
 
   /* section fifth */
   #sixth-section {
