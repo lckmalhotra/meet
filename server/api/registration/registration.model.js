@@ -7,6 +7,7 @@ var RegistrationSchema = new mongoose.Schema({
     company: String,
     email: String,
     phone: String,
+    size: String,
     message: String,
     date : {type: Date, default: Date.now},
     ticketSent: {type: Boolean, default: false}
