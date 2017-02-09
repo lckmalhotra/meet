@@ -10,7 +10,7 @@
 
             $scope.formData = {};
             $scope.isActive = true;
-
+            $scope.formData.size = 'S';
 
             $scope.addThing = function () {
               if($scope.userForm.$valid) {
