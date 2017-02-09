@@ -8976,6 +8976,49 @@ button#submitBtn {
   font-family: 'raleway-thin';
   margin: 30px 0 50px; }
 
+#third-section figure {
+  overflow: inherit !important; }
+  #third-section figure .speaker-popover {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 14%;
+    margin: auto;
+    width: 750px;
+    height: 0;
+    padding: 20px;
+    background: #ffaaaa;
+    display: none;
+    z-index: 999999;
+    transition: all 0.5s; }
+    #third-section figure .speaker-popover img {
+      float: left;
+      width: 248px; }
+    #third-section figure .speaker-popover p {
+      float: right;
+      width: 420px;
+      font-size: 18px;
+      margin-bottom: 24px; }
+    #third-section figure .speaker-popover .social-icons {
+      float: right; }
+      #third-section figure .speaker-popover .social-icons span {
+        float: left;
+        padding-top: 12px; }
+      #third-section figure .speaker-popover .social-icons a {
+        float: right;
+        height: 30px;
+        width: 30px;
+        font-size: 30px !important; }
+  #third-section figure:hover .speaker-popover {
+    display: block;
+    height: 300px; }
+
+#third-section .speaker-list {
+  position: inherit !important;
+  overflow: inherit !important;
+  position: relative; }
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   body {
     overflow: auto; }
