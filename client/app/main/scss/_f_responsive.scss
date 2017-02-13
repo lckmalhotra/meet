@@ -887,6 +887,7 @@
       height: auto;
       margin-top: 8%;
       padding-bottom: 4em;
+      padding-right: 3.1em;
       p {
         font-size: 1.32vw;
         line-height: 4.2vh;
@@ -1084,7 +1085,7 @@
     figure {
       overflow: inherit !important;
       .speaker-popover {
-        position: fixed;
+        position: absolute;
         left: 0;
         right: 0;
         top: 0;
@@ -1099,6 +1100,7 @@
         -moz-transition: all 0.7s;
         -o-transition: all 0.7s;
         transition: all 0.7s;
+        visibility: hidden;
         img {
           float: left;
           width: 248px;
@@ -1132,12 +1134,13 @@
           cursor: pointer;
         }
       }
-      .image:hover ~.speaker-popover {
+      &:hover .speaker-popover {
         opacity: 1;
         position: absolute;
         top: 12%;
         margin: 0 auto;
-        z-index: 999999;
+        z-index: 12;
+        visibility: visible;
       }
     }
   }
