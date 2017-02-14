@@ -68,7 +68,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr class="" ng-repeat="item in items.data.slice().reverse() | dateFilter:Dec2015:Feb2016">
+      <tr class="" ng-if="getYear(item.date) < 117" ng-repeat="item in items.data.slice().reverse()">
         <td>{{$index+1}}</td>
         <td>{{item.name}}</td>
         <td><strong class="">{{item.company}}</strong></td>

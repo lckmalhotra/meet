@@ -10,6 +10,10 @@ angular.module('meetApp')
       $scope.Jan2017 = '2017-01-01T00:00:00.000Z';
       $scope.Mar2017 = '2017-03-01T00:00:00.000Z';
 
+      $scope.getYear = function(date){
+        return new Date(date).getYear();
+      };
+
         $scope.fetch = function () {
             $http.get("/api/registrations").then(function (res) {
                 $scope.items = res;
