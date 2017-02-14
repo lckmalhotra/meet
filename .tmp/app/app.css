@@ -8650,7 +8650,7 @@ Main Components
 
 #first-section .information {
   position: absolute;
-  bottom: 0;
+  bottom: 25px;
   padding-bottom: 0;
   margin-bottom: 2.3em;
   height: 200px; }
@@ -9822,8 +9822,6 @@ button#submitBtn {
         #third-section figure .speaker-popover.center-align::after {
           left: 50%;
           transform: translateX(-50%); }
-    #third-section figure .image img {
-      height: 142px; }
     #third-section figure .image:hover {
       cursor: pointer; }
     #third-section figure:hover .speaker-popover {
@@ -9897,7 +9895,7 @@ button#submitBtn {
     font-size: 24px; }
 
   #sixth-section #location {
-    height: 400px; }
+    height: 65%; }
 
   #seventh-section .foot ul li {
     font-size: 2vh; } }

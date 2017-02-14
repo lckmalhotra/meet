@@ -1163,9 +1163,6 @@
         }
       }
       .image {
-        img{
-          height : 142px;
-        }
         &:hover {
           cursor: pointer;
         }
@@ -1279,7 +1276,7 @@
   }
   #sixth-section #location
   {
-    height: 400px;
+    height: 65%;
   }
 
   #seventh-section .foot ul li
