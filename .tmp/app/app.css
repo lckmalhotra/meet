@@ -8307,10 +8307,13 @@ nav#menu {
       #forth-section .time-schedule li span.text-yellow {
         font-family: 'roboto-light';
         font-weight: 700;
-        color: #f4ee6f; }
+        color: #f4ee6f;
+        font-size: 1.3vw; }
       #forth-section .time-schedule li span.text-red {
         font-family: 'roboto-regular';
         font-weight: 700;
+        color: #eb2242; }
+      #forth-section .time-schedule li span.text-pink {
         color: #eb2242; }
       #forth-section .time-schedule li small {
         font-family: 'raleway-thin';
@@ -8429,7 +8432,8 @@ nav#menu {
     font-family: 'raleway-heavy';
     text-transform: uppercase;
     display: inline-block;
-    margin-top: 4vh; }
+    margin-top: 4vh;
+    font-size: 24px; }
   #seventh-section .foot ul {
     list-style: none; }
     #seventh-section .foot ul li {
