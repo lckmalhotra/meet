@@ -8234,8 +8234,7 @@ nav#menu {
     font-family: 'raleway-thin'; }
   #third-section .speaker-list {
     position: relative;
-    margin: 0 -0.1em;
-    overflow: hidden; }
+    margin: 0 -0.1em; }
   #third-section figure {
     display: inline-block;
     width: 48%;
@@ -9435,8 +9434,7 @@ button#submitBtn {
     #third-section figure {
       height: auto;
       margin: 0px 1.2vh;
-      width: 14vw;
-      overflow: hidden; }
+      width: 14vw; }
       #third-section figure .image {
         height: auto; }
       #third-section figure figcaption h4 {
@@ -9641,8 +9639,7 @@ button#submitBtn {
       margin-top: 10vh; }
     #third-section figure {
       margin: 0px 1.5vw;
-      width: 10.6vw;
-      overflow: hidden; }
+      width: 10.6vw; }
       #third-section figure .image {
         height: auto; }
       #third-section figure figcaption h4 {
@@ -9762,14 +9759,13 @@ button#submitBtn {
     padding-top: 1.1%; }
 
   #third-section figure {
-    overflow: inherit !important; }
+    position: relative; }
     #third-section figure .speaker-popover {
       position: absolute;
       left: 0;
-      right: 0;
-      top: 0;
-      margin: -300px auto 0;
-      width: 750px;
+      right: auto;
+      bottom: 100%;
+      width: 700px;
       height: 300px;
       padding: 20px;
       background: #5388be;
@@ -9779,13 +9775,13 @@ button#submitBtn {
       visibility: hidden; }
       #third-section figure .speaker-popover img {
         float: left;
-        width: 248px;
+        width: 38%;
         filter: grayscale(0);
         -webkit-filter: grayscale(0); }
       #third-section figure .speaker-popover p {
         float: right;
-        width: 420px;
-        font-size: 18px;
+        width: 60%;
+        font-size: 16px;
         margin-bottom: 14px; }
       #third-section figure .speaker-popover .social-icons {
         float: right; }
@@ -9799,19 +9795,42 @@ button#submitBtn {
           width: 25px;
           font-size: 25px !important;
           margin: 2px 5px; }
+      #third-section figure .speaker-popover::after {
+        width: 0;
+        height: 0;
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 55px;
+        border-top: 20px solid #5388be;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent; }
+      #third-section figure .speaker-popover.right-align {
+        right: 0;
+        left: auto; }
+        #third-section figure .speaker-popover.right-align::after {
+          left: auto;
+          right: 55px; }
+      #third-section figure .speaker-popover.center-align {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%); }
+        #third-section figure .speaker-popover.center-align::after {
+          left: 50%;
+          transform: translateX(-50%); }
+    #third-section figure .image img {
+      height: 142px; }
     #third-section figure .image:hover {
       cursor: pointer; }
     #third-section figure:hover .speaker-popover {
       opacity: 1;
       position: absolute;
-      top: 12%;
+      bottom: 100%;
       margin: 0 auto;
-      z-index: 12;
+      z-index: 1000;
       visibility: visible; }
 
   #third-section .speaker-list {
-    position: inherit !important;
-    overflow: inherit !important;
     position: relative; }
 
   #first-section {
