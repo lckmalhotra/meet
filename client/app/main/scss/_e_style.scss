@@ -404,10 +404,14 @@ nav{
                     font-family: 'roboto-light';
                     font-weight: 700;
                     color: #f4ee6f;
+                    font-size: 1.3vw;
                 }
                 span.text-red{
                     font-family: 'roboto-regular';
                     font-weight: 700;
+                    color: #eb2242;
+                }
+                span.text-pink{
                     color: #eb2242;
                 }
                 small{
@@ -854,7 +858,7 @@ Main Components
 #first-section .information
 {
   position:absolute;
-  bottom:0;
+  bottom:25px;
   padding-bottom: 0;
   margin-bottom: 2.3em;
   height: 200px;

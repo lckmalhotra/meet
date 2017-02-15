@@ -5690,8 +5690,7 @@ button.close {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
-          filter: none; }
+  filter: none; }
 
 .fa-stack {
   position: relative;
@@ -8308,10 +8307,13 @@ nav#menu {
       #forth-section .time-schedule li span.text-yellow {
         font-family: 'roboto-light';
         font-weight: 700;
-        color: #f4ee6f; }
+        color: #f4ee6f;
+        font-size: 1.3vw; }
       #forth-section .time-schedule li span.text-red {
         font-family: 'roboto-regular';
         font-weight: 700;
+        color: #eb2242; }
+      #forth-section .time-schedule li span.text-pink {
         color: #eb2242; }
       #forth-section .time-schedule li small {
         font-family: 'raleway-thin';
@@ -8582,6 +8584,7 @@ Main Components
     width: 100%;
     /* Force Hardware Acceleration */
     transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
 
   [data-hijacking="on"] .cd-section > div {
@@ -8646,7 +8649,7 @@ Main Components
 
 #first-section .information {
   position: absolute;
-  bottom: 0;
+  bottom: 25px;
   padding-bottom: 0;
   margin-bottom: 2.3em;
   height: 200px; }
@@ -9818,8 +9821,6 @@ button#submitBtn {
         #third-section figure .speaker-popover.center-align::after {
           left: 50%;
           transform: translateX(-50%); }
-    #third-section figure .image img {
-      height: 142px; }
     #third-section figure .image:hover {
       cursor: pointer; }
     #third-section figure:hover .speaker-popover {
@@ -9893,7 +9894,7 @@ button#submitBtn {
     font-size: 24px; }
 
   #sixth-section #location {
-    height: 400px; }
+    height: 65%; }
 
   #seventh-section .foot ul li {
     font-size: 2vh; } }
