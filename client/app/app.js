@@ -676,7 +676,7 @@ angular.module('meetApp', [
         .RegisterEffect("translateUp.half", {
           defaultDuration: 1,
           calls: [
-            [ { translateY: '-50%'}, 1]
+            [ { translateY: '-100%'}, 1]
           ]
         });
 
