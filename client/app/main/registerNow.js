@@ -13,13 +13,13 @@
             $scope.formData.size = 'S';
 
             $scope.addThing = function () {
-              if($scope.userForm.$valid) {
-                if ($scope.formData) {
-                  $http.post('/api/registrations', $scope.formData);
-                  $scope.formData = {};
-                  $scope.isActive = false;
-                }
-              }
+              // if($scope.userForm.$valid) {
+              //   if ($scope.formData) {
+              //     $http.post('/api/registrations', $scope.formData);
+              //     $scope.formData = {};
+              //     $scope.isActive = false;
+              //   }
+              // }
             };
             $scope.closeThisDialog = function () {
                 ngDialog.close();

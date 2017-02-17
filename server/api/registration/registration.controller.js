@@ -19,7 +19,8 @@ import * as PdfService from "../pdf/pdf.service.js";
 var path = require("path");
 
 export function generateAndSendTicket(req, res, next) {
-    var userId = req.body._id;
+  res.json({message: "Registration Closed."});
+ /*   var userId = req.body._id;
 
     Registration.findOne({_id: userId}, {name: 1, email: 1}).lean().exec(function (err, user) {
         console.log(err, user);
@@ -49,7 +50,7 @@ export function generateAndSendTicket(req, res, next) {
             });
             res.json({message: "Processing request"});
         }
-    });
+    });*/
 }
 
 function sendMailWithPDF(user, cb) {
